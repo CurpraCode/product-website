@@ -25,14 +25,14 @@ const Manage = () => {
         >
           <Box mt="2rem" mr={{lg:"19rem",md:"0rem", sm:"0rem"}}>
             <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
-              Manage everything in <br /> one workspace
+              Manage everything in one workspace
             </Heading>
             <Image
               src="/Lineblue.svg"
               alt=""
               pb="2rem"
               mr={{ md: "auto", sm: "auto" }}
-              display={{ md: "block", sm: "block" }}
+              display={{lg:"inline", md: "block", sm: "block" }}
               ml={{ md: "auto", sm: "auto" }}
             />
             <Text lineHeight="35px">

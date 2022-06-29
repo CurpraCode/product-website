@@ -29,7 +29,7 @@ const Health = () => {
               alt=""
               pb="2rem"
               mr={{ md: "auto", sm: "auto" }}
-              display={{ md: "block", sm: "block" }}
+              display={{ lg:"inline", md: "block", sm: "block" }}
               ml={{ md: "auto", sm: "auto" }}
             />
             <Text lineHeight="35px">
