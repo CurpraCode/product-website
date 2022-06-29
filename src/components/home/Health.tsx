@@ -8,17 +8,30 @@ import {
   Image,
   Divider,
 } from "@chakra-ui/react";
-
+import { useMediaQuery } from "@chakra-ui/react";
 const Health = () => {
+  const [isMobile] = useMediaQuery("(max-width: 968px)");
   return (
     <Box bg="#F4F6F9">
       <Box maxWidth="1220px" m="0 auto" pt="0.1rem">
-        <Flex justifyContent="space-between" mt="5rem">
-          <Box mt="2rem" mr="19rem">
+        <Flex
+          justifyContent="space-between"
+          mt="5rem"
+          flexDirection={{ lg: "row", md: "column", sm: "column" }}
+          textAlign={{ lg: "left", md: "center", sm: "center" }}
+        >
+          <Box mt="2rem" mr={{ lg: "19rem", md: "auto", sm: "auto" }}>
             <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
               Advocates for <br /> healthcare
             </Heading>
-            <Image src="/Line.svg" alt="" pb="2rem" />
+            <Image
+              src="/Line.svg"
+              alt=""
+              pb="2rem"
+              mr={{ md: "auto", sm: "auto" }}
+              display={{ md: "block", sm: "block" }}
+              ml={{ md: "auto", sm: "auto" }}
+            />
             <Text lineHeight="35px">
               In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
               Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
@@ -32,6 +45,7 @@ const Health = () => {
               color="#fff"
               width="200px"
               mt="3rem"
+              mb={{ lg: "0rem", md: "3rem", sm: "3rem" }}
               _hover={{
                 bg: "#3a76bf",
               }}
@@ -43,7 +57,7 @@ const Health = () => {
               Learn More
             </Button>
           </Box>
-          <Image src="/doc.png" alt="" width="30%" />
+          {isMobile ? null : <Image src="/doc.png" alt="" width="30%" />}
         </Flex>
       </Box>
     </Box>

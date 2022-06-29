@@ -12,14 +12,33 @@ import {
 const Efficient = () => {
   return (
     <Box maxWidth="1220px" m="0 auto" mb="6rem">
-      <Flex justifyContent="space-between" mt="10rem">
-        <Image src="/mobile-phone.svg" alt="" width="50%" mr="10rem" />
-        <Box mt="2rem">
+      <Flex
+        justifyContent="space-between"
+        mt="10rem"
+        flexDirection={{ lg: "row", md: "column", sm: "column" }}
+        textAlign={{ lg: "left", md: "center", sm: "center" }}
+      >
+        <Image
+          src="/mobile-phone.svg"
+          alt=""
+          width="50%"
+          mr={{ lg: "10rem", md: "auto", sm: "auto" }}
+          display={{ md: "block", sm: "block" }}
+          ml={{ md: "auto", sm: "auto" }}
+        />
+        <Box mt="2rem" textAlign={{ lg: "left", md: "center", sm: "center" }}>
           <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
             An efficient end to
             <br /> end platform{" "}
           </Heading>
-          <Image src="/Line.svg" alt="" pb="2rem" />
+          <Image
+            src="/Line.svg"
+            alt=""
+            pb="2rem"
+            mr={{ md: "auto", sm: "auto" }}
+            display={{ md: "block", sm: "block" }}
+            ml={{ md: "auto", sm: "auto" }}
+          />
           <Text lineHeight="35px">
             In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
             Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut

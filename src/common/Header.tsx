@@ -32,7 +32,18 @@ const Header = ({ name }: Props) => {
           >
             Sign Up
           </Button>
-          <Button bg="#fff" color="#1491B8" border="2px solid #fff">
+          <Button
+            bg="#fff"
+            color="#1491B8"
+            border="2px solid #fff"
+            _hover={{
+              bg: "#fff",
+            }}
+            _focus={{
+              outline: "none",
+              bg: "#fff",
+            }}
+          >
             Sign In
           </Button>
         </HStack>

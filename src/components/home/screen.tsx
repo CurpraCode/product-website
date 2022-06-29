@@ -12,15 +12,12 @@ import {
 const Screen = () => {
   return (
     <Box maxWidth="1220px" m="0 auto">
-      <Flex justifyContent="space-between" mt="7rem">
+      <Flex justifyContent="space-between" mt="7rem" flexDirection={{lg:"row", md:"column", sm:"column"}}>
         <Box mt="2rem">
-          {" "}
           <Heading color="#fff" fontWeight="bold" mb="1rem" fontSize="3rem">
             Interpretation <br /> made simple
           </Heading>
-          <Text color="#fff">
-            In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-          </Text>
+        
           <Button
             bg="#3a76bf"
             borderRadius="8px"

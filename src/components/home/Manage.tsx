@@ -13,12 +13,28 @@ const Manage = () => {
   return (
     <Box bg="#F4F6F9">
       <Box maxWidth="1220px" m="0 auto" pt="0.1rem" pb="5rem">
-        <Flex justifyContent="space-between" mt="5rem">
-          <Box mt="2rem" mr="19rem">
+        <Flex
+          justifyContent="space-between"
+          mt="5rem"
+          flexDirection={{
+            lg: "row",
+            md: "column-reverse",
+            sm: "column-reverse",
+          }}
+          textAlign={{ lg: "left", md: "center", sm: "center" }}
+        >
+          <Box mt="2rem" mr={{lg:"19rem",md:"0rem", sm:"0rem"}}>
             <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
               Manage everything in <br /> one workspace
             </Heading>
-            <Image src="/Lineblue.svg" alt="" pb="2rem" />
+            <Image
+              src="/Lineblue.svg"
+              alt=""
+              pb="2rem"
+              mr={{ md: "auto", sm: "auto" }}
+              display={{ md: "block", sm: "block" }}
+              ml={{ md: "auto", sm: "auto" }}
+            />
             <Text lineHeight="35px">
               In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
               Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
@@ -26,7 +42,14 @@ const Manage = () => {
               rhoncus ultricies. Duis euismod tortor vel ante varius fringilla.
             </Text>
           </Box>
-          <Image src="/circle-icon.svg" alt="" width="30%" />
+          <Image
+            src="/circle-icon.svg"
+            alt=""
+            width="35%"
+            mr={{ lg: "10rem", md: "auto", sm: "auto" }}
+            display={{ md: "block", sm: "block" }}
+            ml={{ md: "auto", sm: "auto" }}
+          />
         </Flex>
       </Box>
     </Box>
