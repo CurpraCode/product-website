@@ -17,7 +17,7 @@ const Features = () => {
           base: "repeat(1, 1fr)",
           sm: "repeat(2, 1fr)",
           md: "repeat(2, 1fr)",
-          lg: "repeat(4, 1fr)"
+          lg: "repeat(4, 1fr)",
         }}
         gap={6}
       >
@@ -28,7 +28,12 @@ const Features = () => {
             alignItems="center"
             gap="1rem"
             flexDirection="column"
-            textAlign={{ lg: "left", md: "center", sm: "center" }}
+            textAlign={{
+              lg: "left",
+              md: "center",
+              sm: "center",
+              base: "center",
+            }}
           >
             <Image
               src="/location.svg"
@@ -50,7 +55,12 @@ const Features = () => {
             alignItems="center"
             gap="1rem"
             flexDirection="column"
-            textAlign={{ lg: "left", md: "center", sm: "center" }}
+            textAlign={{
+              lg: "left",
+              md: "center",
+              sm: "center",
+              base: "center",
+            }}
           >
             <Image
               src="/instant.svg"
@@ -72,7 +82,7 @@ const Features = () => {
           alignItems="center"
           gap="1rem"
           flexDirection="column"
-          textAlign={{ lg: "left", md: "center", sm: "center" }}
+          textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Image
             src="/confidential.svg"
@@ -93,7 +103,12 @@ const Features = () => {
             alignItems="center"
             gap="1rem"
             flexDirection="column"
-            textAlign={{ lg: "left", md: "center", sm: "center" }}
+            textAlign={{
+              lg: "left",
+              md: "center",
+              sm: "center",
+              base: "center",
+            }}
           >
             <Image
               src="/support.svg"

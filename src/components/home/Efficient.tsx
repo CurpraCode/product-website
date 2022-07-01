@@ -11,7 +11,7 @@ import {
 
 const Efficient = () => {
   return (
-    <Box maxWidth="1220px" m="0 auto" mb="6rem">
+    <Box maxWidth="1220px" m="0 auto" mb="6rem" px="1rem">
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -32,7 +32,10 @@ const Efficient = () => {
           display={{ md: "block", sm: "block" }}
           ml={{ md: "auto", sm: "auto" }}
         />
-        <Box mt="2rem" textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}>
+        <Box
+          mt="2rem"
+          textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
+        >
           <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
             An efficient end to
             <br /> end platform{" "}
@@ -41,9 +44,8 @@ const Efficient = () => {
             src="/Line.svg"
             alt=""
             pb="2rem"
-            mr={{ md: "auto", sm: "auto" }}
+            m={{ md: "auto", sm: "auto", base: "auto" }}
             display={{ lg: "inline", md: "block", sm: "block" }}
-            ml={{ md: "auto", sm: "auto" }}
           />
           <Text lineHeight="35px">
             In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.

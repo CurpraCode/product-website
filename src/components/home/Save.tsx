@@ -11,11 +11,16 @@ import {
 
 const Save = () => {
   return (
-    <Box maxWidth="1220px" m="0 auto" mb="6rem">
+    <Box maxWidth="1220px" m="0 auto" mb="6rem" px="1rem">
       <Flex
         justifyContent="space-between"
         mt="10rem"
-        flexDirection={{ lg: "row", md: "column", sm: "column", base: "column" }}
+        flexDirection={{
+          lg: "row",
+          md: "column",
+          sm: "column",
+          base: "column",
+        }}
         alignItems="center"
         textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
       >
@@ -36,9 +41,8 @@ const Save = () => {
             src="/Line.svg"
             alt=""
             pb="2rem"
-            mr={{ md: "auto", sm: "auto" }}
-            display={{lg:"inline", md: "block", sm: "block" }}
-            ml={{ md: "auto", sm: "auto" }}
+            m={{ md: "auto", sm: "auto", base: "auto" }}
+            display={{ lg: "inline", md: "block", sm: "block" }}
           />
           <Text lineHeight="35px">
             In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.

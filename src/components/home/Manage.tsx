@@ -12,7 +12,7 @@ import {
 const Manage = () => {
   return (
     <Box bg="#F4F6F9">
-      <Box maxWidth="1220px" m="0 auto" pt="0.1rem" pb="5rem">
+      <Box maxWidth="1220px" m="0 auto" pt="0.1rem" pb="5rem" px="1rem">
         <Flex
           justifyContent="space-between"
           alignItems="center"
@@ -21,7 +21,7 @@ const Manage = () => {
             lg: "row",
             md: "column-reverse",
             sm: "column-reverse",
-            base: "column-reverse"
+            base: "column-reverse",
           }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
@@ -33,9 +33,8 @@ const Manage = () => {
               src="/Lineblue.svg"
               alt=""
               pb="2rem"
-              mr={{ md: "auto", sm: "auto" }}
+              m={{ md: "auto", sm: "auto", base: "auto" }}
               display={{ lg: "inline", md: "block", sm: "block" }}
-              ml={{ md: "auto", sm: "auto" }}
             />
             <Text lineHeight="35px">
               In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.

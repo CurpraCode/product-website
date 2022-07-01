@@ -13,12 +13,17 @@ const Health = () => {
   const [isMobile] = useMediaQuery("(max-width: 968px)");
   return (
     <Box bg="#F4F6F9">
-      <Box maxWidth="1220px" m="0 auto" pt="0.1rem">
+      <Box maxWidth="1220px" m="0 auto" pt="0.1rem" px="1rem">
         <Flex
           justifyContent="space-between"
           alignItems="center"
           mt="5rem"
-          flexDirection={{ lg: "row", md: "column", sm: "column", base: "column" }}
+          flexDirection={{
+            lg: "row",
+            md: "column",
+            sm: "column",
+            base: "column",
+          }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Box mt="2rem" mr={{ lg: "19rem", md: "auto", sm: "auto" }}>
@@ -29,9 +34,8 @@ const Health = () => {
               src="/Line.svg"
               alt=""
               pb="2rem"
-              mr={{ md: "auto", sm: "auto" }}
-              display={{ lg:"inline", md: "block", sm: "block" }}
-              ml={{ md: "auto", sm: "auto" }}
+              m={{ md: "auto", sm: "auto", base: "auto" }}
+              display={{ lg: "inline", md: "block", sm: "block" }}
             />
             <Text lineHeight="35px">
               In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
