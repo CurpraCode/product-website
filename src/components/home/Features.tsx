@@ -1,23 +1,33 @@
 import React from "react";
-import { Box, Flex, Text, Heading, Button, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Image,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 
 const Features = () => {
   return (
-    <Box maxWidth="1220px" m="0 auto">
-      <Flex
-        justifyContent="space-evenly"
-        flexDirection={{ md: "row", sm: "column" }}
+    <Box maxWidth="container.xl" m="auto">
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, 1fr)"
+        }}
+        gap={6}
       >
-        <Flex
-          justifyContent="space-between"
-          mt="8rem"
-          flexDirection={{ lg: "row", md: "column", sm: "column" }}
-        >
+        <GridItem>
           <Flex
             mt="2rem"
             justifyContent="space-evenly"
             alignItems="center"
-            flexDirection={{ lg: "row", md: "column", sm: "column" }}
+            gap="1rem"
+            flexDirection="column"
             textAlign={{ lg: "left", md: "center", sm: "center" }}
           >
             <Image
@@ -32,12 +42,14 @@ const Features = () => {
               <Text fontSize="0.7rem">60+ languages provided</Text>
             </Box>
           </Flex>
-
+        </GridItem>
+        <GridItem>
           <Flex
             mt="2rem"
             justifyContent="space-evenly"
             alignItems="center"
-            flexDirection={{ lg: "row", md: "column", sm: "column" }}
+            gap="1rem"
+            flexDirection="column"
             textAlign={{ lg: "left", md: "center", sm: "center" }}
           >
             <Image
@@ -52,37 +64,35 @@ const Features = () => {
               <Text fontSize="0.7rem">60+ languages provided</Text>
             </Box>
           </Flex>
-        </Flex>
-        <Flex
-          justifyContent="space-between"
-          mt={{ lg: "8rem", md: "8rem", sm: "2rem" }}
-          flexDirection={{ lg: "row", md: "column", sm: "column" }}
-        >
-          <Flex
-            mt="2rem"
-            justifyContent="space-evenly"
-            alignItems="center"
-            flexDirection={{ lg: "row", md: "column", sm: "column" }}
-            textAlign={{ lg: "left", md: "center", sm: "center" }}
-          >
-            <Image
-              src="/confidential.svg"
-              alt=""
-              width={{ lg: "25%", md: "35%", sm: "15%" }}
-            />
-            <Box width="150px" ml="0.9rem">
-              <Heading mb="0.3rem" fontSize="1rem">
-                Confidentiality
-              </Heading>
-              <Text fontSize="0.7rem">100% secure portal</Text>
-            </Box>
-          </Flex>
+        </GridItem>
 
+        <Flex
+          mt="2rem"
+          justifyContent="space-evenly"
+          alignItems="center"
+          gap="1rem"
+          flexDirection="column"
+          textAlign={{ lg: "left", md: "center", sm: "center" }}
+        >
+          <Image
+            src="/confidential.svg"
+            alt=""
+            width={{ lg: "25%", md: "35%", sm: "15%" }}
+          />
+          <Box width="150px" ml="0.9rem">
+            <Heading mb="0.3rem" fontSize="1rem">
+              Confidentiality
+            </Heading>
+            <Text fontSize="0.7rem">100% secure portal</Text>
+          </Box>
+        </Flex>
+        <GridItem>
           <Flex
             mt="2rem"
             justifyContent="space-evenly"
             alignItems="center"
-            flexDirection={{ lg: "row", md: "column", sm: "column" }}
+            gap="1rem"
+            flexDirection="column"
             textAlign={{ lg: "left", md: "center", sm: "center" }}
           >
             <Image
@@ -97,8 +107,8 @@ const Features = () => {
               <Text fontSize="0.7rem">Available to assist</Text>
             </Box>
           </Flex>
-        </Flex>
-      </Flex>
+        </GridItem>
+      </Grid>
     </Box>
   );
 };

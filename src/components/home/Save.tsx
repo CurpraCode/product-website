@@ -15,8 +15,9 @@ const Save = () => {
       <Flex
         justifyContent="space-between"
         mt="10rem"
-        flexDirection={{ lg: "row", md: "column", sm: "column" }}
-        textAlign={{ lg: "left", md: "center", sm: "center" }}
+        flexDirection={{ lg: "row", md: "column", sm: "column", base: "column" }}
+        alignItems="center"
+        textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
       >
         <Image
           src="/fem.svg"

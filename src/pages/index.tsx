@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/canvey-logo.svg" />
       </Head>
 
-      <Box
+      {/* <Box
         bgGradient={
           isMobile
             ? "linear-gradient(117.32deg, #5C0E62 -41.64%, #00B5D0 174.5%)"
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
         )}
         <Header name="" />
         <Screen />
-      </Box>
+      </Box> */}
       <Features />
       <How />
       <Efficient />

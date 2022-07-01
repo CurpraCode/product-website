@@ -15,15 +15,17 @@ const Manage = () => {
       <Box maxWidth="1220px" m="0 auto" pt="0.1rem" pb="5rem">
         <Flex
           justifyContent="space-between"
+          alignItems="center"
           mt="5rem"
           flexDirection={{
             lg: "row",
             md: "column-reverse",
             sm: "column-reverse",
+            base: "column-reverse"
           }}
-          textAlign={{ lg: "left", md: "center", sm: "center" }}
+          textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
-          <Box mt="2rem" mr={{lg:"19rem",md:"0rem", sm:"0rem"}}>
+          <Box mt="2rem" mr={{ lg: "19rem", md: "0rem", sm: "0rem" }}>
             <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
               Manage everything in one workspace
             </Heading>
@@ -32,7 +34,7 @@ const Manage = () => {
               alt=""
               pb="2rem"
               mr={{ md: "auto", sm: "auto" }}
-              display={{lg:"inline", md: "block", sm: "block" }}
+              display={{ lg: "inline", md: "block", sm: "block" }}
               ml={{ md: "auto", sm: "auto" }}
             />
             <Text lineHeight="35px">

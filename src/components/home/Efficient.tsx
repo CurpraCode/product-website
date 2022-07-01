@@ -14,8 +14,14 @@ const Efficient = () => {
     <Box maxWidth="1220px" m="0 auto" mb="6rem">
       <Flex
         justifyContent="space-between"
+        alignItems="center"
         mt="10rem"
-        flexDirection={{ lg: "row", md: "column", sm: "column" }}
+        flexDirection={{
+          lg: "row",
+          md: "column",
+          sm: "column",
+          base: "column",
+        }}
         textAlign={{ lg: "left", md: "center", sm: "center" }}
       >
         <Image
@@ -26,7 +32,7 @@ const Efficient = () => {
           display={{ md: "block", sm: "block" }}
           ml={{ md: "auto", sm: "auto" }}
         />
-        <Box mt="2rem" textAlign={{ lg: "left", md: "center", sm: "center" }}>
+        <Box mt="2rem" textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}>
           <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
             An efficient end to
             <br /> end platform{" "}
@@ -36,7 +42,7 @@ const Efficient = () => {
             alt=""
             pb="2rem"
             mr={{ md: "auto", sm: "auto" }}
-            display={{lg:"inline", md: "block", sm: "block" }}
+            display={{ lg: "inline", md: "block", sm: "block" }}
             ml={{ md: "auto", sm: "auto" }}
           />
           <Text lineHeight="35px">

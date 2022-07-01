@@ -16,9 +16,10 @@ const Health = () => {
       <Box maxWidth="1220px" m="0 auto" pt="0.1rem">
         <Flex
           justifyContent="space-between"
+          alignItems="center"
           mt="5rem"
-          flexDirection={{ lg: "row", md: "column", sm: "column" }}
-          textAlign={{ lg: "left", md: "center", sm: "center" }}
+          flexDirection={{ lg: "row", md: "column", sm: "column", base: "column" }}
+          textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Box mt="2rem" mr={{ lg: "19rem", md: "auto", sm: "auto" }}>
             <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
