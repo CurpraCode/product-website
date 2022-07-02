@@ -11,7 +11,7 @@ import {
 
 const Features = () => {
   return (
-    <Box maxWidth="container.xl" m="auto">
+    <Box maxWidth="container.xl" mx="auto" mt="6rem">
       <Grid
         templateColumns={{
           base: "repeat(1, 1fr)",

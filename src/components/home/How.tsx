@@ -6,7 +6,7 @@ const How = () => {
     <Box
       bg="rgb(255,255,255)"
       maxWidth="container.xl"
-      px="1rem"
+      px="3rem"
       mx="auto"
       mb="5rem"
     >

@@ -3,40 +3,81 @@ import {
   Box,
   Heading,
   Flex,
-  Text,
   Button,
-  HStack,
   Image,
+  useMediaQuery,
 } from "@chakra-ui/react";
-// import Image from 'next/image'
+import AuthButton from "./AuthButton";
+
 const Screen = () => {
+  const [isTablet] = useMediaQuery("(max-width: 500px)");
   return (
-    <Box maxWidth="1220px" m="0 auto">
-      <Flex justifyContent="space-between" mt="7rem" flexDirection={{lg:"row", md:"column", sm:"column"}}>
-        <Box mt="2rem">
-          <Heading color="#fff" fontWeight="bold" mb="1rem" fontSize="3rem">
+    <Box
+      maxWidth="container.xl"
+      height={{ base: "500px", sm: "520px", md: "550px" }}
+      m="auto"
+      position="relative"
+    >
+      <Flex
+        justifyContent="space-between"
+        alignItems={isTablet ? "center" : ""}
+        mt="2rem"
+        flexDirection={{
+          lg: "row",
+          md: "column",
+          sm: "column",
+          base: "column",
+        }}
+      >
+        <Box
+          mt="2rem"
+          ml={{ sm: "3rem", md: "3rem", lg: "3.5rem" }}
+          textAlign={isTablet ? "center" : ""}
+        >
+          <Heading
+            color="#fff"
+            fontWeight="bold"
+            mb="1rem"
+            fontSize={{ base: "24px", sm: "32px", md: "48px" }}
+          >
             Interpretation <br /> made simple
           </Heading>
-        
-          <Button
-            bg="#3a76bf"
-            borderRadius="8px"
-            padding="10px"
-            color="#fff"
-            width="200px"
-            mt="3rem"
-            _hover={{
-              bg: "#3a76bf",
-            }}
-            _focus={{
-              outline: "none",
-              bg: "#3a76bf",
-            }}
-          >
-            Start Now
-          </Button>
+
+          {isTablet ? (
+            <Box mt="5rem" alignItems="center" justifyContent="center">
+              <AuthButton />
+            </Box>
+          ) : null}
+
+          {isTablet ? null : (
+            <Button
+              bg="#3a76bf"
+              borderRadius="8px"
+              padding="10px"
+              color="#fff"
+              width="100%"
+              maxW="200px"
+              mt="1rem"
+              _hover={{
+                bg: "#3a76bf",
+              }}
+              _focus={{
+                outline: "none",
+                bg: "#3a76bf",
+              }}
+            >
+              Start Now
+            </Button>
+          )}
         </Box>
-        <Image src="/screen.png" alt="" width="50%" />
+        <Image
+          src="/screen.png"
+          alt=""
+          width={{ base: "80%", sm: "65%", md: "50%" }}
+          position="absolute"
+          right={isTablet ? "" : "0px"}
+          bottom="-6.5rem"
+        />
       </Flex>
     </Box>
   );
