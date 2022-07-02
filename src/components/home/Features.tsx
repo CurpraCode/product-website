@@ -28,18 +28,9 @@ const Features = () => {
             alignItems="center"
             gap="1rem"
             flexDirection="column"
-            textAlign={{
-              lg: "left",
-              md: "center",
-              sm: "center",
-              base: "center",
-            }}
+            textAlign="center"
           >
-            <Image
-              src="/location.svg"
-              alt=""
-              width={{ lg: "25%", md: "35%", sm: "15%" }}
-            />
+            <Image src="/location.svg" alt="" width="70px" height="70px" />
             <Box width="150px" ml="0.9rem">
               <Heading mb="0.3rem" fontSize="1rem">
                 Quality Interpreters
@@ -55,18 +46,9 @@ const Features = () => {
             alignItems="center"
             gap="1rem"
             flexDirection="column"
-            textAlign={{
-              lg: "left",
-              md: "center",
-              sm: "center",
-              base: "center",
-            }}
+            textAlign="center"
           >
-            <Image
-              src="/instant.svg"
-              alt=""
-              width={{ lg: "25%", md: "35%", sm: "15%" }}
-            />
+            <Image src="/instant.svg" alt="" width="70px" height="70px" />
             <Box width="150px" ml="0.9rem">
               <Heading mb="0.3rem" fontSize="1rem">
                 Instant Access
@@ -76,26 +58,6 @@ const Features = () => {
           </Flex>
         </GridItem>
 
-        <Flex
-          mt="2rem"
-          justifyContent="space-evenly"
-          alignItems="center"
-          gap="1rem"
-          flexDirection="column"
-          textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
-        >
-          <Image
-            src="/confidential.svg"
-            alt=""
-            width={{ lg: "25%", md: "35%", sm: "15%" }}
-          />
-          <Box width="150px" ml="0.9rem">
-            <Heading mb="0.3rem" fontSize="1rem">
-              Confidentiality
-            </Heading>
-            <Text fontSize="0.7rem">100% secure portal</Text>
-          </Box>
-        </Flex>
         <GridItem>
           <Flex
             mt="2rem"
@@ -103,18 +65,27 @@ const Features = () => {
             alignItems="center"
             gap="1rem"
             flexDirection="column"
-            textAlign={{
-              lg: "left",
-              md: "center",
-              sm: "center",
-              base: "center",
-            }}
+            textAlign="center"
           >
-            <Image
-              src="/support.svg"
-              alt=""
-              width={{ lg: "25%", md: "35%", sm: "15%" }}
-            />
+            <Image src="/confidential.svg" alt="" width="70px" height="70px" />
+            <Box width="150px" ml="0.9rem">
+              <Heading mb="0.3rem" fontSize="1rem">
+                Confidentiality
+              </Heading>
+              <Text fontSize="0.7rem">100% secure portal</Text>
+            </Box>
+          </Flex>
+        </GridItem>
+        <GridItem>
+          <Flex
+            mt="2rem"
+            justifyContent="space-evenly"
+            alignItems="center"
+            gap="1rem"
+            flexDirection="column"
+            textAlign="center"
+          >
+            <Image src="/support.svg" alt="" width="70px" height="70px" />
             <Box width="150px" ml="0.9rem">
               <Heading mb="0.3rem" fontSize="1rem">
                 24/7 Support

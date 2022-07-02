@@ -4,50 +4,53 @@ import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 const How = () => {
   return (
     <Box
-      pb="1rem"
-      px="1rem"
       bg="rgb(255,255,255)"
-      bgGradient="linear(180deg, rgba(255,255,255,1) 100%, #F4F6F9 0%)"
+      maxWidth="container.xl"
+      px="1rem"
+      mx="auto"
+      mb="5rem"
     >
-      <Box maxWidth="container.xl" m="0 auto" mb="6rem" pt="3rem">
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          mt="5rem"
-          flexDirection={{
-            lg: "row",
-            md: "column",
-            sm: "column",
-            base: "column",
-          }}
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        mt="5rem"
+        flexDirection={{
+          lg: "row",
+          md: "column",
+          sm: "column",
+          base: "column",
+        }}
+        textAlign={{ lg: "left", md: "center", sm: "center" }}
+      >
+        <Image
+          src="/youtubeimg.png"
+          alt=""
+          width="512px"
+          mr={{ lg: "5rem", md: "auto", sm: "auto" }}
+          display={{ md: "block", sm: "block" }}
+          ml={{ lg: "5rem", md: "auto", sm: "auto" }}
+        />
+        <Box
+          mt="2rem"
+          textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
-          <Image
-            src="/youtubeimg.png"
-            alt=""
-            m={{ lg: "10rem", md: "auto", sm: "auto", base: "auto" }}
-            display={{ md: "block", sm: "block" }}
-          />
-          <Box mt="2rem" textAlign="center">
-            <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
-              How is Canvey <br /> bridging the gap?
-            </Heading>
+          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
+            What is Canvey?
+          </Heading>
 
-            <Image
-              src="/Line.svg"
-              alt=""
-              pb="2rem"
-              textAlign="center"
-              alignItems="center"
-              display={{ lg: "inline", md: "block", sm: "block" }}
-              m={{ md: "auto", sm: "auto", base: "auto" }}
-            />
-            <Text lineHeight="35px">
-              In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-              Quisque sit amet fringilla mauris.
-            </Text>
-          </Box>
-        </Flex>
-      </Box>
+          <Image
+            src="/Line.svg"
+            alt=""
+            pb="1rem"
+            display={{ lg: "inline", md: "block", sm: "block" }}
+            m={{ md: "auto", sm: "auto", base: "auto" }}
+          />
+          <Text lineHeight="35px">
+            In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
+            Quisque sit amet fringilla mauris.
+          </Text>
+        </Box>
+      </Flex>
     </Box>
   );
 };

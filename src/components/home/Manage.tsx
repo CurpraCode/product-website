@@ -18,21 +18,21 @@ const Manage = () => {
           alignItems="center"
           mt="5rem"
           flexDirection={{
-            lg: "row",
+            lg: "row-reverse",
             md: "column-reverse",
             sm: "column-reverse",
             base: "column-reverse",
           }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
-          <Box mt="2rem" mr={{ lg: "19rem", md: "0rem", sm: "0rem" }}>
-            <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
+          <Box mt="2rem">
+            <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
               Manage everything in one workspace
             </Heading>
             <Image
               src="/Lineblue.svg"
               alt=""
-              pb="2rem"
+              pb="1rem"
               m={{ md: "auto", sm: "auto", base: "auto" }}
               display={{ lg: "inline", md: "block", sm: "block" }}
             />

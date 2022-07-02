@@ -11,13 +11,13 @@ import {
 
 const Efficient = () => {
   return (
-    <Box maxWidth="1220px" m="0 auto" mb="6rem" px="1rem">
+    <Box maxWidth="container.lg" m="0 auto" mb="6rem">
       <Flex
         justifyContent="space-between"
         alignItems="center"
         mt="10rem"
         flexDirection={{
-          lg: "row",
+          lg: "row-reverse",
           md: "column",
           sm: "column",
           base: "column",
@@ -28,22 +28,20 @@ const Efficient = () => {
           src="/mobile-phone.svg"
           alt=""
           width="50%"
-          mr={{ lg: "10rem", md: "auto", sm: "auto" }}
           display={{ md: "block", sm: "block" }}
-          ml={{ md: "auto", sm: "auto" }}
         />
         <Box
           mt="2rem"
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
-          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
+          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
             An efficient end to
             <br /> end platform{" "}
           </Heading>
           <Image
             src="/Line.svg"
             alt=""
-            pb="2rem"
+            pb="1rem"
             m={{ md: "auto", sm: "auto", base: "auto" }}
             display={{ lg: "inline", md: "block", sm: "block" }}
           />

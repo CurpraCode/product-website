@@ -16,7 +16,7 @@ const Save = () => {
         justifyContent="space-between"
         mt="10rem"
         flexDirection={{
-          lg: "row",
+          lg: "row-reverse",
           md: "column",
           sm: "column",
           base: "column",
@@ -28,19 +28,18 @@ const Save = () => {
           src="/fem.svg"
           alt=""
           width="40%"
-          mr={{ lg: "10rem", md: "auto", sm: "auto" }}
           display={{ md: "block", sm: "block" }}
-          ml={{ md: "auto", sm: "auto" }}
+          ml={{ lg: "5rem", sm: "auto" }}
+          mr={{ lg: "auto", sm: "auto" }}
         />
         <Box mt="2rem">
-          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="2rem">
+          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
             Save time with <br /> Automations{" "}
           </Heading>
-          {/* <Divider size="80" /> */}
           <Image
             src="/Line.svg"
             alt=""
-            pb="2rem"
+            pb="1rem"
             m={{ md: "auto", sm: "auto", base: "auto" }}
             display={{ lg: "inline", md: "block", sm: "block" }}
           />
