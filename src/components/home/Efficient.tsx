@@ -11,11 +11,11 @@ import {
 
 const Efficient = () => {
   return (
-    <Box maxWidth="container.lg" m="0 auto" mb="6rem">
+    <Box maxWidth="container.lg" m="0 auto" mb="6rem" bg="#F4F6F9" py="5rem">
       <Flex
         justifyContent="space-between"
         alignItems="center"
-        mt="10rem"
+        mt="7rem"
         flexDirection={{
           lg: "row-reverse",
           md: "column",
@@ -31,7 +31,8 @@ const Efficient = () => {
           display={{ md: "block", sm: "block" }}
         />
         <Box
-          mt="2rem"
+          mt="3rem"
+          mb="3rem"
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">

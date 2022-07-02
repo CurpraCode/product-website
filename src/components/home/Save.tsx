@@ -11,10 +11,10 @@ import {
 
 const Save = () => {
   return (
-    <Box maxWidth="1220px" m="0 auto" mb="6rem" px="1rem">
+    <Box maxWidth="1220px" m="0 auto" mb="6rem" px="1rem" bg="#F4F6F9" py="8rem">
       <Flex
         justifyContent="space-between"
-        mt="10rem"
+        // mt="3rem"
         flexDirection={{
           lg: "row-reverse",
           md: "column",

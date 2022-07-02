@@ -11,7 +11,7 @@ import {
 
 const Manage = () => {
   return (
-    <Box bg="#F4F6F9">
+    <Box>
       <Box maxWidth="1220px" m="0 auto" pt="0.1rem" pb="5rem" px="1rem">
         <Flex
           justifyContent="space-between"
