@@ -32,7 +32,7 @@ const Screen = () => {
         <Box
           mt="2rem"
           ml={{ sm: "3rem", md: "3rem", lg: "3.5rem" }}
-          textAlign={isTablet ? "center" : ""}
+          textAlign={isTablet ? "center" : "left"}
         >
           <Heading
             color="#fff"
