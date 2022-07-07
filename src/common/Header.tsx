@@ -20,7 +20,7 @@ const Header = ({ name }: Props) => {
           <Image
             src="/canvey-logo.svg"
             alt=""
-            mt={isTablet ? "2.5rem" : null}
+            mt={isTablet ? "2.5rem" : "null"}
           />
         </Link>
         {isTablet ? null : <AuthButton />}

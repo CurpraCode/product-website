@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../Layout";
 
-const Policy = () => {
+const terms = () => {
   return (
     <Layout>
-      <h1>Privacy Policy</h1>
+      <h1>Terms Of Use</h1>
     </Layout>
   );
 };
 
-export default Policy;
+export default terms
