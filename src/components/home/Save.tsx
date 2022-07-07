@@ -12,7 +12,13 @@ import {
 const Save = () => {
   return (
     <Box bg="#F4F6F9">
-      <Box maxWidth="container.lg" m="0 auto" mb="6rem" px="3rem" py="8rem">
+      <Box
+        maxWidth="container.xl"
+        m="0 auto"
+        mb="6rem"
+        px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
+        py="8rem"
+      >
         <Flex
           justifyContent="space-between"
           flexDirection={{
@@ -29,7 +35,7 @@ const Save = () => {
             alt=""
             width="40%"
             display={{ md: "block", sm: "block" }}
-            ml={{ lg: "5rem", sm: "auto" }}
+            ml={{ lg: "4rem", sm: "auto" }}
             mr={{ lg: "auto", sm: "auto" }}
           />
           <Box mt="2rem">

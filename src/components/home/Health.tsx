@@ -10,9 +10,14 @@ import {
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Health = () => {
-  const [isMobile] = useMediaQuery("(max-width: 968px)");
+  const [isMobile] = useMediaQuery("(max-width: 991px)");
   return (
-    <Box maxWidth="container.lg" m="0 auto" pt="0.1rem" px="3rem">
+    <Box
+      maxWidth="container.xl"
+      m="0 auto"
+      pt="0.1rem"
+      px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
+    >
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -24,7 +29,7 @@ const Health = () => {
         }}
         textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
       >
-        <Box my="5rem" ml={{ lg: "12rem", md: "auto", sm: "auto" }}>
+        <Box my="5rem" ml={{ lg: "8rem", md: "auto", sm: "auto" }}>
           <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
             Advocates for <br /> healthcare
           </Heading>

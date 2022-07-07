@@ -6,7 +6,7 @@ const How = () => {
     <Box
       bg="rgb(255,255,255)"
       maxWidth="container.xl"
-      px="3rem"
+      px={{ lg: "0rem", md: "4rem", sm: "3rem", base: "2rem" }}
       mx="auto"
       mb="5rem"
     >
@@ -26,12 +26,13 @@ const How = () => {
           src="/youtubeimg.png"
           alt=""
           width="512px"
-          mr={{ lg: "5rem", md: "auto", sm: "auto" }}
+          mr={{ lg: "3rem", md: "auto", sm: "auto" }}
           display={{ md: "block", sm: "block" }}
           ml={{ lg: "5rem", md: "auto", sm: "auto" }}
         />
         <Box
           mt="2rem"
+          pr={{ lg: "2rem" }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">

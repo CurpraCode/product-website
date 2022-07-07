@@ -53,7 +53,7 @@ const Features = () => {
               <Heading mb="0.3rem" fontSize="1rem">
                 Instant Access
               </Heading>
-              <Text fontSize="0.7rem">60+ languages provided</Text>
+              <Text fontSize="0.7rem">Video and audio options</Text>
             </Box>
           </Flex>
         </GridItem>

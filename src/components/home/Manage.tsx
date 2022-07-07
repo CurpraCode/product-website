@@ -11,7 +11,13 @@ import {
 
 const Manage = () => {
   return (
-    <Box maxWidth="container.lg" m="0 auto" pt="0.1rem" pb="5rem" px="3rem">
+    <Box
+      maxWidth="container.xl"
+      m="0 auto"
+      pt="0.1rem"
+      pb="5rem"
+      px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
+    >
       <Flex
         justifyContent="space-between"
         alignItems="center"
@@ -45,7 +51,7 @@ const Manage = () => {
           src="/circle-icon.svg"
           alt=""
           width="35%"
-          mr={{ lg: "10rem", md: "auto", sm: "auto" }}
+          mr={{ lg: "6rem", md: "auto", sm: "auto" }}
           display={{ md: "block", sm: "block" }}
           ml={{ md: "auto", sm: "auto" }}
         />

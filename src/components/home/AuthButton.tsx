@@ -4,6 +4,7 @@ import { HStack, Button, useMediaQuery } from "@chakra-ui/react";
 const AuthButton = () => {
 
   const [isTablet] = useMediaQuery("(max-width: 500px)");
+  const [isBase] = useMediaQuery("(max-width: 360px)");
 
   return (
     <HStack>
@@ -11,7 +12,7 @@ const AuthButton = () => {
         bg="transparent"
         color="#fff"
         border="2px solid #fff"
-        w={isTablet ? "150px" : {sm: "110px", md: "110px"}}
+        w={isBase ? "120px" : isTablet ? "150px" : {sm: "110px", md: "110px"}}
         h={isTablet ? "50px" : {sm: "40px", md: "40px"}}
         p="10px"
         borderRadius="8px"
@@ -29,7 +30,7 @@ const AuthButton = () => {
         bg="#fff"
         color="#1491B8"
         border="2px solid #fff"
-        w={isTablet ? "150px" : {sm: "110px", md: "110px"}}
+        w={isBase ? "120px" : isTablet ? "150px" : {sm: "110px", md: "110px"}}
         h={isTablet ? "50px" : {sm: "40px", md: "40px"}}
         _hover={{
           bg: "#fff",

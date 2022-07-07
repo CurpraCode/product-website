@@ -12,7 +12,13 @@ import {
 const Efficient = () => {
   return (
     <Box bg="#F4F6F9">
-      <Box maxWidth="container.lg" m="0 auto" mb="6rem" py="5rem" px="3rem">
+      <Box
+        maxWidth="container.xl"
+        m="0 auto"
+        mb="6rem"
+        py="5rem"
+        px={{ lg: "5rem", md: "4rem", sm: "3rem", base: "2rem" }}
+      >
         <Flex
           justifyContent="space-between"
           alignItems="center"
