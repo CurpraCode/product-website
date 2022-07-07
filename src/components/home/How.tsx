@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+// import video from "./Videos/canvey_how.mp4";
 
 const How = () => {
   return (
@@ -22,14 +23,35 @@ const How = () => {
         }}
         textAlign={{ lg: "left", md: "center", sm: "center" }}
       >
-        <Image
+        {/* <Image
           src="/youtubeimg.png"
           alt=""
           width="512px"
           mr={{ lg: "3rem", md: "auto", sm: "auto" }}
-          display={{ md: "block", sm: "block" }}
           ml={{ lg: "5rem", md: "auto", sm: "auto" }}
-        />
+          display={{ md: "block", sm: "block" }}
+        /> */}
+
+        <Box
+          width="472px"
+          mr={{ lg: "3rem", md: "auto", sm: "auto" }}
+          ml={{ lg: "5rem", md: "auto", sm: "auto" }}
+        >
+          <video autoPlay={true} muted loop>
+            <source src="/videos/canvey_how.mp4" type="video/mp4" />
+          </video>
+        </Box>
+
+        {/* <iframe
+          src="https://player.vimeo.com/video/719642839?h=a587e7a614&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=154317"
+          width="100%"
+          height="auto"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="What is Canvey?"
+        ></iframe> */}
+
         <Box
           mt="2rem"
           pr={{ lg: "2rem" }}
