@@ -23,15 +23,6 @@ const How = () => {
         }}
         textAlign={{ lg: "left", md: "center", sm: "center" }}
       >
-        {/* <Image
-          src="/youtubeimg.png"
-          alt=""
-          width="512px"
-          mr={{ lg: "3rem", md: "auto", sm: "auto" }}
-          ml={{ lg: "5rem", md: "auto", sm: "auto" }}
-          display={{ md: "block", sm: "block" }}
-        /> */}
-
         <Box
           mr={{ lg: "3rem", md: "auto", sm: "auto" }}
           ml={{ lg: "5rem", md: "auto", sm: "auto" }}

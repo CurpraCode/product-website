@@ -13,6 +13,7 @@ import Testimonial from "../components/home/Testimonial";
 import Support from "../components/home/Support";
 import Footer from "../common/Footer";
 import How from "../components/home/How";
+import Contact from "../components/home/Contact";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
@@ -52,7 +53,7 @@ const Home: NextPage = () => {
       <Manage />
       {/* <Testimonial /> */}
       {/* <Support /> */}
-
+      <Contact />
       <Footer />
     </div>
   );
