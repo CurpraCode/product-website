@@ -1,7 +1,15 @@
 import React from "react";
-import { Box, Text, Heading, Flex } from "@chakra-ui/react";
-import location from "../../../public/location.svg"
-import Image from "next/image"
+import {
+  Box,
+  Text,
+  Heading,
+  Input,
+  Stack,
+  InputGroup,
+  InputLeftElement,
+  Textarea,
+} from "@chakra-ui/react";
+import Image from "next/image";
 
 const Contact = () => {
   return (
@@ -98,10 +106,54 @@ const Contact = () => {
           >
             message us
           </Heading>
-          <Box display="flex" flexDirection="column" gap="1.5rem">
-            <Box>Name</Box>
-            <Box>Email</Box>
-            <Box>Message</Box>
+          <Box
+            display="flex"
+            alignItems="stretch"
+            flexDirection="column"
+            gap="1.5rem"
+          >
+            <Stack spacing={4}>
+              <InputGroup
+              // border="1px solid #403E50"
+              // borderRadius="7"
+              // _hover={{border: "1px solid #403E50"}}
+              >
+                <InputLeftElement pointerEvents="none">
+                  {
+                    <Image
+                      src="/name.svg"
+                      width="15%"
+                      height="15%"
+                      alt="name"
+                    />
+                  }
+                </InputLeftElement>
+                <Input type="text" placeholder="Name" required />
+              </InputGroup>
+
+              <InputGroup>
+                <InputLeftElement
+                  pointerEvents="none"
+                  color="gray.300"
+                  fontSize="1.2em"
+                >
+                  {
+                    <Image
+                      src="/email-black.svg"
+                      width="15%"
+                      height="15%"
+                      alt="name"
+                    />
+                  }
+                </InputLeftElement>
+                <Input type="email" placeholder="Email" required />
+              </InputGroup>
+
+              <InputGroup>
+                <Textarea placeholder="Message" rows="8" />
+              </InputGroup>
+            </Stack>
+            <Input type="submit" value="Submit" bg="#3A76BF" color="white" fontWeight="500" />
           </Box>
         </Box>
       </Box>
