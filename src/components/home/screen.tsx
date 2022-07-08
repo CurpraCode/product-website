@@ -53,11 +53,13 @@ const Screen = () => {
             <Button
               bg="#3a76bf"
               borderRadius="8px"
-              padding="10px"
+              py="25px"
               color="#fff"
               width="100%"
+              fontWeight="700"
+              fontSize="18px"
               maxW="200px"
-              mt="1rem"
+              mt="3rem"
               _hover={{
                 bg: "#3a76bf",
               }}

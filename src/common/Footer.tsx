@@ -26,13 +26,13 @@ const Footer = () => {
         color="white"
         flexDirection={{ base: "column", sm: "row" }}
       >
-        <Link href="/Policy">
+        <Link href="#">
           <Text cursor="pointer">Privacy Policy</Text>
         </Link>
-        <Link href="/hippa">
+        <Link href="#">
           <Text cursor="pointer">HIPAA Compliance</Text>
         </Link>
-        <Link href="/terms">
+        <Link href="#">
           <Text cursor="pointer">Terms Of Use</Text>
         </Link>
       </Box>

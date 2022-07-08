@@ -48,7 +48,17 @@ const Efficient = () => {
               base: "center",
             }}
           >
-            <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
+            <Heading
+              mb="1rem"
+              fontWeight="700"
+              fontSize={{
+                lg: "36px",
+                md: "24px",
+                sm: "18px",
+                base: "18px",
+              }}
+              pb="1rem"
+            >
               An efficient end to
               <br /> end platform{" "}
             </Heading>
@@ -59,7 +69,13 @@ const Efficient = () => {
               m={{ md: "auto", sm: "auto", base: "auto" }}
               display={{ lg: "inline", md: "block", sm: "block" }}
             />
-            <Text lineHeight="35px">
+            <Text
+              lineHeight="35px"
+              fontSize={{
+                lg: "24px",
+                base: "18px",
+              }}
+            >
               In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
               Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
               volutpat vehicula nibh, id finibus magna pharetra vel. Ut vehicula

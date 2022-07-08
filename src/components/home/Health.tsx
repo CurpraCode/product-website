@@ -30,7 +30,17 @@ const Health = () => {
         textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
       >
         <Box my="5rem" ml={{ lg: "8rem", md: "auto", sm: "auto" }}>
-          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
+          <Heading
+            mb="1rem"
+            fontWeight="700"
+            fontSize={{
+              lg: "36px",
+              md: "24px",
+              sm: "18px",
+              base: "18px",
+            }}
+            pb="1rem"
+          >
             Advocates for <br /> healthcare
           </Heading>
           <Image
@@ -40,7 +50,13 @@ const Health = () => {
             m={{ md: "auto", sm: "auto", base: "auto" }}
             display={{ lg: "inline", md: "block", sm: "block" }}
           />
-          <Text lineHeight="35px">
+          <Text
+            lineHeight="35px"
+            fontSize={{
+              lg: "24px",
+              base: "18px",
+            }}
+          >
             In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
             Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
             volutpat vehicula nibh, id finibus magna pharetra vel. Ut vehicula
@@ -49,7 +65,7 @@ const Health = () => {
           <Button
             bg="#3a76bf"
             borderRadius="8px"
-            padding="10px"
+            py="25px"
             color="#fff"
             width="200px"
             mt="3rem"

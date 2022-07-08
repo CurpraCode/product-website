@@ -37,7 +37,17 @@ const How = () => {
           pr={{ lg: "2rem" }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
-          <Heading fontWeight="bold" mb="1rem" fontSize="2rem" pb="1rem">
+          <Heading
+            mb="1rem"
+            fontWeight="700"
+            fontSize={{
+              lg: "36px",
+              md: "24px",
+              sm: "18px",
+              base: "18px",
+            }}
+            pb="1rem"
+          >
             What is Canvey?
           </Heading>
 
@@ -48,7 +58,13 @@ const How = () => {
             display={{ lg: "inline", md: "block", sm: "block" }}
             m={{ md: "auto", sm: "auto", base: "auto" }}
           />
-          <Text lineHeight="35px">
+          <Text
+            lineHeight="35px"
+            fontSize={{
+              lg: "24px",
+              base: "18px",
+            }}
+          >
             In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
             Quisque sit amet fringilla mauris. Suspendisse ut tempus ante.
           </Text>
