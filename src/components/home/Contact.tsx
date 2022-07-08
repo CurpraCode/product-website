@@ -8,10 +8,12 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
+  useMediaQuery
 } from "@chakra-ui/react";
 import Image from "next/image";
 
 const Contact = () => {
+  const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <Box
       display="flex"
@@ -26,16 +28,16 @@ const Contact = () => {
         display="flex"
         alignItems="center"
         flexDirection="row"
-        ml="20rem"
+        ml={{ md: "16rem", lg: "20rem" }}
         position="relative"
       >
         <Box
           bg="#3A76BF"
           borderRadius="8px"
-          width="360px"
-          height="400px"
+          width={{ md: "300px", lg: "360px" }}
+          height={{ md: "360px", lg: "400px" }}
           position="absolute"
-          left="-19rem"
+          left={{ md: "-16rem", lg: "-18rem" }}
           display="flex"
           flexDirection="column"
           alignItems="center"
@@ -59,7 +61,9 @@ const Contact = () => {
               />
               <Box color="white">
                 <Heading size="sm">Address</Heading>
-                <Text w="90%">787 N Hampden St Minneapolis, MN</Text>
+                <Text w={{ md: "100%", lg: "90%" }}>
+                  787 N Hampden St Minneapolis, MN
+                </Text>
               </Box>
             </Box>
             <Box display="flex" flexDirection="row" gap="1rem">
@@ -90,8 +94,8 @@ const Contact = () => {
         </Box>
         <Box
           bg="white"
-          width="500px"
-          height="500px"
+          width={{ md: "400px", lg: "500px" }}
+          height={{ md: "440px", lg: "500px" }}
           display="flex"
           flexDirection="column"
           alignItems="center"
@@ -150,10 +154,20 @@ const Contact = () => {
               </InputGroup>
 
               <InputGroup>
-                <Textarea placeholder="Message" rows="8" />
+                <Textarea
+                  placeholder="Message"
+                  // rows={{ md: 8, lg: 8 }}
+                  rows={isTablet ? 7 : 5}
+                />
               </InputGroup>
             </Stack>
-            <Input type="submit" value="Submit" bg="#3A76BF" color="white" fontWeight="500" />
+            <Input
+              type="submit"
+              value="Submit"
+              bg="#3A76BF"
+              color="white"
+              fontWeight="500"
+            />
           </Box>
         </Box>
       </Box>
