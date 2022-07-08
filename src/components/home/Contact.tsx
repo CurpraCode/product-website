@@ -38,7 +38,7 @@ const Contact = () => {
           height={{ md: "360px", lg: "400px" }}
           position="absolute"
           left={{ md: "-16rem", lg: "-18rem" }}
-          display="flex"
+          display={{ base: "none", sm: "none", md: "flex" }}
           flexDirection="column"
           alignItems="center"
           pt="3rem"
@@ -93,13 +93,13 @@ const Contact = () => {
           </Box>
         </Box>
         <Box
-          bg="white"
+          bg={{ sm: "#F4F6F9", md: "white" }}
           width={{ md: "400px", lg: "500px" }}
           height={{ md: "440px", lg: "500px" }}
           display="flex"
           flexDirection="column"
           alignItems="center"
-          pt="3rem"
+          pt={{base: "0rem", sm: "0rem", md: "3rem"}}
         >
           <Heading
             fontSize="24px"
@@ -118,9 +118,10 @@ const Contact = () => {
           >
             <Stack spacing={4}>
               <InputGroup
-              // border="1px solid #403E50"
-              // borderRadius="7"
-              // _hover={{border: "1px solid #403E50"}}
+                // border="1px solid #403E50"
+                // borderRadius="7"
+                // _hover={{border: "1px solid #403E50"}}
+                bg="white"
               >
                 <InputLeftElement pointerEvents="none">
                   {
@@ -135,7 +136,7 @@ const Contact = () => {
                 <Input type="text" placeholder="Name" required />
               </InputGroup>
 
-              <InputGroup>
+              <InputGroup bg="white">
                 <InputLeftElement
                   pointerEvents="none"
                   color="gray.300"
@@ -153,7 +154,7 @@ const Contact = () => {
                 <Input type="email" placeholder="Email" required />
               </InputGroup>
 
-              <InputGroup>
+              <InputGroup bg="white">
                 <Textarea
                   placeholder="Message"
                   // rows={{ md: 8, lg: 8 }}
