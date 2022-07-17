@@ -57,10 +57,8 @@ const Health = () => {
               base: "18px",
             }}
           >
-            In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-            Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
-            volutpat vehicula nibh, id finibus magna pharetra vel. Ut vehicula
-            rhoncus ultricies. Duis euismod tortor vel ante varius fringilla.
+            Our focus is to help facilitate the highest level of care for LEP
+            patients
           </Text>
           <Button
             bg="#3a76bf"

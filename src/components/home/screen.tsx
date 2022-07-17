@@ -30,7 +30,7 @@ const Screen = () => {
         }}
       >
         <Box
-          mt="2rem"
+          mt="4rem"
           ml={{ sm: "3rem", md: "3rem", lg: "3.5rem" }}
           textAlign={isTablet ? "center" : "left"}
         >
@@ -40,7 +40,7 @@ const Screen = () => {
             mb="1rem"
             fontSize={{ base: "24px", sm: "32px", md: "48px" }}
           >
-            Interpretation <br /> made simple
+            We Speak your <br /> Language
           </Heading>
 
           {isTablet ? (

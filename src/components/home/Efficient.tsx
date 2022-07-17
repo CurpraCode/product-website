@@ -76,10 +76,8 @@ const Efficient = () => {
                 base: "18px",
               }}
             >
-              In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-              Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
-              volutpat vehicula nibh, id finibus magna pharetra vel. Ut vehicula
-              rhoncus ultricies. Duis euismod tortor vel ante varius fringilla.
+              We’ve Simplified how you connect with interpreters. One click
+              request and connect to a language of your choice
             </Text>
           </Box>
         </Flex>

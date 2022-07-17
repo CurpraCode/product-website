@@ -50,7 +50,7 @@ const Save = () => {
               }}
               pb="1rem"
             >
-              Save time with <br /> Automations{" "}
+              Opportunities for <br /> Interpreters
             </Heading>
             <Image
               src="/Line.svg"
@@ -66,10 +66,8 @@ const Save = () => {
                 base: "18px",
               }}
             >
-              In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-              Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
-              volutpat vehicula nibh, id finibus magna pharetra vel. Ut vehicula
-              rhoncus ultricies. Duis euismod tortor vel ante varius fringilla.
+              Get on the app and get paid. At Canvey we want interpreters to
+              work from anywhere at anytime
             </Text>
           </Box>
         </Flex>

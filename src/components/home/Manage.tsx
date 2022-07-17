@@ -41,7 +41,7 @@ const Manage = () => {
             }}
             pb="1rem"
           >
-            Manage everything in one workspace
+            Social Impact
           </Heading>
           <Image
             src="/Lineblue.svg"
@@ -57,10 +57,9 @@ const Manage = () => {
               base: "18px",
             }}
           >
-            In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-            Quisque sit amet fringilla mauris. Suspendisse ut tempus ante. Ut
-            volutpat vehicula nibh, id finibus magna pharetra vel. Ut vehicula
-            rhoncus ultricies. Duis euismod tortor vel ante varius fringilla.
+            We proudly advocate for underserved communities by facilitating
+            multi-lingual communications. Our services reduce interpretation
+            mistakes and fraud
           </Text>
         </Box>
         <Image

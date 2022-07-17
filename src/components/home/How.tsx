@@ -65,8 +65,8 @@ const How = () => {
               base: "18px",
             }}
           >
-            In sagittis condimentum vehicula. Morbi ullamcorper egestas orci.
-            Quisque sit amet fringilla mauris. Suspendisse ut tempus ante.
+            Our platform is innovating the way individuals & businesses
+            communicate with people who are limited by Language barriers.
           </Text>
         </Box>
       </Flex>
