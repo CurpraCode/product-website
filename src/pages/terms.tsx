@@ -9,4 +9,4 @@ const terms = () => {
   );
 };
 
-export default terms
+export default terms;

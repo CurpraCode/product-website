@@ -4,9 +4,7 @@ import {
   Flex,
   Text,
   Heading,
-  Button,
   Image,
-  Divider,
 } from "@chakra-ui/react";
 
 const Manage = () => {

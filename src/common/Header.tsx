@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, HStack, useMediaQuery, Image } from "@chakra-ui/react";
-import Link from "next/Link";
+import Link from "next/link";
 import AuthButton from "../components/home/AuthButton"
 
 interface Props {
