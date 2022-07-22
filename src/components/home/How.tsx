@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, useMediaQuery } from "@chakra-ui/react";
 
 const How = () => {
+  const isMobile = useMediaQuery("(max-width: 991px)")
   return (
     <Box
       bg="rgb(255,255,255)"
-      maxWidth="container.xl"
+      maxWidth="container.lg"
       px={{ lg: "0rem", md: "4rem", sm: "3rem", base: "2rem" }}
       mx="auto"
       mb="5rem"
@@ -26,7 +27,7 @@ const How = () => {
           mr={{ lg: "3rem", md: "auto", sm: "auto" }}
           ml={{ lg: "5rem", md: "auto", sm: "auto" }}
         >
-          <video width="512px" height="400px" autoPlay={true} muted loop>
+          <video width={isMobile ? "500px" : "800px"} autoPlay={true} muted loop>
             <source src="/videos/canvey_how.mp4" type="video/mp4" />
           </video>
         </Box>
@@ -47,7 +48,7 @@ const How = () => {
             }}
             pb="1rem"
           >
-            What is Canvey?
+            Our Focus
           </Heading>
 
           <Image
@@ -64,8 +65,9 @@ const How = () => {
               base: "18px",
             }}
           >
-            Our platform is innovating the way individuals & businesses
-            communicate with people who are limited by Language barriers.
+            Providing competitive quality interpreting by innovating the way
+            individuals & businesses communicate with people who are limited by
+            Language barriers.
           </Text>
         </Box>
       </Flex>

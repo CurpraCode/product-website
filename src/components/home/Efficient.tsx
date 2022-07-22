@@ -13,7 +13,7 @@ const Efficient = () => {
   return (
     <Box bg="#F4F6F9">
       <Box
-        maxWidth="container.xl"
+        maxWidth="container.lg"
         m="0 auto"
         mb="6rem"
         py="5rem"
@@ -59,8 +59,8 @@ const Efficient = () => {
               }}
               pb="1rem"
             >
-              An efficient end to
-              <br /> end platform{" "}
+              An Efficient End to
+              <br /> End Platform{" "}
             </Heading>
             <Image
               src="/Line.svg"
@@ -76,8 +76,7 @@ const Efficient = () => {
                 base: "18px",
               }}
             >
-              We’ve Simplified how you connect with interpreters. One click
-              request and connect to a language of your choice
+              One click request and connect to a language of your choice
             </Text>
           </Box>
         </Flex>

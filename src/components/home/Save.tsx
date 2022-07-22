@@ -13,7 +13,7 @@ const Save = () => {
   return (
     <Box bg="#F4F6F9">
       <Box
-        maxWidth="container.xl"
+        maxWidth="container.lg"
         m="0 auto"
         mb="6rem"
         px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
@@ -66,8 +66,8 @@ const Save = () => {
                 base: "18px",
               }}
             >
-              Get on the app and get paid. At Canvey we want interpreters to
-              work from anywhere at anytime
+              At Canvey we want interpreters to work from anywhere at anytime.
+              Get on the app and get paid.
             </Text>
           </Box>
         </Flex>

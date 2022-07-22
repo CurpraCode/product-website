@@ -18,7 +18,7 @@ import ContactUs from "../components/home/ContactUs";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
-  const [isMobile] = useMediaQuery("(max-width: 968px)");
+  const [isMobile] = useMediaQuery("(max-width: 991px)");
   const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <div>
@@ -26,6 +26,7 @@ const Home: NextPage = () => {
         <title>Canvey | Website</title>
         <meta name="description" content="Canvey Interpretation made simple" />
         <link rel="icon" href="/canvey-logo.svg" />
+        {/* add google analytics */}
       </Head>
 
       <Box
@@ -37,9 +38,10 @@ const Home: NextPage = () => {
       >
         {isMobile ? null : (
           <Image
-            src="/bg-curve.svg"
+            src="/bg-curve-2.png"
             alt=""
             width="100%"
+            height={{ lg: "550px" }}
             pos="absolute"
             zIndex={-5}
           />

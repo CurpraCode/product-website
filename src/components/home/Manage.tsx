@@ -10,7 +10,7 @@ import {
 const Manage = () => {
   return (
     <Box
-      maxWidth="container.xl"
+      maxWidth="container.lg"
       m="0 auto"
       pt="0.1rem"
       pb="5rem"
@@ -57,7 +57,7 @@ const Manage = () => {
           >
             We proudly advocate for underserved communities by facilitating
             multi-lingual communications. Our services reduce interpretation
-            mistakes and fraud
+            mistakes and fraud.
           </Text>
         </Box>
         <Image

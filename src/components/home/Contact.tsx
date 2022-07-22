@@ -164,7 +164,7 @@ const Contact = () => {
             </Stack>
             <Input
               type="submit"
-              value="Submit"
+              value="Contact Us"
               bg="#3A76BF"
               color="white"
               fontWeight="500"

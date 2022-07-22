@@ -3,7 +3,7 @@ import { HStack, Button, useMediaQuery } from "@chakra-ui/react";
 
 const AuthButton = () => {
 
-  const [isTablet] = useMediaQuery("(max-width: 500px)");
+  const [isTablet] = useMediaQuery("(max-width: 560px)");
   const [isBase] = useMediaQuery("(max-width: 360px)");
 
   return (

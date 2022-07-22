@@ -7,18 +7,20 @@ interface Props {
   name: string;
 }
 const Header = ({ name }: Props) => {
-  const [isTablet] = useMediaQuery("(max-width: 500px)");
+  const [isTablet] = useMediaQuery("(max-width: 560px)");
   
   return (
     <Box bg={name}>
       <HStack
-        justifyContent={isTablet ? "center" : "space-between"}
-        alignItems="center"
+        justifyContent={isTablet ? "" : "space-between"}
+        alignItems="flex-start"
+        m="auto"
+        maxW="container.lg"
         p="16px 64px"
       >
         <Link href="/">
           <Image
-            src="/canvey-logo.svg"
+            src="/canvey-logo.png"
             alt=""
             mt={isTablet ? "2.5rem" : "null"}
           />
