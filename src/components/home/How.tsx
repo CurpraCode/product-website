@@ -27,7 +27,7 @@ const How = () => {
           mr={{ lg: "3rem", md: "auto", sm: "auto" }}
           ml={{ lg: "5rem", md: "auto", sm: "auto" }}
         >
-          <video width={isMobile ? "500px" : "800px"} autoPlay={true} muted loop>
+          <video width={isMobile ? "800px" : "800px"} autoPlay={true} muted loop>
             <source src="/videos/canvey_how.mp4" type="video/mp4" />
           </video>
         </Box>

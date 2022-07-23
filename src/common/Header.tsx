@@ -15,7 +15,7 @@ const Header = ({ name }: Props) => {
         justifyContent={isTablet ? "" : "space-between"}
         alignItems="flex-start"
         m="auto"
-        maxW="container.lg"
+        maxW="container.xl"
         p="16px 64px"
       >
         <Link href="/">

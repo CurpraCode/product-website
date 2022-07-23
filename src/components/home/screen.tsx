@@ -14,10 +14,8 @@ const Screen = () => {
   const [isDesktop] = useMediaQuery("(max-width: 991px)");
   return (
     <Box
-      maxWidth="container.lg"
-      // height={{ base: "auto", sm: "520px", md: "550px" }}
+      maxWidth="container.xl"
       height={isTablet ? "auto" : "550px"}
-      // {isBase ? "120px" : isTablet ? "150px" : {sm: "110px", md: "110px"}}
       m="auto"
       position="relative"
     >
@@ -92,7 +90,7 @@ const Screen = () => {
           src="/screen.png"
           alt=""
           display={isTablet ? "none" : "block"}
-          width={{ base: "80%", sm: "65%", md: "50%", lg: "40%" }}
+          width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           position="absolute"
           right={isTablet ? "" : "0px"}
           top={{ md: "10.5rem", lg: "4.5rem", sm: "10rem" }}
