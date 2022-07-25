@@ -12,7 +12,7 @@ const Footer = () => {
       textAlign="center"
       gap="5rem"
       py="5rem"
-      px={{ base: "1rem", sm: "2rem", md: "3rem" }}
+      px={{ base: "1rem", sm: "1rem", md: "3rem" }}
     >
       <Link href="/">
         <Box cursor="pointer">
@@ -22,18 +22,21 @@ const Footer = () => {
 
       <Box
         display="flex"
-        gap={{ base: "1rem", sm: "2rem", md: "4rem" }}
+        gap={{ base: "2rem", sm: "1.1rem", md: "4rem" }}
         color="white"
-        flexDirection={{ base: "column", sm: "row" }}
+        flexDirection={{ base: "column", sm: "row", md: "row" }}
       >
-        <Link href="#">
+        <Link href="/privacy-policy">
           <Text cursor="pointer">Privacy Policy</Text>
         </Link>
-        <Link href="#">
+        <Link href="/hippa-compliance">
           <Text cursor="pointer">HIPAA Compliance</Text>
         </Link>
-        <Link href="#">
+        <Link href="/terms-of-use">
           <Text cursor="pointer">Terms Of Use</Text>
+        </Link>
+        <Link href="/contact-us">
+          <Text cursor="pointer">Contact Us</Text>
         </Link>
       </Box>
       <Box display="flex" gap="2rem" color="white">

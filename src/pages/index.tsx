@@ -9,17 +9,12 @@ import Efficient from "../components/home/Efficient";
 import Health from "../components/home/Health";
 import Save from "../components/home/Save";
 import Manage from "../components/home/Manage";
-// import Testimonial from "../components/home/Testimonial";
-// import Support from "../components/home/Support";
 import Footer from "../common/Footer";
 import How from "../components/home/How";
-import Contact from "../components/home/Contact";
-import ContactUs from "../components/home/ContactUs";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   const [isMobile] = useMediaQuery("(max-width: 991px)");
-  const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <div>
       <Head>
@@ -55,10 +50,6 @@ const Home: NextPage = () => {
       <Health />
       <Save />
       <Manage />
-      {/* <Testimonial /> */}
-      {/* <Support /> */}
-      <Contact />
-      {isTablet ? <ContactUs /> : null}
       <Footer />
     </div>
   );

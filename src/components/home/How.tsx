@@ -9,7 +9,8 @@ const How = () => {
       maxWidth="container.lg"
       px={{ lg: "0rem", md: "4rem", sm: "3rem", base: "2rem" }}
       mx="auto"
-      mb="5rem"
+      mb="8rem"
+      mt="8rem"
     >
       <Flex
         justifyContent="space-between"

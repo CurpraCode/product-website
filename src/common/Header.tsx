@@ -13,9 +13,9 @@ const Header = ({ name }: Props) => {
     <Box bg={name}>
       <HStack
         justifyContent={isTablet ? "" : "space-between"}
-        alignItems="flex-start"
+        alignItems="center"
         m="auto"
-        maxW="container.xl"
+        maxW="8xl"
         p="16px 64px"
       >
         <Link href="/">
@@ -25,6 +25,7 @@ const Header = ({ name }: Props) => {
             mt={isTablet ? "2.5rem" : "null"}
           />
         </Link>
+        {/* <AuthButton /> */}
         {isTablet ? null : <AuthButton />}
       </HStack>
     </Box>
