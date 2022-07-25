@@ -30,8 +30,8 @@ function StackEx() {
         direction={{ base: "column", sm: "column", md: "row" }}
       >
         <Feature
-          bgColor={{ md: "none", md: "#3A76BF" }}
-          color={{ md: "black", md: "white" }}
+          bgColor={{ base: "none", md: "#3A76BF" }}
+          color={{ base: "black", md: "white" }}
           title="What is HIPAA?"
           desc1="HIPAA is an acronym that stands for “Health Insurance Portability and Accountability Act.” It’s a federal law – overseen by the U.S. Department of Health and Human Services (HHS) Office for Civil Rights – that outlines the proper treatment of patient information, which is labeled as Protected Health Information (PHI)."
           desc2=" In the simplest sense, HIPAA requires medical professionals – including medical interpreters – to safeguard patient data. This includes in communications – both verbal and in writing – as those can contain patient details that need to be protected."
