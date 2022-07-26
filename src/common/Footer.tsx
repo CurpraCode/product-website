@@ -22,7 +22,9 @@ const Footer = () => {
 
       <Box
         display="flex"
-        gap={{ base: "2rem", sm: "1.1rem", md: "4rem" }}
+        flexWrap="wrap"
+        justifyContent="center"
+        gap={{ base: "2rem", sm: "2rem", md: "4rem" }}
         color="white"
         flexDirection={{ base: "column", sm: "row", md: "row" }}
       >

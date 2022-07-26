@@ -1,7 +1,9 @@
 import React from "react";
 import { Box, HStack, useMediaQuery, Image, Button } from "@chakra-ui/react";
 import Link from "next/link";
-import AuthButton from "../components/home/AuthButton"
+import { useRouter } from "next/router";
+import AuthButton from "../components/home/AuthButton";
+import AuthButtonMobile from "../components/home/AuthButtonMobile";
 
 interface Props {
   name: string;
@@ -9,7 +11,8 @@ interface Props {
 const Header = ({ name }: Props) => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
   const [isBase] = useMediaQuery("(max-width: 360px)");
-  
+  const router = useRouter();
+
   return (
     <Box bg={name}>
       <HStack
@@ -17,12 +20,12 @@ const Header = ({ name }: Props) => {
         alignItems="center"
         m="auto"
         maxW="8xl"
-        p="16px 64px"
+        p="16px 48px"
         mb="1rem"
       >
         <Link href="/">
           <Image
-            src="/canvey-logo.png"
+            src="/canvey-logo.svg"
             alt=""
             mt={isTablet ? "2.5rem" : "null"}
             cursor="pointer"
@@ -31,56 +34,7 @@ const Header = ({ name }: Props) => {
         {/* <AuthButton /> */}
         {isTablet ? null : <AuthButton />}
       </HStack>
-      {isTablet ? (
-        <HStack p="16px 64px 64px 64px">
-          <Button
-            bg="transparent"
-            color="#fff"
-            border="2px solid #fff"
-            w={
-              isBase
-                ? "120px"
-                : isTablet
-                ? "150px"
-                : { sm: "110px", md: "110px" }
-            }
-            h={isTablet ? "50px" : { sm: "40px", md: "40px" }}
-            p="10px"
-            borderRadius="8px"
-            _hover={{
-              bg: "none",
-            }}
-            _focus={{
-              outline: "none",
-              bg: "none",
-            }}
-          >
-            Sign Up
-          </Button>
-          <Button
-            bg="#fff"
-            color="#1491B8"
-            border="2px solid #fff"
-            w={
-              isBase
-                ? "120px"
-                : isTablet
-                ? "150px"
-                : { sm: "110px", md: "110px" }
-            }
-            h={isTablet ? "50px" : { sm: "40px", md: "40px" }}
-            _hover={{
-              bg: "#fff",
-            }}
-            _focus={{
-              outline: "none",
-              bg: "#fff",
-            }}
-          >
-            Sign In
-          </Button>
-        </HStack>
-      ) : null}
+      {router.asPath != "/" ? <AuthButtonMobile /> : null}
     </Box>
   );
 };

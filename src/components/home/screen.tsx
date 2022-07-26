@@ -43,7 +43,7 @@ const Screen = () => {
           textAlign={isTablet ? "left" : "left"}
         >
           <Image
-            src="/screen.png"
+            src="/screen.svg"
             alt=""
             display={isTablet ? "block" : "none"}
             width="80%"
@@ -87,8 +87,8 @@ const Screen = () => {
           )}
         </Box>
         <Image
-          src="/screen.png"
-          alt=""
+          src="/screen.svg"
+          alt="mac and phone"
           display={isTablet ? "none" : "block"}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           position="absolute"
