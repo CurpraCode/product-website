@@ -1,8 +1,15 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  useMediaQuery,
+} from "@chakra-ui/react";
 
 const How = () => {
-  const isMobile = useMediaQuery("(max-width: 991px)")
+  const isMobile = useMediaQuery("(max-width: 991px)");
   return (
     <Box
       bg="rgb(255,255,255)"
@@ -28,7 +35,12 @@ const How = () => {
           mr={{ lg: "3rem", md: "auto", sm: "auto" }}
           ml={{ lg: "5rem", md: "auto", sm: "auto" }}
         >
-          <video width={isMobile ? "800px" : "800px"} autoPlay={true} muted loop>
+          <video
+            width={isMobile ? "800px" : "800px"}
+            autoPlay={true}
+            muted
+            loop
+          >
             <source src="/videos/canvey_how.mp4" type="video/mp4" />
           </video>
         </Box>

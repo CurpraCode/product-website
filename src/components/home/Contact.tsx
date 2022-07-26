@@ -22,9 +22,10 @@ const Contact = () => {
         justifyContent="center"
         alignItems="center"
         bg="white"
-        bgImage="url('/top.png')"
-        bgPosition="top"
-        bgRepeat="no-repeat"
+        // bgImage="url('/top.png')"
+        // bgPosition="top"
+        // bgRepeat="no-repeat"
+        // width="100%"
       >
         <Box
           maxWidth="container.lg"
@@ -97,14 +98,14 @@ const Contact = () => {
             </Box>
           </Box>
           <Box
-            bg={{ sm: "#F4F6F9", md: "white" }}
+            bg="white"
             width={{ md: "400px", lg: "500px" }}
             height={{ md: "440px", lg: "500px" }}
             display="flex"
             flexDirection="column"
             alignItems="center"
             pt={{ base: "0rem", sm: "0rem", md: "3rem" }}
-            boxShadow="0px 4px 20px rgba(0, 0, 0, 0.12)"
+            boxShadow={{ base: "none", md: "0px 4px 20px rgba(0, 0, 0, 0.12)" }}
           >
             <Heading
               fontSize="24px"
@@ -178,18 +179,6 @@ const Contact = () => {
           </Box>
         </Box>
       </Box>
-      {/* <Box
-        display="flex"
-        flexDirection="row"
-        justifyContent="center"
-        alignItems="center"
-        w="100%"
-        h="400px"
-        bg="white"
-        bgImage="url('/bottom.png')"
-        bgPosition="bottom"
-        bgRepeat="no-repeat"
-      ></Box> */}
     </>
   );
 };
