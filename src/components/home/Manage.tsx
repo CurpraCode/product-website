@@ -12,8 +12,7 @@ const Manage = () => {
     <Box
       maxWidth="container.lg"
       m="0 auto"
-      pt="0.1rem"
-      pb="5rem"
+      py="8rem"
       px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
     >
       <Flex
@@ -27,7 +26,7 @@ const Manage = () => {
         }}
         textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
       >
-        <Box mt="5rem">
+        <Box>
           <Heading
             mb="1rem"
             fontWeight="700"

@@ -10,7 +10,6 @@ interface Props {
 }
 const Header = ({ name }: Props) => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
-  const [isBase] = useMediaQuery("(max-width: 360px)");
   const router = useRouter();
 
   return (
@@ -31,7 +30,6 @@ const Header = ({ name }: Props) => {
             cursor="pointer"
           />
         </Link>
-        {/* <AuthButton /> */}
         {isTablet ? null : <AuthButton />}
       </HStack>
       {router.asPath != "/" ? <AuthButtonMobile /> : null}

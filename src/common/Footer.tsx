@@ -16,7 +16,7 @@ const Footer = () => {
     >
       <Link href="/">
         <Box cursor="pointer">
-          <Image src="/canvey-logo.svg" alt="canvey logo" />
+          <Image src="/logo.svg" alt="canvey logo" />
         </Box>
       </Link>
 
@@ -41,7 +41,7 @@ const Footer = () => {
           <Text cursor="pointer">Contact Us</Text>
         </Link>
       </Box>
-      <Box display="flex" gap="2rem" color="white">
+      <Box display="flex" gap="2.5rem" color="white">
         <Image src="/twitter.svg" alt="social twitter" />
         <Image src="/instagram.svg" alt="social instagram" />
         <Image src="/facebook.svg" alt="social facebook" />

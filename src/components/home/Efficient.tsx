@@ -15,14 +15,12 @@ const Efficient = () => {
       <Box
         maxWidth="container.lg"
         m="0 auto"
-        mb="6rem"
-        py="5rem"
+        py="8rem"
         px={{ lg: "5rem", md: "4rem", sm: "3rem", base: "2rem" }}
       >
         <Flex
           justifyContent="space-between"
           alignItems="center"
-          mt="7rem"
           flexDirection={{
             lg: "row-reverse",
             md: "column",
@@ -39,7 +37,6 @@ const Efficient = () => {
             ml={{ base: "0rem", sm: "0rem", lg: "2rem" }}
           />
           <Box
-            mt="3rem"
             mb="3rem"
             textAlign={{
               lg: "left",

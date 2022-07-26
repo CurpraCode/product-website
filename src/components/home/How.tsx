@@ -46,7 +46,6 @@ const How = () => {
         </Box>
 
         <Box
-          mt="2rem"
           pr={{ lg: "2rem" }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >

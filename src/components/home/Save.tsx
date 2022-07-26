@@ -15,7 +15,6 @@ const Save = () => {
       <Box
         maxWidth="container.lg"
         m="0 auto"
-        mb="6rem"
         px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
         py="8rem"
       >
@@ -38,7 +37,7 @@ const Save = () => {
             ml={{ lg: "4rem", sm: "auto" }}
             mr={{ lg: "auto", sm: "auto" }}
           />
-          <Box mt="2rem">
+          <Box>
             <Heading
               mb="1rem"
               fontWeight="700"
