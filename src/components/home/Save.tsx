@@ -6,7 +6,6 @@ import {
   Heading,
   Button,
   Image,
-  Divider,
 } from "@chakra-ui/react";
 
 const Save = () => {
@@ -69,6 +68,26 @@ const Save = () => {
               At Canvey we want interpreters to work from anywhere at anytime.
               Get on the app and get paid.
             </Text>
+            <Button
+              bg="#3a76bf"
+              borderRadius="8px"
+              py="25px"
+              color="#fff"
+              width="100%"
+              fontWeight="700"
+              fontSize="18px"
+              maxW="200px"
+              mt={{ base: "2rem", xl: "2.5rem" }}
+              _hover={{
+                bg: "#3a76bf",
+              }}
+              _focus={{
+                outline: "none",
+                bg: "#3a76bf",
+              }}
+            >
+              Get Started
+            </Button>
           </Box>
         </Flex>
       </Box>

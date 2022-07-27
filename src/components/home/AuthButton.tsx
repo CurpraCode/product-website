@@ -24,7 +24,7 @@ const AuthButton = () => {
           bg: "none",
         }}
       >
-        Sign Up
+        Sign In
       </Button>
       <Button
         bg="#fff"
@@ -40,7 +40,7 @@ const AuthButton = () => {
           bg: "#fff",
         }}
       >
-        Sign In
+        Sign Up
       </Button>
     </HStack>
   );

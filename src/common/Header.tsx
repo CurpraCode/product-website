@@ -18,8 +18,8 @@ const Header = ({ name }: Props) => {
         justifyContent={isTablet ? "" : "space-between"}
         alignItems="center"
         m="auto"
-        maxW="8xl"
-        p="16px 48px"
+        maxW="7xl"
+        p="24px 96px 16px 32px"
       >
         <Link href="/">
           <Image

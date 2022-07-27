@@ -12,6 +12,7 @@ import AuthButton from "./AuthButton";
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
   const [isDesktop] = useMediaQuery("(max-width: 768px)");
+  const [isMac] = useMediaQuery("(max-width: 1200px)");
   return (
     <Box
       maxWidth="container.xl"
@@ -73,7 +74,7 @@ const Screen = () => {
               fontWeight="700"
               fontSize="18px"
               maxW="200px"
-              mt="3rem"
+              mt={{ md: "2rem", lg: "2rem", xl: "2.5rem" }}
               _hover={{
                 bg: "#3a76bf",
               }}
@@ -92,8 +93,9 @@ const Screen = () => {
           display={isTablet ? "none" : "block"}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           position="absolute"
-          right={isTablet ? "" : "0px"}
-          top={{ md: "10.5rem", lg: "4.5rem", sm: "12.5rem" }}
+          // right={isMac ? "9rem" : isTablet ? "" : "11rem"}
+          right= {{base: "", sm: "0rem", md: "1rem", lg: "11rem", xl: "12rem"}}
+          top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}
         />
       </Flex>
     </Box>
