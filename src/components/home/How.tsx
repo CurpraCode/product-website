@@ -9,7 +9,8 @@ import {
 } from "@chakra-ui/react";
 
 const How = () => {
-  const isMobile = useMediaQuery("(max-width: 991px)");
+  const [isMobile] = useMediaQuery("(max-width: 520px)");
+  const [isBase] = useMediaQuery("(max-width: 430px)");
   return (
     <Box
       bg="rgb(255,255,255)"
@@ -35,8 +36,7 @@ const How = () => {
           mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
         >
           <iframe
-            // width={{ lg: 560, md: 420, sm: 300 }}
-            width="500"
+            width={isBase ? "300" : isMobile ? "400" : "500"}
             height="340"
             src="https://www.youtube.com/embed/XVkFtvW3GCE"
             title="YouTube video player"
