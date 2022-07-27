@@ -16,13 +16,11 @@ const How = () => {
       maxWidth="container.lg"
       px={{ lg: "0rem", md: "4rem", sm: "3rem", base: "2rem" }}
       mx="auto"
-      mb="8rem"
-      mt="8rem"
+      py="8rem"
     >
       <Flex
         justifyContent="space-between"
         alignItems="center"
-        mt="5rem"
         flexDirection={{
           lg: "row",
           md: "column",
@@ -32,17 +30,20 @@ const How = () => {
         textAlign={{ lg: "left", md: "center", sm: "center" }}
       >
         <Box
-          mr={{ lg: "3rem", md: "auto", sm: "auto" }}
-          ml={{ lg: "5rem", md: "auto", sm: "auto" }}
+          mr={{ lg: "3rem" }}
+          ml={{ lg: "5rem" }}
+          mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
         >
-          <video
-            width={isMobile ? "800px" : "800px"}
-            autoPlay={true}
-            muted
-            loop
-          >
-            <source src="/videos/canvey_how.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            // width={{ lg: 560, md: 420, sm: 300 }}
+            width="500"
+            height="340"
+            src="https://www.youtube.com/embed/XVkFtvW3GCE"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </Box>
 
         <Box

@@ -35,6 +35,7 @@ const Efficient = () => {
             width="50%"
             display="block"
             ml={{ base: "0rem", sm: "0rem", lg: "2rem" }}
+            mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
           />
           <Box
             mb="3rem"

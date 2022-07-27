@@ -66,6 +66,7 @@ const Health = () => {
             mr={{ lg: "6rem", md: "auto", sm: "auto" }}
             display={{ md: "block", sm: "block" }}
             ml={{ md: "auto", sm: "auto" }}
+            mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
           />
         </Flex>
       </Box>

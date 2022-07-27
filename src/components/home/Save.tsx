@@ -36,6 +36,7 @@ const Save = () => {
             display={{ md: "block", sm: "block" }}
             ml={{ lg: "4rem", sm: "auto" }}
             mr={{ lg: "auto", sm: "auto" }}
+            mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
           />
           <Box>
             <Heading
