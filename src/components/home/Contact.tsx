@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 
 const Contact = () => {
-  const [isTablet] = useMediaQuery("(max-width: 768px)");
+  const [isTablet] = useMediaQuery("(max-width: 767px)");
   return (
     <>
       <Box
@@ -21,11 +21,7 @@ const Contact = () => {
         flexDirection="row"
         justifyContent="center"
         alignItems="center"
-        bg="white"
-        // bgImage="url('/top.png')"
-        // bgPosition="top"
-        // bgRepeat="no-repeat"
-        // width="100%"
+        bg={{ base: "#F4F6F9", md: "white" }}
       >
         <Box
           maxWidth="container.lg"
@@ -98,7 +94,7 @@ const Contact = () => {
             </Box>
           </Box>
           <Box
-            bg="white"
+            bg={{ base: "#F4F6F9", md: "white" }}
             width={{ md: "400px", lg: "500px" }}
             height={{ md: "440px", lg: "500px" }}
             display="flex"
@@ -123,12 +119,7 @@ const Contact = () => {
               gap="1.5rem"
             >
               <Stack spacing={4}>
-                <InputGroup
-                  // border="1px solid #403E50"
-                  // borderRadius="7"
-                  // _hover={{border: "1px solid #403E50"}}
-                  bg="white"
-                >
+                <InputGroup bg="white">
                   <InputLeftElement pointerEvents="none">
                     {
                       <Image
@@ -161,16 +152,12 @@ const Contact = () => {
                 </InputGroup>
 
                 <InputGroup bg="white">
-                  <Textarea
-                    placeholder="Message"
-                    // rows={{ md: 8, lg: 8 }}
-                    rows={isTablet ? 7 : 5}
-                  />
+                  <Textarea placeholder="Message" rows={isTablet ? 7 : 5} />
                 </InputGroup>
               </Stack>
               <Input
                 type="submit"
-                value="Contact Us"
+                value={isTablet ? "Send Message" : "Contact Us"}
                 bg="#3A76BF"
                 color="white"
                 fontWeight="500"

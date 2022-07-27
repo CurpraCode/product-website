@@ -5,7 +5,7 @@ import Contact from "../components/home/Contact";
 import ContactUs from "../components/home/ContactUs";
 
 const ContactPage = () => {
-  const [isTablet] = useMediaQuery("(max-width: 768px)");
+  const [isTablet] = useMediaQuery("(max-width: 767px)");
   return (
     <div>
       <Layout>

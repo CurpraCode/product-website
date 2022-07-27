@@ -3,14 +3,13 @@ import { Box, Heading, Text, useMediaQuery } from "@chakra-ui/react";
 import Image from "next/image";
 
 const ContactUs = () => {
-  const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <Box
       bg="#3A76BF"
       display="flex"
       flexDirection="column"
       alignItems="center"
-      py="3rem"
+      py="6rem"
     >
       <Heading
         fontSize="24px"

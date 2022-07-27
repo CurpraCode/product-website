@@ -20,13 +20,13 @@ const Header = ({ name }: Props) => {
         m="auto"
         maxW="8xl"
         p="16px 48px"
-        mb="1rem"
       >
         <Link href="/">
           <Image
             src="/canvey-logo.svg"
             alt=""
             mt={isTablet ? "2.5rem" : "null"}
+            mb="1rem"
             cursor="pointer"
           />
         </Link>
