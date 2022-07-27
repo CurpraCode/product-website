@@ -11,7 +11,7 @@ import AuthButton from "./AuthButton";
 
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
-  const [isDesktop] = useMediaQuery("(max-width: 991px)");
+  const [isDesktop] = useMediaQuery("(max-width: 768px)");
   return (
     <Box
       maxWidth="container.xl"
@@ -50,9 +50,9 @@ const Screen = () => {
           />
           <Heading
             color="#fff"
-            fontWeight="bold"
+            fontWeight="800"
             mb="1rem"
-            fontSize={{ base: "24px", sm: "32px", md: "48px" }}
+            fontSize={{ base: "24px", sm: "38px", md: "48px" }}
           >
             We Speak your <br /> Language
           </Heading>
@@ -93,7 +93,7 @@ const Screen = () => {
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           position="absolute"
           right={isTablet ? "" : "0px"}
-          top={{ md: "10.5rem", lg: "4.5rem", sm: "10rem" }}
+          top={{ md: "10.5rem", lg: "4.5rem", sm: "12.5rem" }}
         />
       </Flex>
     </Box>

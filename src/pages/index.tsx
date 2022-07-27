@@ -14,7 +14,7 @@ import How from "../components/home/How";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
-  const [isMobile] = useMediaQuery("(max-width: 991px)");
+  const [isTablet] = useMediaQuery("(max-width: 768px)");
   return (
     <div>
       <Head>
@@ -26,17 +26,17 @@ const Home: NextPage = () => {
 
       <Box
         bgGradient={
-          isMobile
+          isTablet
             ? "linear-gradient(117.32deg, #5C0E62 -41.64%, #00B5D0 174.5%)"
             : bgcurve
         }
       >
-        {isMobile ? null : (
+        {isTablet ? null : (
           <Image
             src="/bg-curve-2.png"
             alt=""
             width="100%"
-            height={{ lg: "550px" }}
+            height={{ md: "550px" }}
             pos="absolute"
             zIndex={-5}
           />
