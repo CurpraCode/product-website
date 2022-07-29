@@ -4,8 +4,9 @@ import {
   Flex,
   Text,
   Heading,
-  Image,
+  Image as ChakraImage,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 const Manage = () => {
   return (
@@ -40,7 +41,7 @@ const Manage = () => {
           >
             Social Impact
           </Heading>
-          <Image
+          <ChakraImage
             src="/Lineblue.svg"
             alt=""
             pb="1rem"
@@ -59,7 +60,7 @@ const Manage = () => {
             mistakes and fraud.
           </Text>
         </Box>
-        <Image
+        <ChakraImage
           src="/circle-icon.svg"
           alt=""
           width="35%"

@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Canvey | Website</title>
         <meta name="description" content="Canvey Interpretation made simple" />
-        <link rel="icon" href="/canvey-logo.svg" />
+        <link rel="icon" href="/logo.svg" />
         {/* add google analytics */}
       </Head>
 

@@ -38,11 +38,12 @@ const How = () => {
           <iframe
             width={isBase ? "300" : isMobile ? "400" : "500"}
             height="340"
-            src="https://www.youtube.com/embed/XVkFtvW3GCE"
+            src="https://www.youtube.com/embed/XVkFtvW3GCE?rel=0&amp;autoplay=1&mute=1"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
           ></iframe>
         </Box>
 
