@@ -8,7 +8,8 @@ import {
   InputGroup,
   InputLeftElement,
   Textarea,
-  useMediaQuery
+  useMediaQuery,
+  Image as ChakraImage
 } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -53,11 +54,11 @@ const Contact = () => {
               contact us
             </Heading>
             <Box display="flex" flexDirection="column" gap="1rem" px="4rem">
-              <Box display="flex" flexDirection="row" gap="1rem">
-                <Image
+              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+                <ChakraImage
                   src="/location-1.svg"
-                  width="20%"
-                  height="20%"
+                  width="20px"
+                  height="20px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -67,11 +68,11 @@ const Contact = () => {
                   </Text>
                 </Box>
               </Box>
-              <Box display="flex" flexDirection="row" gap="1rem">
-                <Image
+              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+                <ChakraImage
                   src="/phone-1.svg"
-                  width="20%"
-                  height="20%"
+                  width="20px"
+                  height="20px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -79,11 +80,11 @@ const Contact = () => {
                   <Text w="100%">1-206-407-9000</Text>
                 </Box>
               </Box>
-              <Box display="flex" flexDirection="row" gap="1rem">
-                <Image
+              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+                <ChakraImage
                   src="/mail-1.svg"
-                  width="20%"
-                  height="20%"
+                  width="20px"
+                  height="20px"
                   alt="location icon"
                 />
                 <Box color="white">

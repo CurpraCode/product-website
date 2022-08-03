@@ -6,7 +6,6 @@ import {
   Heading,
   Image as ChakraImage,
 } from "@chakra-ui/react";
-import Image from "next/image";
 
 const Manage = () => {
   return (

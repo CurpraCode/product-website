@@ -7,7 +7,7 @@ const AuthButtonMobile = () => {
   return (
     <>
       {isTablet && (
-        <HStack p="16px 64px 64px 48px">
+        <HStack p="16px 64px 64px 36px">
           <Button
             bg="transparent"
             color="#fff"
