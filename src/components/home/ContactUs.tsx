@@ -1,6 +1,5 @@
-import React from 'react'
+import React from "react";
 import { Box, Heading, Text, Image as ChakraImage } from "@chakra-ui/react";
-import Image from "next/image";
 
 const ContactUs = () => {
   return (
@@ -66,6 +65,6 @@ const ContactUs = () => {
       </Box>
     </Box>
   );
-}
+};
 
-export default ContactUs
+export default ContactUs;
