@@ -1,5 +1,5 @@
 /* eslint-disable react/no-children-prop */
-import React from 'react'
+import React from "react";
 import Layout from "../Layout";
 import {
   Container,
@@ -7,232 +7,190 @@ import {
   Box,
   Heading,
   Text,
-  IconButton,
   Button,
   VStack,
   HStack,
-  Wrap,
-  WrapItem,
   FormControl,
-  FormLabel,
   Input,
   InputGroup,
   InputLeftElement,
   Textarea,
   Image,
   useMediaQuery,
+  Stack,
 } from "@chakra-ui/react";
 
 const SignUp = () => {
-
   const [isTablet] = useMediaQuery("(max-width: 767px)");
 
   return (
     <Layout>
-      <Container
-        bg="#9DC4FB"
-        maxW="full"
-        mt={0}
-        centerContent
-        overflow="hidden"
-      >
-        <Flex>
-          <Box
-            bg="#02054B"
-            color="white"
-            borderRadius="lg"
-            m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}
-          >
-            <Box p={4}>
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
-                <WrapItem>
-                  <Box>
-                    <Heading>Contact</Heading>
-                    <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                      Fill up the form below to contact
-                    </Text>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={0} spacing={3} alignItems="flex-start">
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={
-                            <Image
-                              src="/name.svg"
-                              width="15%"
-                              height="15%"
-                              alt="name"
-                            />
-                          }
-                        >
-                          +91-988888888
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={
-                            <Image
-                              src="/name.svg"
-                              width="15%"
-                              height="15%"
-                              alt="name"
-                            />
-                          } // Image
-                        >
-                          hello@abc.com
-                        </Button>
-                        <Button
-                          size="md"
-                          height="48px"
-                          width="200px"
-                          variant="ghost"
-                          color="#DCE2FF"
-                          _hover={{ border: "2px solid #1C6FEB" }}
-                          leftIcon={
-                            <Image
-                              src="/name.svg"
-                              width="15%"
-                              height="15%"
-                              alt="name"
-                            />
-                          }
-                        >
-                          Karnavati, India
-                        </Button>
-                      </VStack>
-                    </Box>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      px={5}
-                      alignItems="flex-start"
-                    >
-                      <IconButton
-                        aria-label="facebook"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={
-                          <Image
-                            src="/name.svg"
-                            width="15%"
-                            height="15%"
-                            alt="name"
-                          />
-                        }
-                      />
-                      <IconButton
-                        aria-label="github"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={
-                          <Image
-                            src="/name.svg"
-                            width="15%"
-                            height="15%"
-                            alt="name"
-                          />
-                        }
-                      />
-                      <IconButton
-                        aria-label="discord"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: "#0D74FF" }}
-                        icon={
-                          <Image
-                            src="/name.svg"
-                            width="15%"
-                            height="15%"
-                            alt="name"
-                          />
-                        }
-                      />
-                    </HStack>
-                  </Box>
-                </WrapItem>
-                <WrapItem>
-                  <Box bg="white" borderRadius="lg">
-                    <Box m={8} color="#0B0E3F">
-                      <VStack spacing={5}>
-                        <FormControl id="name">
-                          <FormLabel>Your Name</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={
-                                <Image
-                                  src="/name.svg"
-                                  width="15%"
-                                  height="15%"
-                                  alt="name"
-                                />
-                              }
-                            />
-                            <Input type="text" size="md" />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Mail</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={
-                                <Image
-                                  src="/name.svg"
-                                  width="15%"
-                                  height="15%"
-                                  alt="name"
-                                />
-                              }
-                            />
-                            <Input type="text" size="md" />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Message</FormLabel>
-                          <Textarea
-                            borderColor="gray.300"
-                            _hover={{
-                              borderRadius: "gray.300",
-                            }}
-                            placeholder="message"
-                          />
-                        </FormControl>
-                        <FormControl id="name" float="right">
-                          <Button
-                            variant="solid"
-                            bg="#0D74FF"
-                            color="white"
-                            _hover={{}}
-                          >
-                            Send Message
-                          </Button>
-                        </FormControl>
-                      </VStack>
-                    </Box>
-                  </Box>
-                </WrapItem>
-              </Wrap>
+      <Container minW="full" bgColor="gray.200">
+        <Flex pl="7rem" pr="11rem" pb="8rem" pt="4rem">
+          <Box w="50%">
+            <Image src="docScreen.svg" alt="interpreter-screen" />
+            <Text fontSize="18px" w="75%" color="gray.600" fontWeight="500">
+              Set up an enterpise account for your organization in{" "}
+              <Text as="span" fontWeight="800">
+                3 Easy Steps
+              </Text>
+            </Text>
+            <Box mt="2rem">
+              <VStack spacing={4}>
+                <Box>
+                  <HStack spacing="24px">
+                    <Box
+                      w="50px"
+                      h="50px"
+                      bgColor="#754C8B"
+                      borderRadius="50%"
+                    ></Box>
+                    <VStack spacing={2} align="left">
+                      <Text fontWeight="bold">Regsiter</Text>
+                      <Text w="90%">
+                        Fill out the form to the right. Make sure to include the
+                        expected amount of interpretations needed per day
+                      </Text>
+                    </VStack>
+                  </HStack>
+                </Box>
+                <Box>
+                  <HStack spacing="24px">
+                    <Box
+                      w="50px"
+                      h="50px"
+                      bgColor="#2A689D"
+                      borderRadius="50%"
+                    ></Box>
+                    <VStack spacing={2} align="left">
+                      <Text fontWeight="bold">Onboarding</Text>
+                      <Text w="90%">
+                        Once your account is approved, we will be in contact to
+                        set up account profile.
+                      </Text>
+                    </VStack>
+                  </HStack>
+                </Box>
+                <Box>
+                  <HStack spacing="24px">
+                    <Box
+                      w="50px"
+                      h="50px"
+                      bgColor="#2BC1D8"
+                      borderRadius="50%"
+                    ></Box>
+                    <VStack spacing={2} align="left">
+                      <Text fontWeight="bold">Learn how to use</Text>
+                      <Text w="90%">
+                        Watch our step by step instructional video on how our
+                        services can benefit your whole team.
+                      </Text>
+                    </VStack>
+                  </HStack>
+                </Box>
+              </VStack>
             </Box>
           </Box>
+          <Container w="50%">
+            <Box
+              bgColor="white"
+              borderRadius="lg"
+              px="2rem"
+              py="1.5rem"
+              mt="2rem"
+              boxShadow="xl"
+            >
+              <VStack spacing={8} align="flex-start">
+                <Heading fontSize="24px" width="100%" color="gray.700">
+                  Interested in bringing our services to your hospital or
+                  clinic?{" "}
+                  <Text as={"span"} color={"#3A76BF"} fontWeight={700}>
+                    Lets Connect!
+                  </Text>
+                </Heading>
+                <Stack spacing={6}>
+                  <HStack>
+                    <Box>
+                      <FormControl id="firstName" isRequired>
+                        <InputGroup bgColor="#F4F6F9">
+                          <InputLeftElement
+                            children={<Image src="name-1.svg" alt="name" />}
+                          />
+                          <Input type="text" placeholder="First Name" />
+                        </InputGroup>
+                      </FormControl>
+                    </Box>
+                    <Box>
+                      <FormControl id="lastName">
+                        <InputGroup bgColor="#F4F6F9">
+                          <InputLeftElement
+                            children={<Image src="name-1.svg" alt="name" />}
+                          />
+                          <Input type="text" placeholder="Last Name" />
+                        </InputGroup>
+                      </FormControl>
+                    </Box>
+                  </HStack>
+                  <HStack>
+                    <Box>
+                      <FormControl id="phoneNumber" isRequired>
+                        <InputGroup bgColor="#F4F6F9">
+                          <InputLeftElement
+                            children={<Image src="phone.svg" alt="phone" />}
+                          />
+                          <Input type="number" placeholder="Phone" />
+                        </InputGroup>
+                      </FormControl>
+                    </Box>
+                    <Box>
+                      <FormControl id="email">
+                        <InputGroup bgColor="#F4F6F9">
+                          <InputLeftElement
+                            children={<Image src="mail.svg" alt="name" />}
+                          />
+                          <Input type="email" placeholder="Email" />
+                        </InputGroup>
+                      </FormControl>
+                    </Box>
+                  </HStack>
+                  <FormControl id="hospital" isRequired>
+                    <InputGroup bgColor="#F4F6F9">
+                      <InputLeftElement
+                        children={<Image src="hospital.svg" alt="name" />}
+                      />
+                      <Input type="text" placeholder="Hospital / Clinic" />
+                    </InputGroup>
+                  </FormControl>
+
+                  <FormControl isRequired>
+                    <Textarea
+                      bgColor="#F4F6F9"
+                      name="message"
+                      placeholder="How can our team help you?"
+                      rows={6}
+                      resize="none"
+                    />
+                  </FormControl>
+
+                  <Stack spacing={10} pt={2}>
+                    <Button
+                      loadingText="Submitting"
+                      colorScheme={"#3A76BF"}
+                      size="lg"
+                      bg={"#3A76BF"}
+                      color={"white"}
+                    >
+                      Register
+                    </Button>
+                  </Stack>
+                </Stack>
+              </VStack>
+            </Box>
+          </Container>
         </Flex>
       </Container>
     </Layout>
   );
-}
+};
 
-export default SignUp
+export default SignUp;
