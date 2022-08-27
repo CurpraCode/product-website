@@ -26,8 +26,14 @@ const SignUp = () => {
   return (
     <Layout>
       <Container minW="full" bgColor="gray.200">
-        <Flex pl="7rem" pr="11rem" pb="8rem" pt="4rem">
-          <Box w="50%">
+        <Flex
+          pl="7rem"
+          pr="11rem"
+          pb="8rem"
+          pt="4rem"
+          flexDirection={{ lg: "column", xl: "row" }}
+        >
+          <Box w={{ lg: "100%", xl: "50%" }}>
             <Image src="docScreen.svg" alt="interpreter-screen" />
             <Text fontSize="18px" w="75%" color="gray.600" fontWeight="500">
               Set up an enterpise account for your organization in{" "}
@@ -36,7 +42,7 @@ const SignUp = () => {
               </Text>
             </Text>
             <Box mt="2rem">
-              <VStack spacing={4}>
+              <VStack spacing={4} align="flex-start">
                 <Box>
                   <HStack spacing="24px">
                     <Box
@@ -91,7 +97,7 @@ const SignUp = () => {
               </VStack>
             </Box>
           </Box>
-          <Container w="50%">
+          <Container w={{ lg: "100%", xl: "50%" }}>
             <Box
               bgColor="white"
               borderRadius="lg"
@@ -116,7 +122,10 @@ const SignUp = () => {
                           <InputLeftElement
                             children={<Image src="name-1.svg" alt="name" />}
                           />
-                          <Input type="text" placeholder="First Name" />
+                          <Input
+                            type="text"
+                            placeholder="First Name"
+                          />
                         </InputGroup>
                       </FormControl>
                     </Box>
