@@ -11,6 +11,7 @@ import {
   MenuDivider,
   Box,
 } from "@chakra-ui/react";
+import Link from "next/link"
 
 const AuthButton = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
@@ -117,7 +118,7 @@ const AuthButton = () => {
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  As an enterprise
+                  <Link href="/sign-up">As an enterprise</Link>
                 </MenuItem>
               </MenuList>
             </>
