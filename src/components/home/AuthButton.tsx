@@ -74,7 +74,7 @@ const AuthButton = () => {
                     ? "120px"
                     : isTablet
                     ? "150px"
-                    : { sm: "170px", md: "190px" }
+                    : { sm: "175px", md: "190px" }
                 }
                 h={isTablet ? "50px" : { sm: "40px", md: "40px" }}
                 _hover={{
@@ -111,7 +111,7 @@ const AuthButton = () => {
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  As a health care worker
+                  As a health care
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem

@@ -18,6 +18,7 @@ import {
   Image,
   useMediaQuery,
   Stack,
+  Circle,
 } from "@chakra-ui/react";
 
 const SignUp = () => {
@@ -27,16 +28,27 @@ const SignUp = () => {
     <Layout>
       <Container minW="full" bgColor="gray.200">
         <Flex
-          pl={{ base: "2rem", md: "4rem", lg: "6rem", xl: "7rem" }}
-          pr={{ base: "2rem", md: "4rem", lg: "6rem", xl: "11rem" }}
+          pl={{ base: "1rem", md: "4rem", lg: "6rem", xl: "7rem" }}
+          pr={{ base: "1rem", md: "4rem", lg: "6rem", xl: "11rem" }}
           pb="8rem"
           pt="4rem"
           flexDirection={{ base: "column", xl: "row" }}
-          gap={{base: "1rem", lg: "2rem"}}
+          gap={{ base: "1rem", lg: "2rem" }}
         >
           <Box w={{ base: "100%", xl: "50%" }}>
-            <Image src="docScreen.svg" alt="interpreter-screen" pb="2rem" margin={{base: "auto", xl: "0"}} />
-            <Text fontSize="18px" w="100%" align={{base: "center", xl: "left"}} color="gray.600" fontWeight="500">
+            <Image
+              src="docScreen.svg"
+              alt="interpreter-screen"
+              pb="2rem"
+              margin={{ base: "auto", xl: "0" }}
+            />
+            <Text
+              fontSize="18px"
+              w="100%"
+              align={{ base: "center", xl: "left" }}
+              color="gray.600"
+              fontWeight="500"
+            >
               Set up an enterpise account for your organization in{" "}
               <Text as="span" fontWeight="800">
                 3 Easy Steps
@@ -45,14 +57,9 @@ const SignUp = () => {
             <Box mt="2rem">
               <VStack spacing={4} align="flex-start">
                 <Box>
-                  <HStack spacing="24px">
-                    <Box
-                      w="50px"
-                      h="50px"
-                      bgColor="#754C8B"
-                      borderRadius="50%"
-                    ></Box>
-                    <VStack spacing={2} align="left">
+                  <HStack spacing={{base: "12px", sm: "24px"}}>
+                    <Circle size={{base: "35px", sm: "50px"}} bg="#754C8B"></Circle>
+                    <VStack spacing={{base: 2, sm: 2}} align="left">
                       <Text fontWeight="bold">Regsiter</Text>
                       <Text w="100%">
                         Fill out the form to the right. Make sure to include the
@@ -62,14 +69,9 @@ const SignUp = () => {
                   </HStack>
                 </Box>
                 <Box>
-                  <HStack spacing="24px">
-                    <Box
-                      w="50px"
-                      h="50px"
-                      bgColor="#2A689D"
-                      borderRadius="50%"
-                    ></Box>
-                    <VStack spacing={2} align="left">
+                  <HStack spacing={{base: "12px", sm: "24px"}}>
+                    <Circle size={{base: "35px", sm: "50px"}} bg="#2A689D"></Circle>
+                    <VStack spacing={{base: 2, sm: 2}} align="left">
                       <Text fontWeight="bold">Onboarding</Text>
                       <Text w="100%">
                         Once your account is approved, we will be in contact to
@@ -79,14 +81,9 @@ const SignUp = () => {
                   </HStack>
                 </Box>
                 <Box>
-                  <HStack spacing="24px">
-                    <Box
-                      w="50px"
-                      h="50px"
-                      bgColor="#2BC1D8"
-                      borderRadius="50%"
-                    ></Box>
-                    <VStack spacing={2} align="left">
+                  <HStack spacing={{base: "12px", sm: "24px"}}>
+                    <Circle size={{base: "35px", sm: "50px"}} bg="#2BC1D8"></Circle>
+                    <VStack spacing={{base: 2, sm: 2}} align="left">
                       <Text fontWeight="bold">Learn how to use</Text>
                       <Text w="100%">
                         Watch our step by step instructional video on how our
@@ -123,7 +120,10 @@ const SignUp = () => {
                   </Text>
                 </Heading>
                 <Stack spacing={6}>
-                  <Stack direction={{base: "column", sm: "row"}} spacing={{base: "5", sm: "3"}}>
+                  <Stack
+                    direction={{ base: "column", sm: "row" }}
+                    spacing={{ base: "5", sm: "3" }}
+                  >
                     <Box>
                       <FormControl id="firstName" isRequired>
                         <InputGroup bgColor="#F4F6F9">
@@ -145,7 +145,10 @@ const SignUp = () => {
                       </FormControl>
                     </Box>
                   </Stack>
-                  <Stack direction={{base: "column", sm: "row"}} spacing={{base: "5", sm: "3"}}>
+                  <Stack
+                    direction={{ base: "column", sm: "row" }}
+                    spacing={{ base: "5", sm: "3" }}
+                  >
                     <Box>
                       <FormControl id="phoneNumber" isRequired>
                         <InputGroup bgColor="#F4F6F9">
