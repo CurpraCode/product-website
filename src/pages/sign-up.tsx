@@ -27,15 +27,16 @@ const SignUp = () => {
     <Layout>
       <Container minW="full" bgColor="gray.200">
         <Flex
-          pl="7rem"
-          pr="11rem"
+          pl={{ base: "2rem", md: "4rem", lg: "6rem", xl: "7rem" }}
+          pr={{ base: "2rem", md: "4rem", lg: "6rem", xl: "11rem" }}
           pb="8rem"
           pt="4rem"
-          flexDirection={{ lg: "column", xl: "row" }}
+          flexDirection={{ base: "column", xl: "row" }}
+          gap={{base: "1rem", lg: "2rem"}}
         >
-          <Box w={{ lg: "100%", xl: "50%" }}>
-            <Image src="docScreen.svg" alt="interpreter-screen" />
-            <Text fontSize="18px" w="75%" color="gray.600" fontWeight="500">
+          <Box w={{ base: "100%", xl: "50%" }}>
+            <Image src="docScreen.svg" alt="interpreter-screen" pb="2rem" margin={{base: "auto", xl: "0"}} />
+            <Text fontSize="18px" w="100%" align={{base: "center", xl: "left"}} color="gray.600" fontWeight="500">
               Set up an enterpise account for your organization in{" "}
               <Text as="span" fontWeight="800">
                 3 Easy Steps
@@ -53,7 +54,7 @@ const SignUp = () => {
                     ></Box>
                     <VStack spacing={2} align="left">
                       <Text fontWeight="bold">Regsiter</Text>
-                      <Text w="90%">
+                      <Text w="100%">
                         Fill out the form to the right. Make sure to include the
                         expected amount of interpretations needed per day
                       </Text>
@@ -70,7 +71,7 @@ const SignUp = () => {
                     ></Box>
                     <VStack spacing={2} align="left">
                       <Text fontWeight="bold">Onboarding</Text>
-                      <Text w="90%">
+                      <Text w="100%">
                         Once your account is approved, we will be in contact to
                         set up account profile.
                       </Text>
@@ -87,7 +88,7 @@ const SignUp = () => {
                     ></Box>
                     <VStack spacing={2} align="left">
                       <Text fontWeight="bold">Learn how to use</Text>
-                      <Text w="90%">
+                      <Text w="100%">
                         Watch our step by step instructional video on how our
                         services can benefit your whole team.
                       </Text>
@@ -97,7 +98,10 @@ const SignUp = () => {
               </VStack>
             </Box>
           </Box>
-          <Container w={{ lg: "100%", xl: "50%" }}>
+          <Container
+            w={{ base: "100%", xl: "50%" }}
+            mt={{ base: "1rem", md: "3rem", xl: "0" }}
+          >
             <Box
               bgColor="white"
               borderRadius="lg"
@@ -107,7 +111,11 @@ const SignUp = () => {
               boxShadow="xl"
             >
               <VStack spacing={8} align="flex-start">
-                <Heading fontSize="24px" width="100%" color="gray.700">
+                <Heading
+                  fontSize={{ base: "16px", lg: "24px" }}
+                  width="100%"
+                  color="gray.700"
+                >
                   Interested in bringing our services to your hospital or
                   clinic?{" "}
                   <Text as={"span"} color={"#3A76BF"} fontWeight={700}>
@@ -115,17 +123,14 @@ const SignUp = () => {
                   </Text>
                 </Heading>
                 <Stack spacing={6}>
-                  <HStack>
+                  <Stack direction={{base: "column", sm: "row"}} spacing={{base: "5", sm: "3"}}>
                     <Box>
                       <FormControl id="firstName" isRequired>
                         <InputGroup bgColor="#F4F6F9">
                           <InputLeftElement
                             children={<Image src="name-1.svg" alt="name" />}
                           />
-                          <Input
-                            type="text"
-                            placeholder="First Name"
-                          />
+                          <Input type="text" placeholder="First Name" />
                         </InputGroup>
                       </FormControl>
                     </Box>
@@ -139,8 +144,8 @@ const SignUp = () => {
                         </InputGroup>
                       </FormControl>
                     </Box>
-                  </HStack>
-                  <HStack>
+                  </Stack>
+                  <Stack direction={{base: "column", sm: "row"}} spacing={{base: "5", sm: "3"}}>
                     <Box>
                       <FormControl id="phoneNumber" isRequired>
                         <InputGroup bgColor="#F4F6F9">
@@ -161,7 +166,7 @@ const SignUp = () => {
                         </InputGroup>
                       </FormControl>
                     </Box>
-                  </HStack>
+                  </Stack>
                   <FormControl id="hospital" isRequired>
                     <InputGroup bgColor="#F4F6F9">
                       <InputLeftElement
