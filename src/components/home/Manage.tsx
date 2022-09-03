@@ -60,7 +60,7 @@ const Manage = () => {
           </Text>
         </Box>
         <ChakraImage
-          src="/circle-icon.svg"
+          src="/circle-icon.png"
           alt=""
           width="35%"
           mr={{ lg: "6rem", md: "auto", sm: "auto" }}

@@ -28,7 +28,7 @@ const SignUp = () => {
     <Layout>
       <Container minW="full" bgColor="gray.200" centerContent>
         <Flex
-          pb="8rem"
+          pb={{ base: "4rem", md: "8rem" }}
           pt="4rem"
           flexDirection={{ base: "column", xl: "row" }}
           gap={{ base: "1rem", lg: "2rem" }}
@@ -117,7 +117,7 @@ const SignUp = () => {
               mt={{ base: "1rem", sm: "2rem" }}
               boxShadow="xl"
             >
-              <VStack spacing={{base: 4, sm: 6, md: 8}}>
+              <VStack spacing={{ base: 4, sm: 6, md: 8 }} align="stretch">
                 <Heading
                   fontSize={{ base: "14px", sm: "16px", lg: "24px" }}
                   color="gray.700"

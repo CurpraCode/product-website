@@ -30,7 +30,7 @@ const Efficient = () => {
           textAlign={{ lg: "left", md: "center", sm: "center" }}
         >
           <Image
-            src="/mobile-phone.svg"
+            src="/mobile-phone.png"
             alt=""
             width="50%"
             display="block"

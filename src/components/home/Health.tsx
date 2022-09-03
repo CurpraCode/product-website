@@ -74,7 +74,7 @@ const Health = () => {
             </Button>
           </Box>
           <Image
-            src="/doc.svg"
+            src="/doc.png"
             alt=""
             width="35%"
             mr={{ lg: "6rem", md: "auto", sm: "auto" }}

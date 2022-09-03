@@ -29,7 +29,7 @@ const Save = () => {
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Image
-            src="/fem.svg"
+            src="/fem.png"
             alt=""
             width="40%"
             display={{ md: "block", sm: "block" }}

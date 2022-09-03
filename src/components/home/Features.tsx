@@ -11,7 +11,7 @@ import {
 
 const Features = () => {
   return (
-    <Box maxWidth="container.lg" mx="auto" mt={{ lg: "-8rem", md: "-2rem", base: "4rem" }}>
+    <Box maxWidth="container.lg" mx="auto" mt={{ lg: "-8rem", md: "0rem", base: "4rem" }}>
       <Grid
         templateColumns={{
           base: "repeat(2, 1fr)",

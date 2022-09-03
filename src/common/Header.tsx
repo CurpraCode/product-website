@@ -23,7 +23,7 @@ const Header = ({ name }: Props) => {
       >
         <Link href="/">
           <Image
-            src="/canvey-logo.svg"
+            src="/canvey-logo.png"
             alt=""
             mt={isTablet ? "2.5rem" : "null"}
             mb="1rem"

@@ -12,7 +12,6 @@ import AuthButton from "./AuthButton";
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
   const [isDesktop] = useMediaQuery("(max-width: 768px)");
-  const [isMac] = useMediaQuery("(max-width: 1200px)");
   return (
     <Box
       maxWidth="container.xl"
@@ -44,7 +43,7 @@ const Screen = () => {
           textAlign={isTablet ? "left" : "left"}
         >
           <Image
-            src="/screen.svg"
+            src="/screen.png"
             alt=""
             display={isTablet ? "block" : "none"}
             width="80%"
@@ -88,7 +87,7 @@ const Screen = () => {
           )}
         </Box>
         <Image
-          src="/screen.svg"
+          src="/screen.png"
           alt="mac and phone"
           display={isTablet ? "none" : "block"}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}

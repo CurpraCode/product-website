@@ -16,7 +16,7 @@ const Footer = () => {
     >
       <Link href="/">
         <Box cursor="pointer">
-          <Image src="/logo.svg" alt="canvey logo" />
+          <Image src="/logo.png" alt="canvey logo" />
         </Box>
       </Link>
 
