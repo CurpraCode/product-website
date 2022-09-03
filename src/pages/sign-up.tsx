@@ -26,18 +26,19 @@ const SignUp = () => {
 
   return (
     <Layout>
-      <Container minW="full" bgColor="gray.200">
+      <Container minW="full" bgColor="gray.200" centerContent>
         <Flex
-          pl={{ base: "1rem", md: "4rem", lg: "6rem", xl: "7rem" }}
-          pr={{ base: "1rem", md: "4rem", lg: "6rem", xl: "11rem" }}
           pb="8rem"
           pt="4rem"
           flexDirection={{ base: "column", xl: "row" }}
           gap={{ base: "1rem", lg: "2rem" }}
+          alignItems="center"
+          justifyContent="center"
+          maxW="container.xl"
         >
           <Box w={{ base: "100%", xl: "50%" }}>
             <Image
-              src="docScreen.svg"
+              src="docScreen.png"
               alt="interpreter-screen"
               pb="2rem"
               margin={{ base: "auto", xl: "0" }}
@@ -57,11 +58,14 @@ const SignUp = () => {
             <Box mt="2rem">
               <VStack spacing={4} align="flex-start">
                 <Box>
-                  <HStack spacing={{base: "12px", sm: "24px"}}>
-                    <Circle size={{base: "35px", sm: "50px"}} bg="#754C8B"></Circle>
-                    <VStack spacing={{base: 2, sm: 2}} align="left">
+                  <HStack spacing={{ base: "12px", sm: "24px" }}>
+                    <Circle
+                      size={{ base: "35px", sm: "50px" }}
+                      bg="#754C8B"
+                    ></Circle>
+                    <VStack spacing={{ base: 1.5, sm: 2 }} align="left">
                       <Text fontWeight="bold">Regsiter</Text>
-                      <Text w="100%">
+                      <Text fontSize={{ base: "13px", sm: "16px" }}>
                         Fill out the form to the right. Make sure to include the
                         expected amount of interpretations needed per day
                       </Text>
@@ -69,11 +73,14 @@ const SignUp = () => {
                   </HStack>
                 </Box>
                 <Box>
-                  <HStack spacing={{base: "12px", sm: "24px"}}>
-                    <Circle size={{base: "35px", sm: "50px"}} bg="#2A689D"></Circle>
-                    <VStack spacing={{base: 2, sm: 2}} align="left">
+                  <HStack spacing={{ base: "12px", sm: "24px" }}>
+                    <Circle
+                      size={{ base: "35px", sm: "50px" }}
+                      bg="#2A689D"
+                    ></Circle>
+                    <VStack spacing={{ base: 1.5, sm: 2 }} align="left">
                       <Text fontWeight="bold">Onboarding</Text>
-                      <Text w="100%">
+                      <Text fontSize={{ base: "13px", sm: "16px" }}>
                         Once your account is approved, we will be in contact to
                         set up account profile.
                       </Text>
@@ -81,11 +88,14 @@ const SignUp = () => {
                   </HStack>
                 </Box>
                 <Box>
-                  <HStack spacing={{base: "12px", sm: "24px"}}>
-                    <Circle size={{base: "35px", sm: "50px"}} bg="#2BC1D8"></Circle>
-                    <VStack spacing={{base: 2, sm: 2}} align="left">
+                  <HStack spacing={{ base: "12px", sm: "24px" }}>
+                    <Circle
+                      size={{ base: "35px", sm: "50px" }}
+                      bg="#2BC1D8"
+                    ></Circle>
+                    <VStack spacing={{ base: 1.5, sm: 2 }} align="left">
                       <Text fontWeight="bold">Learn how to use</Text>
-                      <Text w="100%">
+                      <Text fontSize={{ base: "13px", sm: "16px" }}>
                         Watch our step by step instructional video on how our
                         services can benefit your whole team.
                       </Text>
@@ -102,15 +112,14 @@ const SignUp = () => {
             <Box
               bgColor="white"
               borderRadius="lg"
-              px="2rem"
-              py="1.5rem"
-              mt="2rem"
+              px={{ base: "1rem", sm: "2rem" }}
+              py={{ base: "1rem", md: "2rem" }}
+              mt={{ base: "1rem", sm: "2rem" }}
               boxShadow="xl"
             >
-              <VStack spacing={8} align="flex-start">
+              <VStack spacing={{base: 4, sm: 6, md: 8}}>
                 <Heading
-                  fontSize={{ base: "16px", lg: "24px" }}
-                  width="100%"
+                  fontSize={{ base: "14px", sm: "16px", lg: "24px" }}
                   color="gray.700"
                 >
                   Interested in bringing our services to your hospital or
