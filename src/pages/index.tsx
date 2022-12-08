@@ -3,14 +3,12 @@ import Head from "next/head";
 import Header from "../common/Header";
 import { Box, Image } from "@chakra-ui/react";
 import bgcurve from "../../public/bg-curve.svg";
-import Screen from "../components/home/screen";
-import Features from "../components/home/Features";
-import Efficient from "../components/home/Efficient";
-import Health from "../components/home/Health";
-import Save from "../components/home/Save";
-import Manage from "../components/home/Manage";
+import Screen from "../components/bannerSection/screen";
+import Efficient from "../components/efficiencySection/Efficient";
+import Health from "../components/healthcareSection/Health";
+import Save from "../components/opportiunitySection/Save";
+import Manage from "../components/socialImpactSection/Manage";
 import Footer from "../common/Footer";
-import How from "../components/home/How";
 import { useMediaQuery } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
@@ -44,8 +42,7 @@ const Home: NextPage = () => {
         <Header name={""} />
         <Screen />
       </Box>
-      <Features />
-      <How />
+
       <Efficient />
       <Health />
       <Save />
