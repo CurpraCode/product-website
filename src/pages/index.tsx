@@ -10,6 +10,7 @@ import Save from "../components/opportiunitySection/Save";
 import Manage from "../components/socialImpactSection/Manage";
 import Footer from "../common/Footer";
 import { useMediaQuery } from "@chakra-ui/react";
+import Carousel from "../components/carouselSection/Carousel";
 
 const Home: NextPage = () => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
@@ -41,6 +42,10 @@ const Home: NextPage = () => {
         )}
         <Header name={""} />
         <Screen />
+      </Box>
+
+      <Box>
+        <Carousel />
       </Box>
 
       <Efficient />
