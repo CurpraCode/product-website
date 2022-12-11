@@ -2,8 +2,8 @@ import React from "react";
 import { Box, HStack, useMediaQuery, Image, Button } from "@chakra-ui/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import AuthButton from "../components/home/AuthButton";
-import AuthButtonMobile from "../components/home/AuthButtonMobile";
+import AuthButton from "../components/authButtons/AuthButton";
+import AuthButtonMobile from "../components/authButtons/AuthButtonMobile";
 
 interface Props {
   name: string;

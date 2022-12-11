@@ -7,8 +7,8 @@ import {
   Image,
   useMediaQuery,
 } from "@chakra-ui/react";
-import AuthButton from "./AuthButton";
 import Typewriter from "typewriter-effect";
+import AuthButton from "../authButtons/AuthButton";
 
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
@@ -57,19 +57,16 @@ const Screen = () => {
           >
             We Speak your <br /> Language
           </Heading>
+          <Heading color="#fff">
+            <Typewriter
+              options={{
+                strings: ["Hello", "Spanish", "French", "Chinese"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </Heading>
 
-          <Typewriter
-							options={{
-								strings: [
-									"Hello",
-									"Spanish",
-									"French",
-									"Chinese",
-								],
-								autoStart: true,
-								loop: true,
-							}}
-						/>
           {isTablet ? (
             <Box mt="3rem" alignItems="center" justifyContent="center">
               <AuthButton />
@@ -106,7 +103,7 @@ const Screen = () => {
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           position="absolute"
           // right={isMac ? "9rem" : isTablet ? "" : "11rem"}
-          right= {{base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem"}}
+          right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}
         />
       </Flex>

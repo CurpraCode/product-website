@@ -52,26 +52,6 @@ const Health = () => {
               Our focus is to help facilitate the highest level of care for LEP
               patients.
             </Text>
-            <Button
-              bg="#3a76bf"
-              borderRadius="8px"
-              py="25px"
-              color="#fff"
-              width="100%"
-              fontWeight="700"
-              fontSize="18px"
-              maxW="200px"
-              mt={{ base: "2rem", xl: "2.5rem" }}
-              _hover={{
-                bg: "#3a76bf",
-              }}
-              _focus={{
-                outline: "none",
-                bg: "#3a76bf",
-              }}
-            >
-              Learn More
-            </Button>
           </Box>
           <Image
             src="/doc.png"

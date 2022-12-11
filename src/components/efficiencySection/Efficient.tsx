@@ -30,7 +30,7 @@ const Efficient = () => {
           textAlign={{ lg: "left", md: "center", sm: "center" }}
         >
           <Image
-            src="/mobile-phone.png"
+            src="/InterpreteChart.png"
             alt=""
             width="50%"
             display="block"
@@ -57,8 +57,8 @@ const Efficient = () => {
               }}
               pb="1rem"
             >
-              An Efficient End to
-              <br /> End Platform{" "}
+              Interpretation made
+              <br /> Simple
             </Heading>
             <Image
               src="/Line.svg"
@@ -74,8 +74,30 @@ const Efficient = () => {
                 base: "18px",
               }}
             >
-              One click request and connect to a language of your choice
+              Providing competitive quality interpreting by innovating the way
+              individuals & businesses communicate with people who are limited
+              by Language barriers
             </Text>
+            <Button
+              bg="#3a76bf"
+              borderRadius="8px"
+              py="25px"
+              color="#fff"
+              width="100%"
+              fontWeight="700"
+              fontSize="18px"
+              maxW="200px"
+              mt={{ base: "2rem", xl: "2.5rem" }}
+              _hover={{
+                bg: "#3a76bf",
+              }}
+              _focus={{
+                outline: "none",
+                bg: "#3a76bf",
+              }}
+            >
+              Learn More
+            </Button>
           </Box>
         </Flex>
       </Box>
