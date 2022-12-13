@@ -17,9 +17,17 @@ const Carousel = () => {
           spaceBetween={30}
           modules={[Navigation]}
           navigation
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          breakpoints={{
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            999: {
+              width: 768,
+              slidesPerView: 2,
+            },
+          }}
         >
           <SwiperSlide>
             <CarouselCard IconName={MdLocationOn} />
