@@ -26,7 +26,7 @@ const Screen = () => {
         mt="1rem"
         flexDirection={{
           lg: "row",
-          md: "column",
+          md: "row",
           sm: "column",
           base: "column",
         }}
@@ -46,7 +46,7 @@ const Screen = () => {
           <Image
             src="/screen.png"
             alt=""
-            display={isTablet ? "block" : "none"}
+            display={isTablet ? "none" : "none"}
             width="80%"
           />
           <Heading
@@ -66,12 +66,6 @@ const Screen = () => {
               }}
             />
           </Heading>
-
-          {isTablet ? (
-            <Box mt="3rem" alignItems="center" justifyContent="center">
-              <AuthButton />
-            </Box>
-          ) : null}
 
           {isDesktop ? null : (
             <Button
@@ -99,9 +93,9 @@ const Screen = () => {
         <Image
           src="/screen.png"
           alt="mac and phone"
-          display={isTablet ? "none" : "block"}
+          // display={isTablet ? "none" : "block"}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
-          position="absolute"
+          // position="absolute"
           // right={isMac ? "9rem" : isTablet ? "" : "11rem"}
           right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}
