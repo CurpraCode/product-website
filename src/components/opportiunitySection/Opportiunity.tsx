@@ -1,20 +1,14 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Heading,
-  Button,
-  Image,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Button, Image } from "@chakra-ui/react";
+import ImageSection from "./ImageSection";
 
-const Save = () => {
+const Opportiunity = () => {
   return (
-    <Box bg="#F4F6F9">
+    <Box>
       <Box
         maxWidth="container.lg"
         m="0 auto"
-        px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
+        // px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
         py="8rem"
       >
         <Flex
@@ -28,15 +22,15 @@ const Save = () => {
           alignItems="center"
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
-          <Image
-            src="/fem.png"
-            alt=""
-            width="40%"
+          <Box
+            width="100%"
             display={{ md: "block", sm: "block" }}
             ml={{ lg: "4rem", sm: "auto" }}
             mr={{ lg: "auto", sm: "auto" }}
             mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
-          />
+          >
+            <ImageSection />
+          </Box>
           <Box>
             <Heading
               mb="1rem"
@@ -95,4 +89,4 @@ const Save = () => {
   );
 };
 
-export default Save;
+export default Opportiunity;

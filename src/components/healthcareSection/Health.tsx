@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Flex, Text, Heading, Image, Button } from "@chakra-ui/react";
+import ImageSection from "./ImageSection";
+import HealthCareSlides from "./HealthCareSlides";
 
 const Health = () => {
   return (
@@ -20,8 +22,9 @@ const Health = () => {
             base: "column-reverse",
           }}
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
+          height="500px"
         >
-          <Box>
+          <Box width="40%" h={"100%"}>
             <Heading
               mb="1rem"
               fontWeight="700"
@@ -42,26 +45,31 @@ const Health = () => {
               m={{ md: "auto", sm: "auto", base: "auto" }}
               display={{ lg: "inline", md: "block", sm: "block" }}
             />
-            <Text
-              lineHeight="35px"
-              fontSize={{
-                lg: "24px",
-                base: "18px",
-              }}
-            >
-              Our focus is to help facilitate the highest level of care for LEP
-              patients.
+            <Text lineHeight="35px" color="#575757" fontSize="24px">
+              We proudly advocate for underserved communities by facilitating
+              multi-lingual communications. Our services reduce interpretation
+              mistakes and fraud
             </Text>
           </Box>
-          <Image
-            src="/doc.png"
-            alt=""
-            width="35%"
-            mr={{ lg: "6rem", md: "auto", sm: "auto" }}
-            display={{ md: "block", sm: "block" }}
-            ml={{ md: "auto", sm: "auto" }}
-            mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
-          />
+
+          {/* image and info section */}
+          <Box h="100%" width="60%">
+            <Flex
+              h="500px"
+              w="500px"
+              border="4px"
+              borderColor="#AE64A740"
+              data-group
+              borderRadius="full"
+              position="relative"
+              justifyContent="center"
+              alignItems="center"
+              cursor="pointer"
+            >
+              <ImageSection />
+              <HealthCareSlides groupHover={{ zIndex: 50, opacity: 1 }} />
+            </Flex>
+          </Box>
         </Flex>
       </Box>
     </>

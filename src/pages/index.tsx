@@ -6,11 +6,12 @@ import bgcurve from "../../public/bg-curve.svg";
 import Screen from "../components/bannerSection/screen";
 import Efficient from "../components/efficiencySection/Efficient";
 import Health from "../components/healthcareSection/Health";
-import Save from "../components/opportiunitySection/Save";
+import Opportiunity from "../components/opportiunitySection/Opportiunity";
 import Manage from "../components/socialImpactSection/Manage";
 import Footer from "../common/Footer";
 import { useMediaQuery } from "@chakra-ui/react";
 import Carousel from "../components/carouselSection/Carousel";
+import HealthCareSlides from "../components/healthcareSection/HealthCareSlides";
 
 const Home: NextPage = () => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
@@ -50,7 +51,7 @@ const Home: NextPage = () => {
 
       <Efficient />
       <Health />
-      <Save />
+      <Opportiunity />
       <Manage />
       <Footer />
     </div>
