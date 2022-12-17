@@ -132,37 +132,34 @@ const Header = ({ name }: Props) => {
                       mt={"6rem"}
                     >
                       {links.map(({ name, to }, index) => (
-                        <>
-                          {" "}
-                          <NextLink key={index} href={to}>
-                            <Collapse in={isOpen} animateOpacity>
-                              <Link
-                                fontWeight={700}
-                                // color="white"
-                                px={["0.6rem", "0.6rem", "1rem", "2rem"]}
-                                py=".8rem"
-                                _hover={{
-                                  textDecor: "none",
-                                  color: "theme.300",
-                                }}
-                                _focus={{
-                                  textDecor: "none",
-                                  bg: "none",
-                                  border: "none",
-                                }}
-                                _active={{
-                                  textDecor: "none",
-                                  bg: "none",
-                                  border: "none",
-                                }}
-                                onClick={onClose}
-                              >
-                                {name}
-                              </Link>
-                            </Collapse>
-                          </NextLink>
-                        </>
-                      ))}{" "}
+                        <NextLink key={index} href={to}>
+                          <Collapse in={isOpen} animateOpacity>
+                            <Link
+                              fontWeight={700}
+                              // color="white"
+                              px={["0.6rem", "0.6rem", "1rem", "2rem"]}
+                              py=".8rem"
+                              _hover={{
+                                textDecor: "none",
+                                color: "theme.300",
+                              }}
+                              _focus={{
+                                textDecor: "none",
+                                bg: "none",
+                                border: "none",
+                              }}
+                              _active={{
+                                textDecor: "none",
+                                bg: "none",
+                                border: "none",
+                              }}
+                              onClick={onClose}
+                            >
+                              {name}
+                            </Link>
+                          </Collapse>
+                        </NextLink>
+                      ))}
                       <AuthButton />
                     </Flex>
                   </DrawerBody>
