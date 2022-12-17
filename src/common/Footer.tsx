@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <Box
-      bg="#210933"
+      bg="#403E50"
       display="flex"
       flexDirection="column"
       alignItems="center"

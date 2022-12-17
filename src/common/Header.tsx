@@ -1,38 +1,177 @@
-import React from "react";
-import { Box, HStack, useMediaQuery, Image, Button } from "@chakra-ui/react";
-import Link from "next/link";
+import React, { useRef } from "react";
+import {
+  Box,
+  HStack,
+  useMediaQuery,
+  Image,
+  Button,
+  Collapse,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerOverlay,
+  Flex,
+  Link,
+  useDisclosure,
+} from "@chakra-ui/react";
+// import Link from "next/link";
 import { useRouter } from "next/router";
 import AuthButton from "../components/authButtons/AuthButton";
 import AuthButtonMobile from "../components/authButtons/AuthButtonMobile";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import Footer from "./Footer";
+import NextLink from "next/link";
 
 interface Props {
   name: string;
 }
+const links = [
+  { name: "About Us", to: "/about" },
+  { name: "Contact Us", to: "/contact-us" },
+  { name: "How It Works", to: "/privacy" },
+];
 const Header = ({ name }: Props) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = useRef<HTMLDivElement | null>(null);
+  const [isTab] = useMediaQuery("(max-width: 991px)");
   const [isTablet] = useMediaQuery("(max-width: 560px)");
   const router = useRouter();
 
   return (
     <Box bg={name}>
-      <HStack
-        justifyContent={isTablet ? "" : "space-between"}
-        alignItems="center"
+      <Flex
+        width="100%"
+        p={["0.5rem 0.5rem", "0.3rem 0.5rem", "2rem 2rem", "2rem 2rem"]}
         m="auto"
         maxW="7xl"
-        p="24px 96px 16px 32px"
+        justifyContent="space-between"
+        alignItems="center"
+        fontWeight="600"
       >
-        <Link href="/">
+        <NextLink href="/" passHref>
           <Image
+            width="25%"
+            height="25%"
+            objectFit="cover"
             src="/canvey-logo.png"
-            alt=""
-            mt={isTablet ? "2.5rem" : "null"}
-            mb="1rem"
-            cursor="pointer"
+            alt="logo"
           />
-        </Link>
-        {isTablet ? null : <AuthButton />}
-      </HStack>
-      {router.asPath != "/" ? <AuthButtonMobile /> : null}
+        </NextLink>
+        <Box
+          display="flex"
+          justifyContent={["end", "end", "end", "space-between"]}
+          alignItems="center"
+        >
+          <Box
+            display={["none", "none", "none", "flex"]}
+            w={["100%", "100%", "100%", "100%"]}
+            alignItems="center"
+            fontSize={["1rem", "1.1rem"]}
+          >
+            {links.map(({ name, to }, index) => (
+              <NextLink href={to} passHref key={index}>
+                <Link
+                  px={["2rem", "4rem", "4rem", "3rem"]}
+                  color="white"
+                  _hover={{
+                    textDecor: "none",
+                    color: "theme.300",
+                  }}
+                  _focus={{
+                    textDecor: "none",
+                    bg: "none",
+                    border: "none",
+                  }}
+                  _active={{
+                    textDecor: "none",
+                    bg: "none",
+                    border: "none",
+                  }}
+                  onClick={onClose}
+                >
+                  {name}
+                </Link>
+              </NextLink>
+            ))}
+            {isTablet ? null : <AuthButton />}
+          </Box>
+
+          <Flex
+            display={["flex", "flex", "flex", "none"]}
+            justifyContent={"flex-end"}
+            mr={["1.5rem"]}
+            alignItems="center"
+          >
+            <Box ref={btnRef} onClick={onOpen}>
+              <HamburgerIcon fontSize={"1.5rem"} color="white" />
+            </Box>
+          </Flex>
+          {isTab && (
+            <Box display={["flex", "flex", "none", "none"]}>
+              <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+                size={isTab && "full"}
+              >
+                <DrawerOverlay />
+                <DrawerContent>
+                  <DrawerCloseButton
+                    mt="2rem"
+                    _focus={{
+                      outline: 0,
+                    }}
+                  />
+                  <DrawerBody>
+                    <Flex
+                      direction={"column"}
+                      align="center"
+                      gap={9}
+                      mt={"6rem"}
+                    >
+                      {links.map(({ name, to }, index) => (
+                        <>
+                          {" "}
+                          <NextLink key={index} href={to}>
+                            <Collapse in={isOpen} animateOpacity>
+                              <Link
+                                fontWeight={700}
+                                // color="white"
+                                px={["0.6rem", "0.6rem", "1rem", "2rem"]}
+                                py=".8rem"
+                                _hover={{
+                                  textDecor: "none",
+                                  color: "theme.300",
+                                }}
+                                _focus={{
+                                  textDecor: "none",
+                                  bg: "none",
+                                  border: "none",
+                                }}
+                                _active={{
+                                  textDecor: "none",
+                                  bg: "none",
+                                  border: "none",
+                                }}
+                                onClick={onClose}
+                              >
+                                {name}
+                              </Link>
+                            </Collapse>
+                          </NextLink>
+                        </>
+                      ))}{" "}
+                      <AuthButton />
+                    </Flex>
+                  </DrawerBody>
+                </DrawerContent>
+              </Drawer>
+            </Box>
+          )}
+        </Box>
+      </Flex>
     </Box>
   );
 };

@@ -9,7 +9,13 @@ import {
   MenuList,
   MenuItem,
   MenuDivider,
+  Text,
   Box,
+  AccordionPanel,
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -19,25 +25,6 @@ const AuthButton = () => {
 
   return (
     <HStack ml="-10px !important">
-      <Button
-        bg="transparent"
-        color="#fff"
-        border="2px solid #fff"
-        w={isBase ? "120px" : isTablet ? "150px" : { sm: "90px", md: "110px" }}
-        h={isTablet ? "50px" : { sm: "40px", md: "40px" }}
-        p="10px"
-        borderRadius="8px"
-        _hover={{
-          bg: "none",
-        }}
-        _focus={{
-          outline: "none",
-          bg: "none",
-        }}
-      >
-        Sign In
-      </Button>
-
       {isTablet ? (
         <Button
           bg="#fff"
@@ -58,7 +45,7 @@ const AuthButton = () => {
           Sign Up
         </Button>
       ) : (
-        <Menu>
+        <Menu closeOnSelect={false}>
           {({ isOpen }) => (
             <>
               <MenuButton
@@ -91,7 +78,7 @@ const AuthButton = () => {
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
-                  Create an account{" "}
+                  Our Members
                   {isOpen ? (
                     <Image src="arrow-up.svg" alt="arrow" ml="6px" />
                   ) : (
@@ -104,21 +91,59 @@ const AuthButton = () => {
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  As an interpreter
+                  <Accordion allowToggle >
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" flex="1" textAlign="left">
+                            Interpreters
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                     <Text color="#3A76BF">Sign in</Text>  
+                       <p>I am a registered interpreter</p>
+                      </AccordionPanel>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                      <Text color="#3A76BF">Sign Up</Text>  
+                       <p>I need to set up my account</p>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </Accordion>
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  As a health care worker
+                  <Accordion allowToggle>
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" flex="1" textAlign="left">
+                            Health Care Worker
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                      <Text color="#3A76BF">Sign in</Text>  
+                       <p>I am a registered Health Care Worker</p>
+                      </AccordionPanel>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                      <Text color="#3A76BF">Sign Up</Text>  
+                       <p>I need to set up my account</p>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </Accordion>
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  <Link href="/sign-up">As an enterprise</Link>
+                  <Link href="/sign-up">Hospital Administrators</Link>
                 </MenuItem>
               </MenuList>
             </>

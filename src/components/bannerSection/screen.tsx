@@ -7,6 +7,7 @@ import {
   Image,
   useMediaQuery,
 } from "@chakra-ui/react";
+import Typewriter from "typewriter-effect";
 import AuthButton from "../authButtons/AuthButton";
 
 const Screen = () => {
@@ -18,14 +19,15 @@ const Screen = () => {
       height={isTablet ? "auto" : "550px"}
       m="auto"
       position="relative"
+      mb="2rem"
     >
       <Flex
         justifyContent="space-between"
-        alignItems={isTablet ? "" : ""}
+        alignItems={{ base: "center", md: "center", lg: "flex-start" }}
         mt="1rem"
         flexDirection={{
           lg: "row",
-          md: "column",
+          md: "row",
           sm: "column",
           base: "column",
         }}
@@ -42,26 +44,27 @@ const Screen = () => {
           pb={{ base: "2rem" }}
           textAlign={isTablet ? "left" : "left"}
         >
-          <Image
-            src="/screen.png"
-            alt=""
-            display={isTablet ? "block" : "none"}
-            width="80%"
-          />
           <Heading
             color="#fff"
             fontWeight="800"
             mb="1rem"
+            textAlign={{ base: "center", lg: "left" }}
             fontSize={{ base: "24px", sm: "38px", md: "48px" }}
           >
             We Speak your <br /> Language
           </Heading>
-
-          {isTablet ? (
-            <Box mt="3rem" alignItems="center" justifyContent="center">
-              <AuthButton />
-            </Box>
-          ) : null}
+          <Heading
+            color="#fff"
+            textAlign={{ base: "center", md: "center", lg: "left" }}
+          >
+            <Typewriter
+              options={{
+                strings: ["Hello", "Spanish", "French", "Chinese"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </Heading>
 
           {isDesktop ? null : (
             <Button
@@ -89,9 +92,9 @@ const Screen = () => {
         <Image
           src="/screen.png"
           alt="mac and phone"
-          display={isTablet ? "none" : "block"}
+          // display={isTablet ? "none" : "block"}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
-          position="absolute"
+          // position="absolute"
           // right={isMac ? "9rem" : isTablet ? "" : "11rem"}
           right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}
