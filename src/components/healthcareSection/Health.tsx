@@ -24,7 +24,7 @@ const Health = () => {
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
           height="500px"
         >
-          <Box width="40%" h={"100%"}>
+          <Box width={{ base: "100%", md: "100%", lg: "50%" }} h={"100%"}>
             <Heading
               mb="1rem"
               fontWeight="700"
@@ -55,8 +55,8 @@ const Health = () => {
           {/* image and info section */}
           <Box h="100%" width="60%">
             <Flex
-              h="500px"
-              w="500px"
+              h={{ base: "200px", md: "250px", lg: "400px" }}
+              w={{ base: "200px", md: "250px", lg: "400px" }}
               border="4px"
               borderColor="#AE64A740"
               data-group

@@ -23,7 +23,7 @@ const Opportiunity = () => {
           textAlign={{ lg: "left", md: "center", sm: "center", base: "center" }}
         >
           <Box
-            width="100%"
+            width={{ base: "60%", md: "50%", lg: "100%" }}
             display={{ md: "block", sm: "block" }}
             ml={{ lg: "4rem", sm: "auto" }}
             mr={{ lg: "auto", sm: "auto" }}

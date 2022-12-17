@@ -49,10 +49,10 @@ const HealthCareSlides = ({
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="38px" fontFamily="mono">
+            <Heading fontSize="18px" fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text>
+            <Text fontSize="10px">
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
@@ -66,10 +66,10 @@ const HealthCareSlides = ({
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="38px" fontFamily="mono">
+              <Heading fontSize="18px" fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text>
+            <Text fontSize="10px">
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
@@ -83,10 +83,10 @@ const HealthCareSlides = ({
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="38px" fontFamily="mono">
+            <Heading fontSize="18px" fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text>
+            <Text fontSize="10px">
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>

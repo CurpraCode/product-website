@@ -30,6 +30,8 @@ const Home: NextPage = () => {
             ? "linear-gradient(117.32deg, #5C0E62 -41.64%, #00B5D0 174.5%)"
             : bgcurve
         }
+        borderBottomLeftRadius="500px"
+        borderBottomRightRadius="500px"
       >
         {isTablet ? null : (
           <Image

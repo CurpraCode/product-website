@@ -9,7 +9,13 @@ import {
   MenuList,
   MenuItem,
   MenuDivider,
+  Text,
   Box,
+  AccordionPanel,
+  Accordion,
+  AccordionButton,
+  AccordionIcon,
+  AccordionItem,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -39,7 +45,7 @@ const AuthButton = () => {
           Sign Up
         </Button>
       ) : (
-        <Menu>
+        <Menu closeOnSelect={false}>
           {({ isOpen }) => (
             <>
               <MenuButton
@@ -85,14 +91,52 @@ const AuthButton = () => {
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  Interpreter
+                  <Accordion allowToggle >
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" flex="1" textAlign="left">
+                            Interpreters
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                     <Text color="#3A76BF">Sign in</Text>  
+                       <p>I am a registered interpreter</p>
+                      </AccordionPanel>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                      <Text color="#3A76BF">Sign Up</Text>  
+                       <p>I need to set up my account</p>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </Accordion>
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem
                   _hover={{ color: "#403E50", fontWeight: "600" }}
                   transition="all .8s ease-out"
                 >
-                  Health Care Worker
+                  <Accordion allowToggle>
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" flex="1" textAlign="left">
+                            Health Care Worker
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                      <Text color="#3A76BF">Sign in</Text>  
+                       <p>I am a registered Health Care Worker</p>
+                      </AccordionPanel>
+                      <AccordionPanel pb={4} fontSize="0.6rem">
+                      <Text color="#3A76BF">Sign Up</Text>  
+                       <p>I need to set up my account</p>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </Accordion>
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem

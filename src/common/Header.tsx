@@ -42,7 +42,7 @@ const Header = ({ name }: Props) => {
     <Box bg={name}>
       <Flex
         width="100%"
-        p={["0.1rem 0.3rem", "0.3rem 0.5rem", "2rem 2rem", "2rem 2rem"]}
+        p={["0.5rem 0.5rem", "0.3rem 0.5rem", "2rem 2rem", "2rem 2rem"]}
         m="auto"
         maxW="7xl"
         justifyContent="space-between"
@@ -51,8 +51,8 @@ const Header = ({ name }: Props) => {
       >
         <NextLink href="/" passHref>
           <Image
-            width="15%"
-            height="15%"
+            width="25%"
+            height="25%"
             objectFit="cover"
             src="/canvey-logo.png"
             alt="logo"
@@ -132,34 +132,38 @@ const Header = ({ name }: Props) => {
                       mt={"6rem"}
                     >
                       {links.map(({ name, to }, index) => (
-                        <NextLink key={index} href={to}>
-                          <Collapse in={isOpen} animateOpacity>
-                            <Link
-                              fontWeight={700}
-                              // color="white"
-                              px={["0.6rem", "0.6rem", "1rem", "2rem"]}
-                              py=".8rem"
-                              _hover={{
-                                textDecor: "none",
-                                color: "theme.300",
-                              }}
-                              _focus={{
-                                textDecor: "none",
-                                bg: "none",
-                                border: "none",
-                              }}
-                              _active={{
-                                textDecor: "none",
-                                bg: "none",
-                                border: "none",
-                              }}
-                              onClick={onClose}
-                            >
-                              {name}
-                            </Link>
-                          </Collapse>
-                        </NextLink>
-                      ))}
+                        <>
+                          {" "}
+                          <NextLink key={index} href={to}>
+                            <Collapse in={isOpen} animateOpacity>
+                              <Link
+                                fontWeight={700}
+                                // color="white"
+                                px={["0.6rem", "0.6rem", "1rem", "2rem"]}
+                                py=".8rem"
+                                _hover={{
+                                  textDecor: "none",
+                                  color: "theme.300",
+                                }}
+                                _focus={{
+                                  textDecor: "none",
+                                  bg: "none",
+                                  border: "none",
+                                }}
+                                _active={{
+                                  textDecor: "none",
+                                  bg: "none",
+                                  border: "none",
+                                }}
+                                onClick={onClose}
+                              >
+                                {name}
+                              </Link>
+                            </Collapse>
+                          </NextLink>
+                        </>
+                      ))}{" "}
+                      <AuthButton />
                     </Flex>
                   </DrawerBody>
                 </DrawerContent>

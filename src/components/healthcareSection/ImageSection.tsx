@@ -4,8 +4,8 @@ import { Flex, Image } from "@chakra-ui/react";
 const ImageSection = () => {
   return (
     <Flex
-      width="90%"
-      height="90%"
+      width="100%"
+      height="100%"
       bg="#AE64A740"
       // border="2px"
 

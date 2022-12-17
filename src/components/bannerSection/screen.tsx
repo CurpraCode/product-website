@@ -19,10 +19,11 @@ const Screen = () => {
       height={isTablet ? "auto" : "550px"}
       m="auto"
       position="relative"
+      mb="2rem"
     >
       <Flex
         justifyContent="space-between"
-        alignItems={isTablet ? "" : ""}
+        alignItems={{ base: "center", md: "center", lg: "flex-start" }}
         mt="1rem"
         flexDirection={{
           lg: "row",
@@ -43,21 +44,19 @@ const Screen = () => {
           pb={{ base: "2rem" }}
           textAlign={isTablet ? "left" : "left"}
         >
-          <Image
-            src="/screen.png"
-            alt=""
-            display={isTablet ? "none" : "none"}
-            width="80%"
-          />
           <Heading
             color="#fff"
             fontWeight="800"
             mb="1rem"
+            textAlign={{ base: "center", lg: "left" }}
             fontSize={{ base: "24px", sm: "38px", md: "48px" }}
           >
             We Speak your <br /> Language
           </Heading>
-          <Heading color="#fff">
+          <Heading
+            color="#fff"
+            textAlign={{ base: "center", md: "center", lg: "left" }}
+          >
             <Typewriter
               options={{
                 strings: ["Hello", "Spanish", "French", "Chinese"],
