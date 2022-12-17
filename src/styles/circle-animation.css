@@ -21,21 +21,21 @@
 
 .one {
   position: absolute;
-  top: 55px;
-  left: 55px;
+  top: 10%;
+  left: 15%;
 }
 
 .two {
   position: absolute;
-  top: 55px;
-  right: 55px;
+  top: 10%;
+  right: 15%;
 }
 
 .three {
   position: absolute;
   bottom: 20px;
-  left: 40%;
   top: 96%;
+  left: 40%;
 }
 
 .moon-color-1 {
@@ -74,7 +74,7 @@
 
 @keyframes moons-oppacity {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   10% {
     opacity: 0.3;

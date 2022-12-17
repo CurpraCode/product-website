@@ -11,7 +11,6 @@ import Manage from "../components/socialImpactSection/Manage";
 import Footer from "../common/Footer";
 import { useMediaQuery } from "@chakra-ui/react";
 import Carousel from "../components/carouselSection/Carousel";
-import HealthCareSlides from "../components/healthcareSection/HealthCareSlides";
 
 const Home: NextPage = () => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
