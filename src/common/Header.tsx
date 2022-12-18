@@ -15,7 +15,6 @@ import {
   Link,
   useDisclosure,
 } from "@chakra-ui/react";
-// import Link from "next/link";
 import { useRouter } from "next/router";
 import AuthButton from "../components/authButtons/AuthButton";
 import AuthButtonMobile from "../components/authButtons/AuthButtonMobile";
