@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
 import {
   Box,
-  HStack,
   useMediaQuery,
   Image,
-  Button,
   Collapse,
   Drawer,
   DrawerBody,
@@ -15,12 +13,8 @@ import {
   Link,
   useDisclosure,
 } from "@chakra-ui/react";
-// import Link from "next/link";
-import { useRouter } from "next/router";
 import AuthButton from "../components/authButtons/AuthButton";
-import AuthButtonMobile from "../components/authButtons/AuthButtonMobile";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import Footer from "./Footer";
 import NextLink from "next/link";
 
 interface Props {
@@ -36,7 +30,6 @@ const Header = ({ name }: Props) => {
   const btnRef = useRef<HTMLDivElement | null>(null);
   const [isTab] = useMediaQuery("(max-width: 991px)");
   const [isTablet] = useMediaQuery("(max-width: 560px)");
-  const router = useRouter();
 
   return (
     <Box bg={name}>
@@ -136,7 +129,6 @@ const Header = ({ name }: Props) => {
                           <Collapse in={isOpen} animateOpacity>
                             <Link
                               fontWeight={700}
-                              // color="white"
                               px={["0.6rem", "0.6rem", "1rem", "2rem"]}
                               py=".8rem"
                               _hover={{
