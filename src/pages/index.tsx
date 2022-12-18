@@ -11,7 +11,6 @@ import Manage from "../components/socialImpactSection/Manage";
 import Footer from "../common/Footer";
 import { useMediaQuery } from "@chakra-ui/react";
 import Carousel from "../components/carouselSection/Carousel";
-// import HealthCareSlides from "../components/healthcareSection/HealthCareSlides";
 
 const Home: NextPage = () => {
   const [isTablet] = useMediaQuery("(max-width: 768px)");
@@ -35,15 +34,15 @@ const Home: NextPage = () => {
       >
         {isTablet ? null : (
           <Image
-            src="/bg-curve-2.png"
+            src="/bg-curve.svg"
             alt=""
             width="100%"
-            height={{ md: "550px" }}
+            height={[550]}
             pos="absolute"
-            zIndex={-5}
+            zIndex={-10}
           />
         )}
-        <Header name={""} />
+        <Header name={"blah blah blah"} />
         <Screen />
       </Box>
 
