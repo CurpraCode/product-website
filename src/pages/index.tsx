@@ -34,15 +34,15 @@ const Home: NextPage = () => {
       >
         {isTablet ? null : (
           <Image
-            src="/bg-curve-2.png"
+            src="/bg-curve.svg"
             alt=""
             width="100%"
-            height={{ md: "550px" }}
+            height={[550]}
             pos="absolute"
-            zIndex={-5}
+            zIndex={-10}
           />
         )}
-        <Header name={""} />
+        <Header name={"blah blah blah"} />
         <Screen />
       </Box>
 

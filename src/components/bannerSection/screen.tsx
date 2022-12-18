@@ -1,18 +1,9 @@
 import React from "react";
-import {
-  Box,
-  Heading,
-  Flex,
-  Button,
-  Image,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Box, Heading, Flex, Image, useMediaQuery } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
-import AuthButton from "../authButtons/AuthButton";
 
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
-  const [isDesktop] = useMediaQuery("(max-width: 768px)");
   return (
     <Box
       maxWidth="container.xl"
@@ -59,43 +50,17 @@ const Screen = () => {
           >
             <Typewriter
               options={{
-                strings: ["Hello", "Spanish", "French", "Chinese"],
+                strings: ["Hello", "Hola", "Bonjour", "你好", "مرحبًا"],
                 autoStart: true,
                 loop: true,
               }}
             />
           </Heading>
-
-          {isDesktop ? null : (
-            <Button
-              bg="#3a76bf"
-              borderRadius="8px"
-              py="25px"
-              color="#fff"
-              width="100%"
-              fontWeight="700"
-              fontSize="18px"
-              maxW="200px"
-              mt={{ md: "2rem", lg: "2rem", xl: "2.5rem" }}
-              _hover={{
-                bg: "#3a76bf",
-              }}
-              _focus={{
-                outline: "none",
-                bg: "#3a76bf",
-              }}
-            >
-              Start Now
-            </Button>
-          )}
         </Box>
         <Image
           src="/screen.png"
           alt="mac and phone"
-          // display={isTablet ? "none" : "block"}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
-          // position="absolute"
-          // right={isMac ? "9rem" : isTablet ? "" : "11rem"}
           right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}
         />

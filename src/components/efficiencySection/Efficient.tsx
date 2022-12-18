@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Heading,
-  Button,
-  Image,
-  Divider,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Heading, Button, Image } from "@chakra-ui/react";
 
 const Efficient = () => {
   return (
