@@ -1,18 +1,10 @@
-.container {
-  position: relative;
-}
-
 .circle {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
   position: absolute;
+  z-index: 10;
   animation: rotating-circle 5s linear infinite;
 }
 
 .moon-box {
-  width: 30px;
-  height: 30px;
   background-color: #fff;
   border-radius: 50%;
   transition: 0.7s;
@@ -22,13 +14,13 @@
 .one {
   position: absolute;
   top: 10%;
-  left: 15%;
+  left: 14%;
 }
 
 .two {
   position: absolute;
   top: 10%;
-  right: 15%;
+  right: 14%;
 }
 
 .three {
@@ -74,7 +66,7 @@
 
 @keyframes moons-oppacity {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   10% {
     opacity: 0.3;
