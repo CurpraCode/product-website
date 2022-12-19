@@ -22,7 +22,7 @@ const HealthCareSlides = ({
     <Flex
       bg="#AE64A7E5"
       color="#fff"
-      px="70px"
+     
       borderRadius="full"
       pos="absolute"
       top="0"
@@ -43,13 +43,13 @@ const HealthCareSlides = ({
       >
         <SwiperSlide>
           <Stack
-            height="500px"
+            height={{base:"300px", md:"300px", lg:"500px"}}
             align="center"
             justifyContent="center"
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="18px" fontFamily="mono">
+            <Heading fontSize="10px" fontFamily="mono">
               Lorem ipsum
             </Heading>
             <Text fontSize="10px">

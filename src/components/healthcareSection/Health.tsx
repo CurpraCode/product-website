@@ -48,7 +48,14 @@ const Health = () => {
           </Heading>
 
           <Box w="50px" border="3px solid #AE64A7" borderRadius="5px"></Box>
-          <Text lineHeight="35px" color="#575757" fontSize="24px">
+          <Text
+            lineHeight="35px"
+            color="#575757"
+            fontSize={{
+              lg: "24px",
+              base: "18px",
+            }}
+          >
             Our focus is to help facilitate the highest level of care for LEP
             patients
           </Text>

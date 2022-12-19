@@ -29,7 +29,7 @@ const Header = ({ name }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef<HTMLDivElement | null>(null);
   const [isTab] = useMediaQuery("(max-width: 991px)");
-  const [isTablet] = useMediaQuery("(max-width: 560px)");
+  // const [isTablet] = useMediaQuery("(max-width: 560px)");
 
   return (
     <Box bg={name}>
@@ -65,7 +65,7 @@ const Header = ({ name }: Props) => {
             {links.map(({ name, to }, index) => (
               <NextLink href={to} passHref key={index}>
                 <Link
-                  px={["2rem", "4rem", "4rem", "3rem"]}
+                  px={["2rem", "3rem", "3rem", "2rem"]}
                   color="white"
                   _hover={{
                     textDecor: "none",
@@ -87,7 +87,7 @@ const Header = ({ name }: Props) => {
                 </Link>
               </NextLink>
             ))}
-            {isTablet ? null : <AuthButton />}
+             <AuthButton />
           </Box>
 
           <Flex

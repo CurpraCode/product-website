@@ -35,7 +35,14 @@ const Opportiunity = () => {
             Opportunities for <br /> Interpreters
           </Heading>
           <Box w="50px" border="3px solid #686DF1" borderRadius="5px"></Box>
-          <Text lineHeight="35px" color="#575757" fontSize="24px">
+          <Text
+            lineHeight="35px"
+            color="#575757"
+            fontSize={{
+              lg: "24px",
+              base: "18px",
+            }}
+          >
             At Canvey we want interpreters to work from anywhere at anytime. Get
             on the app and get paid.
           </Text>
