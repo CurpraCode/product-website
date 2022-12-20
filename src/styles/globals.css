@@ -18,12 +18,3 @@ a {
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
 }
-
-/* swiper slider */
-.swiper-button-prev {
-  color: red;
-}
-
-.swiper-button-next {
-  color: #000;
-}

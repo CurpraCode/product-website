@@ -12,7 +12,7 @@ import ImageSection from "./ImageSection";
 
 const Opportiunity = () => {
   return (
-    <Box py="2rem" px="2rem" h={[800, 800, 700]} border="2px">
+    <Box py="2rem" px="2rem" h={[800, 800, 700]}>
       <Stack
         h="100%"
         direction={["column-reverse", "column-reverse", "row"]}
