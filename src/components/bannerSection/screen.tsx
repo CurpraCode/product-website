@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
+  const [isTab] = useMediaQuery("(max-width: 760px)");
   return (
     <Box
       maxWidth="container.xl"
@@ -24,7 +25,7 @@ const Screen = () => {
         }}
       >
         <Box
-          mt={isTablet ? "0rem" : "4rem"}
+          mt={isTablet ? "4rem" : "4rem"}
           ml={{
             sm: "3rem",
             md: "3rem",
@@ -40,7 +41,7 @@ const Screen = () => {
             fontWeight="800"
             mb="1rem"
             textAlign={{ base: "center", lg: "left" }}
-            fontSize={{ base: "24px", sm: "38px", md: "48px" }}
+            fontSize={{ base: "28px", sm: "38px", md: "58px" }}
           >
             We Speak your <br /> Language
           </Heading>
@@ -60,6 +61,7 @@ const Screen = () => {
         <Image
           src="/screen.png"
           alt="mac and phone"
+          mt={isTab ? "7rem" : ""}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}

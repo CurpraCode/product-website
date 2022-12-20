@@ -35,7 +35,7 @@ const Header = ({ name }: Props) => {
     <Box bg={name}>
       <Flex
         width="100%"
-        p={["0.5rem 0.5rem", "0.3rem 0.5rem", "2rem 2rem", "2rem 2rem"]}
+        p={["2rem 2rem", "2rem 2rem", "2rem 2rem", "2rem 2rem"]}
         m="auto"
         maxW="7xl"
         justifyContent="space-between"

@@ -74,8 +74,8 @@ const AuthButton = () => {
             </MenuButton>
             <MenuList width="190px">
               <Accordion allowToggle>
-                <AccordionItem>
-                  <AccordionButton>
+                <AccordionItem border="0px">
+                  <AccordionButton border="5px">
                     <Box as="span" flex="1" textAlign="left">
                       Interpreters
                     </Box>
@@ -96,7 +96,7 @@ const AuthButton = () => {
               <MenuDivider />
 
               <Accordion allowToggle>
-                <AccordionItem>
+                <AccordionItem border="0px">
                   <AccordionButton>
                     <Box as="span" flex="1" textAlign="left">
                       Health Care Worker

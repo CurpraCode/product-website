@@ -1,8 +1,13 @@
 import "../styles/globals.css";
 import "../styles/circle-animation.css";
 import type { AppProps } from "next/app";
-import { ChakraProvider } from "@chakra-ui/react";
+import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import ReactGA from "react-ga";
+import "@fontsource/inter/400.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/nunito-sans/400.css";
+import "@fontsource/open-sans/700.css";
+
 ReactGA.initialize("G-DBBN3WC1C7");
 
 if (typeof window !== "undefined") {
@@ -10,9 +15,15 @@ if (typeof window !== "undefined") {
   ReactGA.pageview(window.location.pathname + window.location.search);
 }
 
+const theme = extendTheme({
+  fonts: {
+    heading: `'Open Sans', sans-serif`,
+    body: `'montserrat', sans-serif`,
+  },
+});
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );

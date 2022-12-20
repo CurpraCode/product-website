@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../common/Header";
 import { Box, Image } from "@chakra-ui/react";
 import bgcurve from "../../public/bg-curve.svg";
+// import bgsmallcurve from "../../public/bgsmallcurve.png";
 import Screen from "../components/bannerSection/screen";
 import Efficient from "../components/efficiencySection/Efficient";
 import Health from "../components/healthcareSection/Health";
@@ -24,15 +25,20 @@ const Home: NextPage = () => {
       </Head>
 
       <Box
-        bgGradient={
-          isTablet
-            ? "linear-gradient(117.32deg, #5C0E62 -41.64%, #00B5D0 174.5%)"
-            : bgcurve
-        }
-        borderBottomLeftRadius="500px"
-        borderBottomRightRadius="500px"
+        bgGradient={isTablet ? null : bgcurve}
+        // borderBottomLeftRadius="500px"
+        // borderBottomRightRadius="500px"
       >
-        {isTablet ? null : (
+        {isTablet ? (
+          <Image
+            src="/bgsmallcurve.png"
+            alt=""
+            width="100%"
+            height={[550]}
+            pos="absolute"
+            zIndex={-10}
+          />
+        ) : (
           <Image
             src="/bg-curve.svg"
             alt=""
@@ -46,7 +52,7 @@ const Home: NextPage = () => {
         <Screen />
       </Box>
 
-      <Box>
+      <Box mt="4rem">
         <Carousel />
       </Box>
 
