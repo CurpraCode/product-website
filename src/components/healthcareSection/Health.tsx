@@ -47,7 +47,7 @@ const Health = () => {
             Advocates for <br /> healthcare
           </Heading>
 
-          <Box w="50px" border="3px solid #AE64A7" borderRadius="5px"></Box>
+          <Box w="60px" border="4px solid #AE64A7" borderRadius="5px"></Box>
           <Text
             lineHeight="35px"
             color="#575757"

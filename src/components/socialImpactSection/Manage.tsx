@@ -62,7 +62,7 @@ const Manage = () => {
         <ChakraImage
           src="/circle-icon.png"
           alt=""
-          width={{base:"50%", md:"50%",lg:"35%"}}
+          width={{base:"50%", md:"50%",lg:"45%"}}
           mr={{ lg: "6rem", md: "auto", sm: "auto" }}
           display={{ md: "block", sm: "block" }}
           ml={{ md: "auto", sm: "auto" }}

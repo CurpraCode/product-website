@@ -12,7 +12,7 @@ import ImageSection from "./ImageSection";
 
 const Opportiunity = () => {
   return (
-    <Box py="2rem" px="2rem" h={[800, 800, 700]}>
+    <Center py="8rem" px="8rem" h={[800, 800, 700]}>
       <Stack
         h="100%"
         direction={["column-reverse", "column-reverse", "row"]}
@@ -34,7 +34,7 @@ const Opportiunity = () => {
           <Heading fontWeight="700" fontSize={["18px", "25px", "36px"]}>
             Opportunities for <br /> Interpreters
           </Heading>
-          <Box w="50px" border="3px solid #686DF1" borderRadius="5px"></Box>
+          <Box w="60px" border="4px solid #686DF1" borderRadius="5px"></Box>
           <Text
             lineHeight="35px"
             color="#575757"
@@ -73,7 +73,7 @@ const Opportiunity = () => {
           <ImageSection />
         </Center>
       </Stack>
-    </Box>
+    </Center>
   );
 };
 

@@ -120,7 +120,7 @@ const AuthButton = () => {
                 _hover={{ color: "#403E50", fontWeight: "600" }}
                 transition="all .8s ease-out"
               >
-                <Link href="/sign-up">As an enterprise</Link>
+                <Link href="/sign-up">As an organization</Link>
               </MenuItem>
             </MenuList>
           </>
