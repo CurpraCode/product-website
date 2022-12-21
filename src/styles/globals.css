@@ -19,6 +19,11 @@ a {
   background-color: #fff !important;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+}
+
 /* react-slick - replace arrow img*/
 
 .slick-prev:before,
