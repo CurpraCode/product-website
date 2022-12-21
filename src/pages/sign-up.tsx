@@ -16,13 +16,12 @@ import {
   InputLeftElement,
   Textarea,
   Image,
-  useMediaQuery,
   Stack,
   Circle,
 } from "@chakra-ui/react";
 
 const SignUp = () => {
-  const [isTablet] = useMediaQuery("(max-width: 767px)");
+
 
   return (
     <Layout>
