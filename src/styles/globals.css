@@ -18,3 +18,12 @@ a {
 .swiper-pagination-bullet-active {
   background-color: #fff !important;
 }
+
+/* react-slick - replace arrow img*/
+
+.slick-prev:before,
+.slick-next:before {
+  width: 30px;
+  height: 30px;
+  content: "" !important;
+}
