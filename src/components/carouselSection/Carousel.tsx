@@ -3,12 +3,44 @@ import CarouselCard from "./CarouselCard";
 import { MdLocationOn, MdPrivacyTip } from "react-icons/md";
 import { AiFillClockCircle } from "react-icons/ai";
 import { IoMdHeadset } from "react-icons/io";
-import { Flex, Stack } from "@chakra-ui/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Stack, Box } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { NextArrow, PrevArrow } from "./CarouselArrows";
+
+const settings = {
+  className: "my-carousel",
+  // dots: true,
+  infinite: false,
+  speed: 500,
+  // slidesToShow: 3,
+  slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1924,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 const Carousel = () => {
   const cards: { icon: IconType; title: string; body: string }[] = [
@@ -46,38 +78,23 @@ const Carousel = () => {
 
   return (
     <Stack>
-      <Flex
-        bg="#F4F6F9"
+      <Box
         bgGradient="linear(180deg, #FFF 50%, #F4F6F9 50%)"
         py="10px"
-        px={[5, 70]}
+        w="100%"
+        px={[0, 5, 70]}
       >
-        <Swiper
-          spaceBetween={30}
-          modules={[Navigation]}
-          navigation
-          breakpoints={{
-            640: {
-              width: 640,
-              slidesPerView: 1,
-            },
-            999: {
-              width: 768,
-              slidesPerView: 2,
-            },
-          }}
-        >
-          {cards.map((card, index) => (
-            <SwiperSlide key={index}>
-              <CarouselCard
-                IconName={card.icon}
-                title={card.title}
-                body={card.body}
-              />
-            </SwiperSlide>
+        <Slider {...settings}>
+          {cards.map((card) => (
+            // eslint-disable-next-line react/jsx-key
+            <CarouselCard
+              IconName={card.icon}
+              title={card.title}
+              body={card.body}
+            />
           ))}
-        </Swiper>
-      </Flex>
+        </Slider>
+      </Box>
     </Stack>
   );
 };
