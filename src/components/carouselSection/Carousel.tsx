@@ -1,4 +1,6 @@
 import React from "react";
+import "../../styles/Home.module.css";
+
 import CarouselCard from "./CarouselCard";
 import { MdLocationOn, MdPrivacyTip } from "react-icons/md";
 import { AiFillClockCircle } from "react-icons/ai";
@@ -59,10 +61,6 @@ const Carousel = () => {
           breakpoints={{
             640: {
               width: 640,
-              slidesPerView: 1,
-            },
-            490:{
-              width: 240,
               slidesPerView: 1,
             },
             999: {

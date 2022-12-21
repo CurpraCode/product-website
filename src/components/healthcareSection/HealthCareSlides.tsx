@@ -22,7 +22,6 @@ const HealthCareSlides = ({
     <Flex
       bg="#AE64A7E5"
       color="#fff"
-     
       borderRadius="full"
       pos="absolute"
       top="0"
@@ -43,16 +42,16 @@ const HealthCareSlides = ({
       >
         <SwiperSlide>
           <Stack
-            height={{base:"300px", md:"300px", lg:"500px"}}
+            height={{ base: "300px", md: "300px", lg: "500px" }}
             align="center"
             justifyContent="center"
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="10px" fontFamily="mono">
+            <Heading fontSize="42px" fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text fontSize="10px">
+            <Text fontSize="24px">
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
@@ -66,10 +65,10 @@ const HealthCareSlides = ({
             px="45px"
             textAlign="center"
           >
-              <Heading fontSize="18px" fontFamily="mono">
+            <Heading fontSize="42px" fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text fontSize="10px">
+            <Text fontSize="24px">
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
@@ -83,10 +82,10 @@ const HealthCareSlides = ({
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="18px" fontFamily="mono">
+            <Heading fontSize="42px" fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text fontSize="10px">
+            <Text fontSize="24px">
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>

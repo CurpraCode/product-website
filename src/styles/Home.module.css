@@ -107,6 +107,10 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgb(0, 0, 0) !important;
+}
 
 @media (max-width: 600px) {
   .grid {
