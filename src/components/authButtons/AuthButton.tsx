@@ -82,11 +82,11 @@ const AuthButton = () => {
                     <AccordionIcon />
                   </AccordionButton>
 
-                  <AccordionPanel pb={4} fontSize="0.6rem">
+                  <AccordionPanel pb={4} fontSize="0.7rem">
                     <Text color="#3A76BF">Sign in</Text>
                     <p>I am a registered interpreter</p>
                   </AccordionPanel>
-                  <AccordionPanel pb={4} fontSize="0.6rem">
+                  <AccordionPanel pb={4} fontSize="0.7rem">
                     <Text color="#3A76BF">Sign Up</Text>
                     <p>I need to set up my account</p>
                   </AccordionPanel>
@@ -104,11 +104,11 @@ const AuthButton = () => {
                     <AccordionIcon />
                   </AccordionButton>
 
-                  <AccordionPanel pb={4} fontSize="0.6rem">
+                  <AccordionPanel pb={4} fontSize="0.7rem">
                     <Text color="#3A76BF">Sign in</Text>
                     <p>I am a registered Health Care Worker</p>
                   </AccordionPanel>
-                  <AccordionPanel pb={4} fontSize="0.6rem">
+                  <AccordionPanel pb={4} fontSize="0.7rem">
                     <Text color="#3A76BF">Sign Up</Text>
                     <p>I need to set up my account</p>
                   </AccordionPanel>

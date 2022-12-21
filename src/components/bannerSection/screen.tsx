@@ -27,11 +27,11 @@ const Screen = () => {
         <Box
           mt={isTablet ? "4rem" : "4rem"}
           ml={{
-            sm: "3rem",
+            sm: "0rem",
             md: "3rem",
             lg: "3.5rem",
             xl: "3.5rem",
-            base: "3rem",
+            base: "0rem",
           }}
           pb={{ base: "2rem" }}
           textAlign={isTablet ? "left" : "left"}
@@ -41,7 +41,7 @@ const Screen = () => {
             fontWeight="800"
             mb="1rem"
             textAlign={{ base: "center", lg: "left" }}
-            fontSize={{ base: "28px", sm: "38px", md: "58px" }}
+            fontSize={{ base: "38px", sm: "38px", md: "58px" }}
           >
             We Speak your <br /> Language
           </Heading>
@@ -61,7 +61,7 @@ const Screen = () => {
         <Image
           src="/screen.png"
           alt="mac and phone"
-          mt={isTab ? "7rem" : ""}
+          mt={isTab ? "5rem" : ""}
           width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
           right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}

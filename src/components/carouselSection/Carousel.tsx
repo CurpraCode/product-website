@@ -61,6 +61,10 @@ const Carousel = () => {
               width: 640,
               slidesPerView: 1,
             },
+            490:{
+              width: 240,
+              slidesPerView: 1,
+            },
             999: {
               width: 768,
               slidesPerView: 2,
