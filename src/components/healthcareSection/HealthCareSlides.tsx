@@ -42,16 +42,16 @@ const HealthCareSlides = ({
       >
         <SwiperSlide>
           <Stack
-            height={{ base: "300px", md: "300px", lg: "500px" }}
+            height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
             align="center"
             justifyContent="center"
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="42px" fontFamily="mono">
+            <Heading fontSize={{ base: "24px", lg: "42px" }} fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text fontSize="24px">
+            <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
@@ -59,16 +59,16 @@ const HealthCareSlides = ({
         </SwiperSlide>
         <SwiperSlide>
           <Stack
-            height="500px"
+            height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
             align="center"
             justifyContent="center"
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="42px" fontFamily="mono">
+            <Heading fontSize={{ base: "24px", lg: "42px" }} fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text fontSize="24px">
+            <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
@@ -76,16 +76,16 @@ const HealthCareSlides = ({
         </SwiperSlide>
         <SwiperSlide>
           <Stack
-            height="500px"
+            height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
             align="center"
             justifyContent="center"
             px="45px"
             textAlign="center"
           >
-            <Heading fontSize="42px" fontFamily="mono">
+            <Heading fontSize={{ base: "24px", lg: "42px" }} fontFamily="mono">
               Lorem ipsum
             </Heading>
-            <Text fontSize="24px">
+            <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
               Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
               adipiscing at luctus erat mauris ut.
             </Text>
