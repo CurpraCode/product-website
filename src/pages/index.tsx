@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             src="/bg-curve.svg"
             alt=""
             width="100%"
-            height={[550]}
+            height={[593]}
             pos="absolute"
             zIndex={-10}
           />
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         <Screen />
       </Box>
 
-      <Box mt="4rem">
+      <Box mt={{ base: "8rem", md: "4rem", lg: "4rem" }}>
         <Carousel />
       </Box>
 

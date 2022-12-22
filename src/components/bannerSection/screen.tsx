@@ -16,7 +16,7 @@ const Screen = () => {
       <Flex
         justifyContent="space-between"
         alignItems={{ base: "center", md: "center", lg: "flex-start" }}
-        mt="1rem"
+        mt={{ base: "0rem", md: "0rem", lg: "1rem" }}
         flexDirection={{
           lg: "row",
           md: "row",
@@ -25,7 +25,7 @@ const Screen = () => {
         }}
       >
         <Box
-          mt={isTablet ? "4rem" : "4rem"}
+          mt={{base:"4rem", md:"-8rem", lg:"4rem"}}
           ml={{
             sm: "0rem",
             md: "3rem",
@@ -41,7 +41,7 @@ const Screen = () => {
             fontWeight="800"
             mb="1rem"
             textAlign={{ base: "center", lg: "left" }}
-            fontSize={{ base: "38px", sm: "38px", md: "58px" }}
+            fontSize={{ base: "38px", sm: "38px", md: "38px" }}
           >
             We Speak your <br /> Language
           </Heading>
@@ -62,7 +62,7 @@ const Screen = () => {
           src="/screen.png"
           alt="mac and phone"
           mt={isTab ? "5rem" : ""}
-          width={{ base: "80%", sm: "65%", md: "50%", lg: "36%", xl: "35%" }}
+          width={{ base: "80%", sm: "65%", md: "56%", lg: "56%", xl: "55%" }}
           right={{ base: "", sm: "0rem", md: "1rem", lg: "8rem", xl: "12rem" }}
           top={{ md: "8.5rem", lg: "4.5rem", sm: "12.5rem" }}
         />

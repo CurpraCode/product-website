@@ -83,5 +83,6 @@ const Carousel = () => {
     </Stack>
   );
 };
+//24/7 assistance for your need
 
 export default Carousel;
