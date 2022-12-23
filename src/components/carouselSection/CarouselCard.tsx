@@ -17,7 +17,7 @@ const CarouselCard = ({ IconName, title, body }) => {
     >
       <CardBody>
         <Stack alignItems="start" justifyContent="space-between" gap="2">
-          <Stack mt="6" gap="2">
+          <Stack mt="6" gap="1">
             <Flex justifyContent={"start"} alignItems="center" gap="5px">
               <Icon as={IconName} color="blue.400" boxSize={6} />
               <Heading size="md">{title}</Heading>

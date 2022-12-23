@@ -70,7 +70,7 @@ const Carousel = () => {
           }}
         >
           {cards.map((card, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide  key={index}>
               <CarouselCard
                 IconName={card.icon}
                 title={card.title}
