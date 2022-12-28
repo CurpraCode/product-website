@@ -61,7 +61,7 @@ const Carousel = () => {
           breakpoints={{
             640: {
               width: 640,
-              slidesPerView: 1,
+              slidesPerView: 3,
             },
             999: {
               width: 768,
@@ -83,6 +83,5 @@ const Carousel = () => {
     </Stack>
   );
 };
-//24/7 assistance for your need
 
 export default Carousel;
