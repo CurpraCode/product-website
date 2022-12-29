@@ -45,9 +45,14 @@ a {
 .swiper-button-disabled {
   opacity: 0.5;
 }
+.swiper-slide {
+  flex-shrink: 3 !important;
+  /* width:100% !important */
+ 
+}
 @media (max-width: 790px) {
   .swiper-slide {
-    flex-shrink: none !important;
-   
+    flex-shrink: 2 !important;
+    width:100% !important
   }
 }
