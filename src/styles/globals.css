@@ -45,3 +45,9 @@ a {
 .swiper-button-disabled {
   opacity: 0.5;
 }
+@media (max-width: 790px) {
+  .swiper-slide {
+    flex-shrink: none !important;
+    width: 100% !important;
+  }
+}
