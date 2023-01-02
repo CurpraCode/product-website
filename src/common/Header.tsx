@@ -23,7 +23,7 @@ interface Props {
 const links = [
   { name: "About Us", to: "/about" },
   { name: "Contact Us", to: "/contact-us" },
-  { name: "How It Works", to: "/privacy" },
+  { name: "How It Works", to: "/how-it-works" },
 ];
 const Header = ({ name }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,7 +44,7 @@ const Header = ({ name }: Props) => {
       >
         <NextLink href="/" passHref>
           <Image
-            width={{ base: "52%", md:"30%", lg: "25%" }}
+            width={{ base: "52%", md: "30%", lg: "25%" }}
             height="25%"
             objectFit="cover"
             src="/canvey-logo.png"
