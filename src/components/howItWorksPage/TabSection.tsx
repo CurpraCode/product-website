@@ -51,9 +51,10 @@ const TabSection = () => {
               <Stack
                 key={index}
                 w={["240px", "760px"]}
-                gap={["20px", "100px"]}
+                gap={["20px", "30px", "30px", "100px"]}
                 direction={["column", "row"]}
                 alignItems={["center"]}
+                px={["0", "10px", "10px", "0"]}
               >
                 <Image src="/random-gradient.svg" alt="gradient-box" />
                 <VStack

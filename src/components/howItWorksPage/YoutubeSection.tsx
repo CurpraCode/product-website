@@ -13,15 +13,18 @@ const YoutubeSection = () => {
         />
       </Box>
 
-      <Image
-        src="/Sample-YouTube-Player.svg"
-        alt="gradient background"
-        w={["300", "560"]}
-        h={["180", "340"]}
+      <Box
+        as="iframe"
+        src="https://www.youtube.com/embed/iWDKsHm6gTA"
+        w={["300", "440", "560"]}
+        h={["180", "230", "340"]}
         pos="absolute"
         top="200"
         left="50%"
         transform="translate(-50%)"
+        sx={{
+          aspectRatio: "16/9",
+        }}
       />
     </Box>
   );
