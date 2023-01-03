@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 const Screen = () => {
   const [isTablet] = useMediaQuery("(max-width: 560px)");
   const [isTab] = useMediaQuery("(max-width: 760px)");
+  const [isTabView] = useMediaQuery("(width: 768px)");
   return (
     <Box
       maxWidth="container.xl"
@@ -17,15 +18,19 @@ const Screen = () => {
         justifyContent="space-between"
         alignItems={{ base: "center", md: "center", lg: "flex-start" }}
         mt={{ base: "0rem", md: "0rem", lg: "1rem" }}
-        flexDirection={{
-          lg: "row",
-          md: "row",
-          sm: "column",
-          base: "column",
-        }}
+        flexDirection={
+          isTabView
+            ? "column"
+            : {
+                lg: "row",
+                md: "row",
+                sm: "column",
+                base: "column",
+              }
+        }
       >
         <Box
-          mt={{base:"4rem", md:"-8rem", lg:"4rem"}}
+          mt={isTabView ? "3rem" : { base: "4rem", md: "-8rem", lg: "4rem" }}
           ml={{
             sm: "0rem",
             md: "3rem",

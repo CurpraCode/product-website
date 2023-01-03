@@ -59,18 +59,19 @@ const Carousel = () => {
           modules={[Navigation]}
           navigation
           breakpoints={{
+           
             640: {
-              width: 640,
+              width: 540,
               slidesPerView: 1,
             },
             999: {
               width: 768,
-              slidesPerView: 2,
+              slidesPerView: 1,
             },
           }}
         >
           {cards.map((card, index) => (
-            <SwiperSlide  key={index}>
+            <SwiperSlide key={index}>
               <CarouselCard
                 IconName={card.icon}
                 title={card.title}
@@ -83,6 +84,5 @@ const Carousel = () => {
     </Stack>
   );
 };
-//24/7 assistance for your need
 
 export default Carousel;
