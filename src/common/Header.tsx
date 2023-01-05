@@ -21,7 +21,7 @@ interface Props {
   name: string;
 }
 const links = [
-  { name: "About Us", to: "/about" },
+  { name: "About Us", to: "/about-us" },
   { name: "Contact Us", to: "/contact-us" },
   { name: "How It Works", to: "/how-it-works" },
 ];

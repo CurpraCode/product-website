@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Image, Text, Heading, Icon, Flex } from "@chakra-ui/react";
 import { Card, CardBody } from "@chakra-ui/card";
 
-const CarouselCard = ({ IconName, title, body }) => {
+const CarouselCard = ({ IconName, title, body, imgSrc }) => {
   return (
     <Card
       maxW="sm"
@@ -22,10 +22,18 @@ const CarouselCard = ({ IconName, title, body }) => {
               <Icon as={IconName} color="blue.400" boxSize={6} />
               <Heading size="md">{title}</Heading>
             </Flex>
-            <Text mb={body=="24/7 assistance for your need"? "1.5rem !important": "0rem"}>{body}</Text>
+            <Text
+              mb={
+                body == "24/7 assistance for your need"
+                  ? "1.5rem !important"
+                  : "0rem"
+              }
+            >
+              {body}
+            </Text>
           </Stack>
           <Image
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            src={imgSrc}
             alt="Green double couch"
             borderRadius="lg"
             width="350px"

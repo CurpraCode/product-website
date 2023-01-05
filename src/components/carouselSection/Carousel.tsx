@@ -13,36 +13,42 @@ import { Navigation } from "swiper";
 import { IconType } from "react-icons/lib";
 
 const Carousel = () => {
-  const cards: { icon: IconType; title: string; body: string }[] = [
+  const cards: {
+    icon: IconType;
+    title: string;
+    body: string;
+    imgSrc: string;
+  }[] = [
     {
       icon: MdLocationOn,
       title: "Quality Interpreters",
       body: "60+ Langauges available for interpretations",
+      imgSrc: "/carousel-quality.png",
     },
     {
       icon: AiFillClockCircle,
       title: "Instant Access",
       body: "Access to both Video and Audio mean of interpretation",
+      imgSrc: "/carousel-instant.png",
     },
     {
       icon: IoMdHeadset,
       title: "Support",
       body: "24/7 assistance for your need",
+      imgSrc: "/carousel-support.png",
     },
-    {
-      icon: AiFillClockCircle,
-      title: "Instant Access",
-      body: "Access to both Video and Audio mean of interpretation",
-    },
+
     {
       icon: MdPrivacyTip,
       title: "Privacy",
       body: "100% secured application for your own privacy",
+      imgSrc: "/carousel-privacy.png",
     },
     {
       icon: MdLocationOn,
       title: "HIPAA",
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      body: "As per federal law our services are HIPAA compliant and secure.",
+      imgSrc: "/carousel-hipaa.png",
     },
   ];
 
@@ -59,7 +65,6 @@ const Carousel = () => {
           modules={[Navigation]}
           navigation
           breakpoints={{
-           
             640: {
               width: 540,
               slidesPerView: 1,
@@ -76,6 +81,7 @@ const Carousel = () => {
                 IconName={card.icon}
                 title={card.title}
                 body={card.body}
+                imgSrc={card.imgSrc}
               />
             </SwiperSlide>
           ))}

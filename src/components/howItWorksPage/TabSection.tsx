@@ -52,7 +52,7 @@ const TabSection = () => {
                 key={index}
                 w={["240px", "760px"]}
                 gap={["20px", "30px", "30px", "100px"]}
-                direction={["column", "row"]}
+                direction={["column","column","column", "row"]}
                 alignItems={["center"]}
                 px={["0", "10px", "10px", "0"]}
               >
