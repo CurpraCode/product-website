@@ -12,8 +12,8 @@ const AboutComp = () => {
       </Text>
       <Box
         mt="4rem"
-        bg="#F4F6F9"
-        bgGradient="linear(180deg, #FFF 50%, #F4F6F9 50%)"
+        bg="#E4EEFF"
+        bgGradient="linear(180deg, #FFF 50%, #E4EEFF 50%)"
         py="10px"
         px={[5, 70]}
       >
