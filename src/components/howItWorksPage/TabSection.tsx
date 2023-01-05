@@ -50,16 +50,16 @@ const TabSection = () => {
             {TabsData.map((item, index) => (
               <Stack
                 key={index}
-                w={["240px", "760px"]}
+                w={["240px", "540px", "760px"]}
                 gap={["20px", "30px", "30px", "100px"]}
-                direction={["column","column","column", "row"]}
+                direction={["column", "column", "row"]}
                 alignItems={["center"]}
                 px={["0", "10px", "10px", "0"]}
               >
                 <Image src="/random-gradient.svg" alt="gradient-box" />
                 <VStack
-                  alignItems={["center", "start"]}
-                  textAlign={["center", "start"]}
+                  alignItems={["center", "center", "start"]}
+                  textAlign={["center", "center", "start"]}
                   gap="4"
                 >
                   <Heading fontSize={["18px", "24px"]}>{item.title}</Heading>
