@@ -15,7 +15,7 @@ const YoutubeSection = () => {
 
       <Box
         as="iframe"
-        src="https://www.youtube.com/embed/iWDKsHm6gTA"
+        src="https://www.youtube.com/embed/XVkFtvW3GCE"
         w={["300", "440", "560"]}
         h={["180", "230", "340"]}
         pos="absolute"

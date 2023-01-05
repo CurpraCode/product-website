@@ -38,6 +38,7 @@ const CarouselCard = ({ IconName, title, body, imgSrc }) => {
             borderRadius="lg"
             width="350px"
             height="300px"
+            objectFit="contain"
           />
         </Stack>
       </CardBody>
