@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
-import Typewriter from "typewriter-effect";
+import { TypeAnimation } from "react-type-animation";
 
 const AboutComp = () => {
   const [isTab] = useMediaQuery("(max-width: 660px)");
@@ -35,19 +35,23 @@ const AboutComp = () => {
         </Flex>
         <Text textAlign="center" fontSize="1.2rem" mt="5rem" mb="5rem">
           We strive to provide services that express
-          <Text as="span" color="#3A76BF" fontWeight="bolder">
-            <Typewriter
-              options={{
-                strings: [
-                  "Integrity",
-                  "Community",
-                  "Compassion",
-                  "Prosperity",
-                  "Privacy",
-                ],
-                autoStart: true,
-                loop: true,
-              }}
+          <Text as="span" display="inline" ml="0.7rem" color="#3A76BF" fontWeight="bolder">
+            <TypeAnimation
+              sequence={[
+                "Integrity",
+                1000,
+                "Community",
+                1000,
+                "Compassion",
+                1000,
+                "Prosperity",
+                1000,
+                "Privacy",
+                1000,
+              ]}
+              speed={40} // Custom Speed from 1-99 - Default Speed: 40
+              wrapper="span" // Animation will be rendered as a <span>
+              repeat={Infinity} // Repeat this Animation Sequence infinitely
             />
           </Text>
         </Text>
