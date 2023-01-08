@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Image,
+  Center,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 
 const AboutComp = () => {
@@ -33,28 +40,36 @@ const AboutComp = () => {
           />
           <Image src="/white-doctor.png" alt="profile image" />
         </Flex>
-        <Text textAlign="center" fontSize="1.2rem" mt="5rem" mb="5rem">
-          We strive to provide services that express
-          <Text as="span" display="inline" ml="0.7rem" color="#3A76BF" fontWeight="bolder">
-            <TypeAnimation
-              sequence={[
-                "Integrity",
-                1000,
-                "Community",
-                1000,
-                "Compassion",
-                1000,
-                "Prosperity",
-                1000,
-                "Privacy",
-                1000,
-              ]}
-              speed={40} // Custom Speed from 1-99 - Default Speed: 40
-              wrapper="span" // Animation will be rendered as a <span>
-              repeat={Infinity} // Repeat this Animation Sequence infinitely
-            />
+        <Center>
+          <Text textAlign="left" fontSize="1.2rem" mt="5rem" mb="5rem">
+            We strive to provide services that express
+            <Text
+              as="span"
+              display="inline"
+              ml="0.7rem"
+              color="#3A76BF"
+              fontWeight="bolder"
+            >
+              <TypeAnimation
+                sequence={[
+                  "Integrity",
+                  1000,
+                  "Community",
+                  1000,
+                  "Compassion",
+                  1000,
+                  "Prosperity",
+                  1000,
+                  "Privacy",
+                  1000,
+                ]}
+                speed={40} // Custom Speed from 1-99 - Default Speed: 40
+                wrapper="span" // Animation will be rendered as a <span>
+                repeat={Infinity} // Repeat this Animation Sequence infinitely
+              />
+            </Text>
           </Text>
-        </Text>
+        </Center>
       </Box>
       <Flex
         mt="5rem"
@@ -63,7 +78,7 @@ const AboutComp = () => {
         alignItems="center"
       >
         <Image
-          width={isTab ? "40%" : "20%"}
+          width={isTab ? "20%" : "20%"}
           src="/story.png"
           alt="profile image"
         />
@@ -104,7 +119,7 @@ const AboutComp = () => {
           alignItems="center"
           px={[5, 70]}
         >
-          <Image src="/chart.png" alt="chart" />
+          <Image src="/chart.png" alt="chart" width="35%" />
           <Flex
             flexDir="column"
             mt={isTabView ? "5rem" : ""}
