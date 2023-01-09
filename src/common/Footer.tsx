@@ -11,8 +11,9 @@ const Footer = () => {
       alignItems="center"
       justifyContent="center"
       textAlign="center"
-      gap="5rem"
-      py="5rem"
+      gap="2rem"
+      py={"2rem"}
+      h={["400px", "200px"]}
       px={{ base: "1rem", sm: "1rem", md: "3rem" }}
     >
       <Link href="/">
