@@ -74,7 +74,7 @@ const AboutComp = () => {
       <Box bg="#F4F6F9" px={isTab ? "" : [5, 70]} mt="5rem" py="5rem">
         <Flex
           flexDirection={{
-            lg: "row",
+            lg: "column",
             md: "column",
             sm: "column",
             base: "column",
