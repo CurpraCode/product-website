@@ -119,7 +119,7 @@ const AboutComp = () => {
           alignItems="center"
           px={[5, 70]}
         >
-          <Image src="/chart.png" alt="chart" width="35%" />
+          <Image src="/chart.png" alt="chart" width={isTab ? "20%" : "20%"} />
           <Flex
             flexDir="column"
             mt={isTabView ? "5rem" : ""}
