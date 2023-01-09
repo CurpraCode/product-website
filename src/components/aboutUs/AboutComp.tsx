@@ -120,14 +120,22 @@ const AboutComp = () => {
           px={[5, 70]}
         >
           <Image src="/chart.png" alt="chart" width={isTab ? "20%" : "20%"} />
+          <Text
+            textAlign="center"
+            mt="2rem"
+            fontSize="1.3rem"
+            fontWeight="bolder"
+          >
+            The Problem
+          </Text>
           <Flex
             flexDir="column"
-            mt={isTabView ? "5rem" : ""}
+            mt={isTabView ? "2rem" : ""}
             mb={isTabView ? "5rem" : ""}
             alignItems="center"
           >
             <Box
-              w="160px"
+              w="60px"
               mb={isTabView ? "3rem" : "3rem"}
               border="4px solid #D0CCE9"
               borderRadius="5px"
@@ -144,12 +152,6 @@ const AboutComp = () => {
                 barriers are obstacles to providing high-quality patient care.”
               </Text>
             </Text>
-            <Box
-              w="60px"
-              mt={isTabView ? "3rem" : "3rem"}
-              border="4px solid #D0CCE9"
-              borderRadius="5px"
-            ></Box>
           </Flex>
         </Flex>
       </Box>
