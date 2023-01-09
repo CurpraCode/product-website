@@ -1,13 +1,6 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Image,
-  Center,
-  useMediaQuery,
-} from "@chakra-ui/react";
-import { TypeAnimation } from "react-type-animation";
+import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import ServiceAnimatedText from "./ServiceAnimatedText";
 
 const AboutComp = () => {
   const [isTab] = useMediaQuery("(max-width: 660px)");
@@ -40,36 +33,7 @@ const AboutComp = () => {
           />
           <Image src="/white-doctor.png" alt="profile image" />
         </Flex>
-        <Center>
-          <Text textAlign="left" fontSize="1.2rem" mt="5rem" mb="5rem">
-            We strive to provide services that express
-            <Text
-              as="span"
-              display="inline"
-              ml="0.7rem"
-              color="#3A76BF"
-              fontWeight="bolder"
-            >
-              <TypeAnimation
-                sequence={[
-                  "Integrity",
-                  1000,
-                  "Community",
-                  1000,
-                  "Compassion",
-                  1000,
-                  "Prosperity",
-                  1000,
-                  "Privacy",
-                  1000,
-                ]}
-                speed={40} // Custom Speed from 1-99 - Default Speed: 40
-                wrapper="span" // Animation will be rendered as a <span>
-                repeat={Infinity} // Repeat this Animation Sequence infinitely
-              />
-            </Text>
-          </Text>
-        </Center>
+        <ServiceAnimatedText />
       </Box>
       <Flex
         mt="5rem"
