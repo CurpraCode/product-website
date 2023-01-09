@@ -7,7 +7,6 @@ import {
   SystemStyleObject,
 } from "@chakra-ui/react";
 import { Navigation, Pagination } from "swiper";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -18,6 +17,20 @@ const HealthCareSlides = ({
 }: {
   groupHover: SystemStyleObject;
 }) => {
+  const slidesData = [
+    {
+      title: "Lorem ipsum",
+      body: "Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies adipiscing at luctus erat mauris ut.",
+    },
+    {
+      title: "Lorem ipsum",
+      body: "Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies adipiscing at luctus erat mauris ut.",
+    },
+    {
+      title: "Lorem ipsum",
+      body: "Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies adipiscing at luctus erat mauris ut.",
+    },
+  ];
   return (
     <Flex
       bg="#AE64A7E5"
@@ -41,7 +54,7 @@ const HealthCareSlides = ({
       </div>
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={50}
+        slidesPerView={1}
         navigation={{
           nextEl: ".swiper-icon-next",
           prevEl: ".swiper-icon-prev",
@@ -49,59 +62,30 @@ const HealthCareSlides = ({
         }}
         pagination={{ clickable: true }}
         className="mySwiper"
-        onSlideChange={() => console.log("slide change")}
       >
-        <SwiperSlide>
-          <Stack
-            height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
-            align="center"
-            justifyContent="center"
-            px="45px"
-            textAlign="center"
-          >
-            <Heading fontSize={{ base: "24px", lg: "42px" }} fontFamily="mono">
-              Lorem ipsum
-            </Heading>
-            <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
-              Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
-              adipiscing at luctus erat mauris ut.
-            </Text>
-          </Stack>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Stack
-            height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
-            align="center"
-            justifyContent="center"
-            px="45px"
-            textAlign="center"
-          >
-            <Heading fontSize={{ base: "24px", lg: "42px" }} fontFamily="mono">
-              Lorem ipsum
-            </Heading>
-            <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
-              Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
-              adipiscing at luctus erat mauris ut.
-            </Text>
-          </Stack>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Stack
-            height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
-            align="center"
-            justifyContent="center"
-            px="45px"
-            textAlign="center"
-          >
-            <Heading fontSize={{ base: "24px", lg: "42px" }} fontFamily="mono">
-              Lorem ipsum
-            </Heading>
-            <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
-              Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies
-              adipiscing at luctus erat mauris ut.
-            </Text>
-          </Stack>
-        </SwiperSlide>
+        {slidesData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Stack
+              height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
+              align="center"
+              justifyContent="center"
+              textAlign="center"
+              px={["5px", "25px", "45px"]}
+              w={["240px", "300px", "480px"]}
+              // border="5px dotted blue"
+            >
+              <Heading
+                fontSize={{ base: "24px", lg: "42px" }}
+                fontFamily="mono"
+              >
+                {item.title}
+              </Heading>
+              <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
+                {item.body}
+              </Text>
+            </Stack>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Flex>
   );

@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/circle-animation.css";
+import "../styles/healthcare-carousel.css";
 import type { AppProps } from "next/app";
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
 import ReactGA from "react-ga";
