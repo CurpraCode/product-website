@@ -74,7 +74,7 @@ const AboutComp = () => {
       <Box bg="#F4F6F9" px={isTab ? "" : [5, 70]} mt="5rem" py="5rem">
         <Flex
           flexDirection={{
-            lg: "row",
+            lg: "column",
             md: "column",
             sm: "column",
             base: "column",
@@ -83,38 +83,43 @@ const AboutComp = () => {
           alignItems="center"
           px={[5, 70]}
         >
-          <Image src="/chart.png" alt="chart" width="35%" />
-          <Flex
-            flexDir="column"
-            mt={isTabView ? "5rem" : ""}
-            mb={isTabView ? "5rem" : ""}
-            alignItems="center"
-          >
-            <Box
-              w="160px"
-              mb={isTabView ? "3rem" : "3rem"}
-              border="4px solid #D0CCE9"
-              borderRadius="5px"
-            ></Box>
+          <Image src="/chart.png" alt="chart" width={isTab ? "20%" : "20%"} />
+          <Box>
             <Text
-              fontSize="1.2rem"
-              px={isTab ? "" : [5, 70]}
-              textAlign={isTabView ? "center" : "left"}
+              textAlign="center"
+              mt="2rem"
+              fontSize="1.3rem"
+              fontWeight="bolder"
             >
-              According to a study released by the Center for Studying Health
-              System Change;
-              <Text as="span" fontWeight="bold">
-                “Nearly half of U.S. physicians say language or other cultural
-                barriers are obstacles to providing high-quality patient care.”
-              </Text>
+              The Problem
             </Text>
-            <Box
-              w="60px"
-              mt={isTabView ? "3rem" : "3rem"}
-              border="4px solid #D0CCE9"
-              borderRadius="5px"
-            ></Box>
-          </Flex>
+            <Flex
+              flexDir="column"
+              mt={isTabView ? "2rem" : "2rem"}
+              mb={isTabView ? "5rem" : ""}
+              alignItems="center"
+            >
+              <Box
+                w="60px"
+                mb={isTabView ? "3rem" : "3rem"}
+                border="4px solid #D0CCE9"
+                borderRadius="5px"
+              ></Box>
+              <Text
+                fontSize="1.2rem"
+                px={isTabView ? "" : [5, 70]}
+                textAlign={isTabView ? "center" : "center"}
+              >
+                According to a study released by the Center for Studying Health
+                System Change;
+                <Text as="span" fontWeight="bold">
+                  “Nearly half of U.S. physicians say language or other cultural
+                  barriers are obstacles to providing high-quality patient
+                  care.”
+                </Text>
+              </Text>
+            </Flex>
+          </Box>
         </Flex>
       </Box>
       <Flex
