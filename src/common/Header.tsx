@@ -47,7 +47,7 @@ const Header = ({ name }: Props) => {
             width={{ base: "52%", md: "30%", lg: "25%" }}
             height="25%"
             objectFit="cover"
-            src="/canvey-logo.png"
+            src="/canvey-logo.svg"
             alt="logo"
           />
         </NextLink>

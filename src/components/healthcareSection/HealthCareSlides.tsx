@@ -70,7 +70,7 @@ const HealthCareSlides = ({
               align="center"
               justifyContent="center"
               textAlign="center"
-              px={["5px", "25px", "45px"]}
+              px={["35px", "45px"]}
               w={["240px", "300px", "480px"]}
               // border="5px dotted blue"
             >
