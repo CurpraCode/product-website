@@ -16,32 +16,70 @@ import {
 const TabSection = () => {
   const [TabsData] = useState([
     {
-      title: "1. Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Hendrerit nunc pellentesque vitae aenean diam nulla maecenas. Dui accumsan amet vitae amet bibendum sit cum felis.",
+      title: "1. Dowload",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/download.svg",
+    },
+
+    {
+      title: "2. Sign Up",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/signup.svg",
     },
     {
-      title: "2. Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Hendrerit nunc pellentesque vitae aenean diam nulla maecenas. Dui accumsan amet vitae amet bibendum sit cum felis.",
+      title: "3. Go Online",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/goonline.svg",
     },
     {
-      title: "3. Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Hendrerit nunc pellentesque vitae aenean diam nulla maecenas. Dui accumsan amet vitae amet bibendum sit cum felis.",
+      title: "4. Make Money",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/makemoney.svg",
     },
     {
-      title: "4. Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Hendrerit nunc pellentesque vitae aenean diam nulla maecenas. Dui accumsan amet vitae amet bibendum sit cum felis.",
+      title: "5. Refer Friends",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/referfriends.svg",
+    },
+  ]);
+  const [TabData] = useState([
+    {
+      title: "1. Verification",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/verification.svg",
+    },
+
+    {
+      title: "2. Make Request",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/makerequest.svg",
     },
     {
-      title: "5. Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Hendrerit nunc pellentesque vitae aenean diam nulla maecenas. Dui accumsan amet vitae amet bibendum sit cum felis.",
+      title: "3. Stay Organized",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/stayorganized.svg",
+    },
+    {
+      title: "4. Rating System",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/ratingsystem.svg",
+    },
+    {
+      title: "5. Analytics",
+      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      imgSrc: "/analytics.svg",
     },
   ]);
 
   return (
     <Tabs>
       <TabList>
-        <Tab w="50%">Interpreters</Tab>
-        <Tab w="50%">Health Care Workers</Tab>
+        <Tab w="50%" fontSize="1.3rem" fontWeight="bolder">
+          Interpreters
+        </Tab>
+        <Tab w="50%" fontSize="1.3rem" fontWeight="bolder">
+          Health Care Workers
+        </Tab>
       </TabList>
 
       <TabPanels py="100px">
@@ -56,7 +94,7 @@ const TabSection = () => {
                 alignItems={["center"]}
                 px={["0", "10px", "10px", "0"]}
               >
-                <Image src="/random-gradient.svg" alt="gradient-box" />
+                <Image src={item.imgSrc} alt="gradient-box" />
                 <VStack
                   alignItems={["center", "center", "start"]}
                   textAlign={["center", "center", "start"]}
@@ -64,7 +102,7 @@ const TabSection = () => {
                 >
                   <Heading fontSize={["18px", "24px"]}>{item.title}</Heading>
                   <Box
-                    border="4px solid #3A76BF"
+                    border="4px solid #8F5273"
                     w="40px"
                     borderRadius="10"
                   ></Box>
@@ -76,7 +114,7 @@ const TabSection = () => {
         </TabPanel>
         <TabPanel>
           <VStack alignItems="center" gap="100px">
-            {TabsData.map((item, index) => (
+            {TabData.map((item, index) => (
               <Stack
                 key={index}
                 w={["240px", "540px", "760px"]}
@@ -85,7 +123,7 @@ const TabSection = () => {
                 alignItems={["center"]}
                 px={["0", "10px", "10px", "0"]}
               >
-                <Image src="/random-gradient.svg" alt="gradient-box" />
+                <Image src={item.imgSrc} alt="gradient-box" />
                 <VStack
                   alignItems={["center", "center", "start"]}
                   textAlign={["center", "center", "start"]}
