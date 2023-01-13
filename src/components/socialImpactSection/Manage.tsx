@@ -5,6 +5,7 @@ import {
   Text,
   Heading,
   Image as ChakraImage,
+  VStack,
 } from "@chakra-ui/react";
 
 const Manage = () => {
@@ -30,23 +31,18 @@ const Manage = () => {
           <Heading
             mb="1rem"
             fontWeight="700"
-            fontSize={{
-              lg: "36px",
-              md: "24px",
-              sm: "18px",
-              base: "18px",
-            }}
+            fontSize={["18px", "25px", "36px"]}
             pb="1rem"
           >
             Social Impact
           </Heading>
-          <ChakraImage
-            src="/Lineblue.svg"
-            alt=""
-            pb="1rem"
-            m={{ md: "auto", sm: "auto", base: "auto" }}
-            display={{ lg: "inline", md: "block", sm: "block" }}
-          />
+          <VStack
+            alignItems={["center","center", "center", "start"]}
+            justifyContent="center"
+            textAlign={["center","center", "center", "start"]}
+          >
+            <Box w="60px" mb="1rem" border="4px solid #686DF1" borderRadius="5px"></Box>
+          </VStack>
           <Text
             lineHeight="35px"
             fontSize={{
@@ -62,7 +58,7 @@ const Manage = () => {
         <ChakraImage
           src="/circle-icon.png"
           alt=""
-          width={{base:"50%", md:"50%",lg:"45%"}}
+          width={{ base: "50%", md: "50%", lg: "45%" }}
           mr={{ lg: "6rem", md: "auto", sm: "auto" }}
           display={{ md: "block", sm: "block" }}
           ml={{ md: "auto", sm: "auto" }}

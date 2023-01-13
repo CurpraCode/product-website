@@ -16,7 +16,7 @@ import {
 const TabSection = () => {
   const [TabsData] = useState([
     {
-      title: "1. Dowload",
+      title: "1. Download",
       body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
       imgSrc: "/download.svg",
     },

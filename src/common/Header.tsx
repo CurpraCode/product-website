@@ -44,7 +44,7 @@ const Header = ({ name }: Props) => {
       >
         <NextLink href="/" passHref>
           <Image
-            width={{ base: "52%", md: "30%", lg: "25%" }}
+            width={{ base: "37%", md: "25%", lg: "20%" }}
             height="25%"
             objectFit="cover"
             src="/canvey-logo.svg"

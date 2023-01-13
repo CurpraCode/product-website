@@ -13,7 +13,7 @@ const Footer = () => {
       textAlign="center"
       gap="2rem"
       py={"2rem"}
-      h={["400px", "200px"]}
+      h={["600px", "400px"]}
       px={{ base: "1rem", sm: "1rem", md: "3rem" }}
     >
       <Link href="/">
@@ -26,9 +26,10 @@ const Footer = () => {
         display="flex"
         flexWrap="wrap"
         justifyContent="center"
-        gap={{ base: "2rem", sm: "2rem", md: "4rem" }}
+        gap={{ base: "3rem", sm: "3rem", md: "5rem" }}
         color="white"
         flexDirection={{ base: "column", sm: "row", md: "row" }}
+        mt="2rem"
       >
         <Link href="/privacy-policy">
           <Text cursor="pointer">Privacy Policy</Text>
@@ -43,7 +44,7 @@ const Footer = () => {
           <Text cursor="pointer">Contact Us</Text>
         </Link>
       </Box>
-      <Box display="flex" gap="2.5rem" color="white">
+      <Box display="flex" gap="4.5rem" color="white" mb="2rem" mt="2rem">
         <Image src="/twitter.svg" alt="social twitter" />
         <Image src="/instagram.svg" alt="social instagram" />
         <Image src="/facebook.svg" alt="social facebook" />

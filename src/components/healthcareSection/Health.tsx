@@ -37,7 +37,8 @@ const Health = () => {
         <VStack
           width={["100%", "100%", "40%"]}
           h="100%"
-          gap="4"
+          mt="0"
+          // gap="2"
           spacing={["40px"]}
           alignItems={["center", "center", "start"]}
           justifyContent="center"
