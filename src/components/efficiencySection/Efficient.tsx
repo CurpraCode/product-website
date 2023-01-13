@@ -1,14 +1,15 @@
 import React from "react";
 import { Box, Flex, Text, Heading, Button, Image } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 const Efficient = () => {
   return (
     <Box bg="#F4F6F9">
       <Box
-        maxWidth="container.lg"
+        maxW="7xl"
         m="0 auto"
         py="8rem"
-        px={{ lg: "5rem", md: "4rem", sm: "3rem", base: "2rem" }}
+        px={{ lg: "6rem", md: "4rem", sm: "3rem", base: "2rem" }}
       >
         <Flex
           justifyContent="space-between"
@@ -42,7 +43,7 @@ const Efficient = () => {
               mb="1rem"
               fontWeight="700"
               fontSize={{
-                lg: "36px",
+                lg: "32px",
                 md: "24px",
                 sm: "18px",
                 base: "18px",
@@ -62,7 +63,7 @@ const Efficient = () => {
             <Text
               lineHeight="35px"
               fontSize={{
-                lg: "24px",
+                lg: "22px",
                 base: "18px",
               }}
             >
@@ -70,6 +71,7 @@ const Efficient = () => {
               individuals & businesses communicate with people who are limited
               by Language barriers
             </Text>
+            <NextLink href="/how-it-works" passHref>
             <Button
               bg="#3a76bf"
               borderRadius="8px"
@@ -90,6 +92,7 @@ const Efficient = () => {
             >
               Learn More
             </Button>
+            </NextLink>
           </Box>
         </Flex>
       </Box>

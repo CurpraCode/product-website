@@ -5,7 +5,13 @@ import HealthCareSlides from "./HealthCareSlides";
 
 const Health = () => {
   return (
-    <Center py="2rem" px="2rem" h={[800, 800, 700]}>
+    <Center
+      maxW="7xl"
+      m="0 auto"
+      py="8rem"
+      h={[800, 800, 700]}
+      px={{ lg: "3rem", md: "3rem", sm: "3rem", base: "2rem" }}
+    >
       <Stack
         h="100%"
         direction={["column", "column", "row"]}
@@ -38,10 +44,9 @@ const Health = () => {
           width={["100%", "100%", "40%"]}
           h="100%"
           mt="0"
-          // gap="2"
           spacing={["40px"]}
           alignItems={["center", "center", "start"]}
-          justifyContent="center"
+          justifyContent={["", "", "center"]}
           textAlign={["center", "center", "start"]}
         >
           <Heading fontWeight="700" fontSize={["18px", "25px", "36px"]}>

@@ -11,7 +11,7 @@ import {
 const Manage = () => {
   return (
     <Box
-      maxWidth="container.lg"
+    maxW="7xl"
       m="0 auto"
       py="8rem"
       px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
