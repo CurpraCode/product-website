@@ -2,9 +2,22 @@ import React from "react";
 import Layout from "../Layout";
 import { Container, Box, Heading, Text, Stack } from "@chakra-ui/react";
 
-function Feature({ title, desc1, desc2="", desc3="", bgColor, color, ...rest }) {
+function Feature({
+  title,
+  desc1,
+  desc2 = "",
+  desc3 = "",
+  bgColor,
+  color,
+  ...rest
+}) {
   return (
-    <Box p={{base: 2, sm: 4, md: 6}} bgColor={bgColor} borderRadius="lg" {...rest}>
+    <Box
+      p={{ base: 2, sm: 4, md: 6 }}
+      bgColor={bgColor}
+      borderRadius="lg"
+      {...rest}
+    >
       <Heading fontSize="3xl" color={color} mb="2rem">
         {title}
       </Heading>
@@ -40,9 +53,10 @@ function StackEx() {
           bgColor="white"
           color="black"
           title="Our Commitment to patient confidentiality"
-          desc1="Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus."
-          desc2=" Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante, eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula."
-          desc3="Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum. Dapibus imperdiet praesent magnis ridiculus congue gravida curabitur dictum sagittis, enim et magna sit inceptos sodales parturient pharetra mollis, aenean vel nostra tellus commodo pretium sapien sociosqu."
+          desc1="Canvey, is committed to maintaining the highest standards of privacy and security for personal health information as outlined in the Health Insurance Portability and Accountability Act (HIPAA). We have implemented a comprehensive compliance program, which includes physical, administrative, and technical safeguards to protect all electronic protected health information (ePHI) in accordance with HIPAA regulations."
+          desc2="Our team of dedicated professionals is responsible for ensuring that our organization remains in compliance with HIPAA regulations. All employees and contractors are required to undergo regular HIPAA training and are held to strict standards of confidentiality. We conduct regular audits of our compliance program to identify areas of improvement and ensure that all PHI is handled appropriately."
+          desc3="We take any potential violations of HIPAA regulations very seriously and have implemented strict protocols for reporting and investigating any incidents. Any breaches of HIPAA regulations will be promptly addressed and may result in disciplinary action, including termination of employment.
+          In summary, our team at Canvey is fully committed to HIPAA compliance and we are dedicated to protecting the privacy and security of personal health information of healthcare providers and patients using our services."
         />
       </Stack>
     </Container>

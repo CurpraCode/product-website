@@ -62,12 +62,20 @@ const AboutComp = () => {
             borderRadius="5px"
           ></Box>
           <Text textAlign="center" mt="3rem" fontSize={isTab ? "" : "1.2rem"}>
-            Lorem ipsum dolor sit amet consectetur. Nibh odio urna fames
-            malesuada dignissim. Sed elementum senectus convallis risus et enim
-            libero. Quis mi aliquet pulvinar est dolor tincidunt cras nunc.
-            Magna at fermentum quis risus ullamcorper vitae purus. In amet sit
-            lectus et lacus. Viverra viverra eu est tellus. Tellus quis feugiat
-            leo adipiscing sit morbi ac ut.
+            We, the founders of Canvey, come from immigrant families and
+            understand firsthand the struggles of navigating a new country where
+            the primary language is not our first language. Growing up, we often
+            saw our loved ones struggle to communicate with health care
+            providers. That&#39;s why we started Canvey, a technology-driven
+            interpretation company that specializes in providing professional
+            interpreting services via our application. Together, we set out to
+            create a personalized approach to interpreting that would meet the
+            specific needs of our users, while being sensitive to cultural
+            differences. Our platform is designed to be user-friendly and easy
+            to use, making it accessible for anyone to access our services.
+            We&#39;re dedicated to helping others, just like our families, to
+            communicate effectively and to fully participate in their own
+            healthcare journey.
           </Text>
         </Flex>
       </Flex>
@@ -110,13 +118,20 @@ const AboutComp = () => {
                 px={isTabView ? "" : [5, 70]}
                 textAlign={isTabView ? "center" : "center"}
               >
-                According to a study released by the Center for Studying Health
-                System Change;
+                The U.S. Census Bureau has reported that 21% of the population
+                speaks a language other than English at home. This is more than
+                60 million people who may have limited proficiency in English.
+                According to a study released by the center for studying health
+                system change;
                 <Text as="span" fontWeight="bold">
                   “Nearly half of U.S. physicians say language or other cultural
                   barriers are obstacles to providing high-quality patient
                   care.”
                 </Text>
+                Inadequate communication with patients can make the healthcare
+                process more difficult for both patients and providers, and it’s
+                important to address them to ensure high quality and safe care
+                for all.
               </Text>
             </Flex>
           </Box>
@@ -144,12 +159,12 @@ const AboutComp = () => {
             borderRadius="5px"
           ></Box>
           <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
-            Lorem ipsum dolor sit amet consectetur. Nibh odio urna fames
-            malesuada dignissim. Sed elementum senectus convallis risus et enim
-            libero. Quis mi aliquet pulvinar est dolor tincidunt cras nunc.
-            Magna at fermentum quis risus ullamcorper vitae purus. In amet sit
-            lectus et lacus. Viverra viverra eu est tellus. Tellus quis feugiat
-            leo adipiscing sit morbi ac ut.
+            We promise to revolutionize the interpretation industry by providing
+            cutting-edge technology, fast and reliable service, and high-quality
+            in-person and virtual interpretation for people of all languages,
+            cultures and backgrounds. Our commitment is to ensure equal access
+            to effective communication. You can trust that we will always put
+            our clients first and work tirelessly to break down barriers.
           </Text>
         </Flex>
         <Image mt="5rem" src="/cut-bg.png" alt="profile image" />
