@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  Image,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import ServiceAnimatedText from "./ServiceAnimatedText";
 
 const AboutComp = () => {
@@ -7,9 +14,15 @@ const AboutComp = () => {
   const [isTabView] = useMediaQuery("(max-width: 990px)");
   return (
     <Box>
-      <Text mt="4rem" textAlign="center" fontSize="1.3rem" fontWeight="bolder">
+      <Heading
+        as="h1"
+        mt="4rem"
+        textAlign="center"
+        fontSize="1.3rem"
+        color="#403E50"
+      >
         About Us
-      </Text>
+      </Heading>
       <Box
         mt="4rem"
         bg="#E4EEFF"
@@ -61,7 +74,7 @@ const AboutComp = () => {
             border="4px solid #AE64A7"
             borderRadius="5px"
           ></Box>
-          <Text textAlign="center" mt="3rem" fontSize={isTab ? "" : "1.2rem"}>
+          <Text textAlign="center" mt="3rem" fontSize="1.2rem">
             We, the founders of Canvey, come from immigrant families and
             understand firsthand the struggles of navigating a new country where
             the primary language is not our first language. Growing up, we often
@@ -110,7 +123,7 @@ const AboutComp = () => {
               <Box
                 w="60px"
                 mb={isTabView ? "3rem" : "3rem"}
-                border="4px solid #D0CCE9"
+                border="4px solid #8279BB"
                 borderRadius="5px"
               ></Box>
               <Text
@@ -155,10 +168,10 @@ const AboutComp = () => {
           <Box
             mt="2rem"
             w="60px"
-            border="4px solid #AE64A7"
+            border="4px solid #3A76BF"
             borderRadius="5px"
           ></Box>
-          <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
+          <Text mt="3rem" textAlign="center" fontSize="1.2rem">
             We promise to revolutionize the interpretation industry by providing
             cutting-edge technology, fast and reliable service, and high-quality
             in-person and virtual interpretation for people of all languages,

@@ -1,36 +1,11 @@
 import React from "react";
-import {
-  Flex,
-  Stack,
-  Heading,
-  Text,
-  SystemStyleObject,
-} from "@chakra-ui/react";
-import { Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { Flex, Stack, Text, SystemStyleObject } from "@chakra-ui/react";
 
 const HealthCareSlides = ({
   groupHover,
 }: {
   groupHover: SystemStyleObject;
 }) => {
-  const slidesData = [
-    {
-      title: "Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies adipiscing at luctus erat mauris ut.",
-    },
-    {
-      title: "Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies adipiscing at luctus erat mauris ut.",
-    },
-    {
-      title: "Lorem ipsum",
-      body: "Lorem ipsum dolor sit amet consectetur. Vitae egestas ut ultricies adipiscing at luctus erat mauris ut.",
-    },
-  ];
   return (
     <Flex
       bg="#AE64A7E5"
@@ -46,47 +21,19 @@ const HealthCareSlides = ({
       transition="0.3s"
       _groupHover={groupHover}
     >
-      <div className="swiper-button swiper-icon-next">
-        <IoIosArrowForward color="#fff" />
-      </div>
-      <div className="swiper-button swiper-icon-prev">
-        <IoIosArrowBack color="#fff" />
-      </div>
-      <Swiper
-        modules={[Navigation, Pagination]}
-        slidesPerView={1}
-        navigation={{
-          nextEl: ".swiper-icon-next",
-          prevEl: ".swiper-icon-prev",
-          disabledClass: "swiper-button-disabled",
-        }}
-        pagination={{ clickable: true }}
-        className="mySwiper"
+      <Stack
+        height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
+        align="center"
+        justifyContent="center"
+        textAlign="center"
+        px={["35px", "45px"]}
+        w={["240px", "300px", "480px"]}
       >
-        {slidesData.map((item, index) => (
-          <SwiperSlide key={index}>
-            <Stack
-              height={{ base: "250px", sm: "300px", md: "400px", lg: "500px" }}
-              align="center"
-              justifyContent="center"
-              textAlign="center"
-              px={["35px", "45px"]}
-              w={["240px", "300px", "480px"]}
-              // border="5px dotted blue"
-            >
-              <Heading
-                fontSize={{ base: "24px", lg: "42px" }}
-                fontFamily="mono"
-              >
-                {item.title}
-              </Heading>
-              <Text fontSize={{ base: "8px", sm: "12px", lg: "24px" }}>
-                {item.body}
-              </Text>
-            </Stack>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Text fontSize={["15px", "18px", "24px", "28px"]}>
+          Nearly half of U.S. physicians say language or other cultural barriers
+          are obstacles to providing high-quality patient care
+        </Text>
+      </Stack>
     </Flex>
   );
 };
