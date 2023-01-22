@@ -23,7 +23,7 @@ const Policy = () => {
             seriously. Our privacy policy is designed to provide transparency
             and inform clients and users of the types of information we collect,
             how we use it, and the steps we take to protect it. This policy
-            applies solely to the information collected through our website.---
+            applies solely to the information collected through our website.
             As the sole proprietors of the information collected through our
             website, we collect personally identifiable information such as
             name, contact information, and payment information from our clients
@@ -32,7 +32,7 @@ const Policy = () => {
             requests, improve our services, and communicate with our clients and
             users. We do not share this information with any third parties
             outside of our organization, except as necessary to fulfill
-            requests.---- Clients and users have the right to opt-out of any
+            requests. Clients and users have the right to opt-out of any
             future communications from us at any time, and can also access,
             change, or delete any information we have about them. We take
             necessary precautions to protect the information collected on our

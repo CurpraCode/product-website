@@ -49,8 +49,7 @@ const Opportiunity = () => {
                 base: "18px",
               }}
             >
-              At Canvey we want interpreters to work from anywhere at anytime.
-              Get on the app and get paid.
+              Canvey's app allows interpreters to work remotely and get paid easily. Join us for flexible interpreting opportunities.
             </Text>
             <Button
               bg="#3a76bf"

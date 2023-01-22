@@ -37,7 +37,7 @@ const Footer = () => {
         <Link href="/hippa-compliance">
           <Text cursor="pointer">HIPAA Compliance</Text>
         </Link>
-        <Link href="/terms-of-use">
+        <Link href="/">
           <Text cursor="pointer">Terms Of Use</Text>
         </Link>
         <Link href="/contact-us">

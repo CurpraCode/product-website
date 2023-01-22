@@ -63,7 +63,7 @@ const Health = () => {
             }}
           >
             Our focus is to help facilitate the highest level of care for LEP
-            patients
+            patients.
           </Text>
         </VStack>
       </Stack>

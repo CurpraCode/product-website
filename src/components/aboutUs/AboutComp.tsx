@@ -84,9 +84,9 @@ const AboutComp = () => {
             interpreting services via our application. Together, we set out to
             create a personalized approach to interpreting that would meet the
             specific needs of our users, while being sensitive to cultural
-            differences. Our platform is designed to be user-friendly and easy
-            to use, making it accessible for anyone to access our services.
-            We&#39;re dedicated to helping others, just like our families, to
+            differences. Our platform is designed to be user-friendly
+            making it accessible for anyone to access our services.
+            We are dedicated to helping others, just like our families, to
             communicate effectively and to fully participate in their own
             healthcare journey.
           </Text>
@@ -112,7 +112,7 @@ const AboutComp = () => {
               fontSize="1.3rem"
               fontWeight="bolder"
             >
-              The Problem
+              The Obstacle
             </Text>
             <Flex
               flexDir="column"
@@ -135,13 +135,13 @@ const AboutComp = () => {
                 speaks a language other than English at home. This is more than
                 60 million people who may have limited proficiency in English.
                 According to a study released by the center for studying health
-                system change;
+                system change;&nbsp;
                 <Text as="span" fontWeight="bold">
                   “Nearly half of U.S. physicians say language or other cultural
                   barriers are obstacles to providing high-quality patient
                   care.”
                 </Text>
-                Inadequate communication with patients can make the healthcare
+                &nbsp;Inadequate communication with patients can make the healthcare
                 process more difficult for both patients and providers, and it’s
                 important to address them to ensure high quality and safe care
                 for all.

@@ -18,6 +18,8 @@ const ServiceAnimatedText = () => {
             sequence={[
               "Integrity",
               1000,
+              "Inclusion",
+              1000,
               "Community",
               1000,
               "Compassion",
@@ -26,6 +28,7 @@ const ServiceAnimatedText = () => {
               1000,
               "Privacy",
               1000,
+              
             ]}
             speed={40} // Custom Speed from 1-99 - Default Speed: 40
             wrapper="span" // Animation will be rendered as a <span>

@@ -69,7 +69,7 @@ const Efficient = () => {
             >
               Providing competitive quality interpreting by innovating the way
               individuals & businesses communicate with people who are limited
-              by Language barriers
+              by language barriers.
             </Text>
             <NextLink href="/how-it-works" passHref>
             <Button
