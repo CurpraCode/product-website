@@ -75,7 +75,7 @@ const AboutComp = () => {
             borderRadius="5px"
           ></Box>
           <Text textAlign="center" mt="3rem" fontSize="1.2rem">
-            We, the founders of Canvey, come from immigrant families and
+            The founders of Canvey, come from immigrant families and
             understand firsthand the struggles of navigating a new country where
             the primary language is not our first language. Growing up, we often
             saw our loved ones struggle to communicate with health care

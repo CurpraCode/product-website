@@ -22,7 +22,7 @@ const Carousel = () => {
     {
       icon: MdLocationOn,
       title: "Quality Interpreters",
-      body: "60+ Languages available for interpretations",
+      body: "We offer services in the top 11 requested languages in Minnesota.",
       imgSrc: "/carousel-quality.png",
     },
     {
