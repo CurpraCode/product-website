@@ -17,56 +17,56 @@ const TabSection = () => {
   const [TabsData] = useState([
     {
       title: "1. Download",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      body: "Install our app on your mobile device from the appropriate app store, such as App Store or Google Play.",
       imgSrc: "/download.svg",
     },
 
     {
       title: "2. Sign Up",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      body: `To sign up with us, simply open the app and click "Sign Up" to create a new account. Follow the onboarding steps to complete the process.`,
       imgSrc: "/signup.svg",
     },
     {
       title: "3. Go Online",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      body: "Accept service requests at your convenience, whether they're virtual or in-person",
       imgSrc: "/goonline.svg",
     },
     {
       title: "4. Make Money",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      body: "Track your earnings in real-time and earn more with Canvey's interpreter app designed to help you succeed!",
       imgSrc: "/makemoney.svg",
     },
     {
       title: "5. Refer Friends",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      body: "Refer your healthcare interpreter friends to Canvey and earn rewards. Join us in revolutionizing healthcare communication.",
       imgSrc: "/referfriends.svg",
     },
   ]);
   const [TabData] = useState([
     {
-      title: "1. Verification",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      title: "1. Download",
+      body: "Install our app on your mobile device from the appropriate app store, such as App Store or Google Play.",
       imgSrc: "/verification.svg",
     },
 
     {
-      title: "2. Make Request",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      title: "2. Sign Up",
+      body: `Sign up with us by opening the app and clicking "Sign Up." Complete the onboarding steps for healthcare professionals to join us.`,
       imgSrc: "/makerequest.svg",
     },
     {
-      title: "3. Stay Organized",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      title: "3. Verification",
+      body: "Once verified, healthcare providers gain secure access to our interpretation service platform, ensuring a trusted connection to their organization.",
       imgSrc: "/stayorganized.svg",
     },
     {
-      title: "4. Rating System",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      title: "4. Make Request",
+      body: "Effortlessly request interpreters for any mode—video, audio, sign language, or in-person—through our platform. Enjoy advanced scheduling and on-demand service with a simple click.",
       imgSrc: "/ratingsystem.svg",
     },
     {
-      title: "5. Analytics",
-      body: "At Canvey we want interpreters to work from anywhere at anytime. Get on the app and get paid",
+      title: "5. Rating System",
+      body: "Your feedback is crucial to us. Please take a moment to rate our services and leave a comment. We are dedicated to continuously enhancing your experience.",
       imgSrc: "/analytics.svg",
     },
   ]);
