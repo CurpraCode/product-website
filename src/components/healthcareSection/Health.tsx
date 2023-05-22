@@ -1,7 +1,8 @@
 import React from "react";
-import { Box, Text, Heading, Stack, VStack, Center } from "@chakra-ui/react";
+import { Box, Text,Button, Heading, Stack, VStack, Center } from "@chakra-ui/react";
 import ImageSection from "./ImageSection";
 import HealthCareSlides from "./HealthCareSlides";
+import NextLink from "next/link";
 
 const Health = () => {
   return (
@@ -18,7 +19,6 @@ const Health = () => {
         justifyContent="center"
         alignItems="center"
         spacing="20px"
-        px="5rem"
       >
         {/* image and info section */}
         <Center h="100%" width={["100%", "100%", "60%"]}>
@@ -44,27 +44,54 @@ const Health = () => {
           width={["100%", "100%", "40%"]}
           h="100%"
           mt="0"
-          spacing={["40px"]}
+          spacing={["30px"]}
           alignItems={["center", "center", "start"]}
           justifyContent={["", "", "center"]}
           textAlign={["center", "center", "start"]}
         >
           <Heading fontWeight="700" fontSize={["18px", "25px", "36px"]}>
-            Advocates for <br /> healthcare
+            Advocates For Healthcare
           </Heading>
 
-          <Box w="60px" border="4px solid #AE64A7" borderRadius="5px"></Box>
+          <Box w="60px" border="2.5px solid #AE64A7" borderRadius="5px"></Box>
           <Text
             lineHeight="35px"
             color="#575757"
             fontSize={{
-              lg: "24px",
-              base: "18px",
+              lg: "22px",
+              md: "18px",
+              sm: "18px",
+              base: "12px",
+         
             }}
           >
-            Our focus is to help facilitate the highest level of care for LEP
-            patients.
+            We&rsquo;re passionate healthcare advocates dedicated to empowering
+            underserved communities with multilingual communication. Our
+            innovative services reduce interpretation errors and prevent fraud,
+            ensuring access to accurate healthcare information for all.
           </Text>
+          <NextLink href="/how-it-works" passHref>
+              <Button
+                bg="#AE64A7"
+                borderRadius="8px"
+                py="25px"
+                color="#fff"
+                width="100%"
+                fontWeight="700"
+                fontSize="18px"
+                maxW="200px"
+                mt={{ base: "2rem", xl: "2.5rem" }}
+                _hover={{
+                  bg: "#AE64A7",
+                }}
+                _focus={{
+                  outline: "none",
+                  bg: "#AE64A7",
+                }}
+              >
+              Get Started
+              </Button>
+            </NextLink>
         </VStack>
       </Stack>
     </Center>

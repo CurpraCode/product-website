@@ -11,7 +11,7 @@ import {
 const Manage = () => {
   return (
     <Box
-    maxW="7xl"
+      maxW="7xl"
       m="0 auto"
       py="8rem"
       px={{ lg: "4rem", md: "3rem", sm: "3rem", base: "2rem" }}
@@ -37,22 +37,33 @@ const Manage = () => {
             Social Impact
           </Heading>
           <VStack
-            alignItems={["center","center", "center", "start"]}
+            alignItems={["center", "center", "center", "start"]}
             justifyContent="center"
-            textAlign={["center","center", "center", "start"]}
+            textAlign={["center", "center", "center", "start"]}
           >
-            <Box w="60px" mb="1rem" border="4px solid #686DF1" borderRadius="5px"></Box>
+            <Box
+              w="60px"
+              mb="1rem"
+              border="2.5px solid #3A76BF"
+              borderRadius="5px"
+            ></Box>
           </VStack>
           <Text
             lineHeight="35px"
             fontSize={{
-              lg: "24px",
-              base: "18px",
+              lg: "22px",
+              md: "18px",
+              sm: "18px",
+              base: "12px",
+         
             }}
           >
-            We proudly advocate for underserved communities by facilitating
-            multi-lingual communications. Our services reduce interpretation
-            mistakes and fraud.
+            We are dedicated to making a positive social impact in underserved
+            communities. As language barriers can significantly hinder access to
+            essential information, we provide innovative multilingual
+            communication services that strive to bridge that gap. Join us in
+            our mission to empower individuals and communities through accurate
+            communication solutions.
           </Text>
         </Box>
         <ChakraImage

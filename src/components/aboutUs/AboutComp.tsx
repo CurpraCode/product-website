@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Heading,
-  Image,
-  useMediaQuery,
-} from "@chakra-ui/react";
+import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
 import ServiceAnimatedText from "./ServiceAnimatedText";
 
 const AboutComp = () => {
@@ -14,15 +7,9 @@ const AboutComp = () => {
   const [isTabView] = useMediaQuery("(max-width: 990px)");
   return (
     <Box>
-      <Heading
-        as="h1"
-        mt="4rem"
-        textAlign="center"
-        fontSize="1.3rem"
-        color="#403E50"
-      >
+      <Text mt="4rem" textAlign="center" fontSize="1.3rem" fontWeight="bolder">
         About Us
-      </Heading>
+      </Text>
       <Box
         mt="4rem"
         bg="#E4EEFF"
@@ -74,8 +61,8 @@ const AboutComp = () => {
             border="4px solid #AE64A7"
             borderRadius="5px"
           ></Box>
-          <Text textAlign="center" mt="3rem" fontSize="1.2rem">
-            The founders of Canvey, come from immigrant families and
+          <Text textAlign="center" mt="3rem" fontSize={isTab ? "" : "1.2rem"}>
+            We, the founders of Canvey, come from immigrant families and
             understand firsthand the struggles of navigating a new country where
             the primary language is not our first language. Growing up, we often
             saw our loved ones struggle to communicate with health care
@@ -84,9 +71,9 @@ const AboutComp = () => {
             interpreting services via our application. Together, we set out to
             create a personalized approach to interpreting that would meet the
             specific needs of our users, while being sensitive to cultural
-            differences. Our platform is designed to be user-friendly
-            making it accessible for anyone to access our services.
-            We are dedicated to helping others, just like our families, to
+            differences. Our platform is designed to be user-friendly and easy
+            to use, making it accessible for anyone to access our services.
+            We&#39;re dedicated to helping others, just like our families, to
             communicate effectively and to fully participate in their own
             healthcare journey.
           </Text>
@@ -112,7 +99,7 @@ const AboutComp = () => {
               fontSize="1.3rem"
               fontWeight="bolder"
             >
-              The Obstacle
+              The Problem
             </Text>
             <Flex
               flexDir="column"
@@ -123,7 +110,7 @@ const AboutComp = () => {
               <Box
                 w="60px"
                 mb={isTabView ? "3rem" : "3rem"}
-                border="4px solid #8279BB"
+                border="4px solid #D0CCE9"
                 borderRadius="5px"
               ></Box>
               <Text
@@ -135,13 +122,13 @@ const AboutComp = () => {
                 speaks a language other than English at home. This is more than
                 60 million people who may have limited proficiency in English.
                 According to a study released by the center for studying health
-                system change;&nbsp;
+                system change;
                 <Text as="span" fontWeight="bold">
                   “Nearly half of U.S. physicians say language or other cultural
                   barriers are obstacles to providing high-quality patient
                   care.”
                 </Text>
-                &nbsp;Inadequate communication with patients can make the healthcare
+                Inadequate communication with patients can make the healthcare
                 process more difficult for both patients and providers, and it’s
                 important to address them to ensure high quality and safe care
                 for all.
@@ -168,10 +155,10 @@ const AboutComp = () => {
           <Box
             mt="2rem"
             w="60px"
-            border="4px solid #3A76BF"
+            border="4px solid #AE64A7"
             borderRadius="5px"
           ></Box>
-          <Text mt="3rem" textAlign="center" fontSize="1.2rem">
+          <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
             We promise to revolutionize the interpretation industry by providing
             cutting-edge technology, fast and reliable service, and high-quality
             in-person and virtual interpretation for people of all languages,

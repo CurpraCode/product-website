@@ -1,10 +1,9 @@
 import React from "react";
-import { Box, Flex, Text, Heading, Button, Image } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, Text, Heading, Image, Flex } from "@chakra-ui/react";
 
-const Efficient = () => {
+const Secure = () => {
   return (
-    <Box>
+    <Box bg="#F4F6F9">
       <Box
         maxW="7xl"
         m="0 auto"
@@ -15,7 +14,7 @@ const Efficient = () => {
           justifyContent="space-between"
           alignItems="center"
           flexDirection={{
-            lg: "row",
+            lg: "row-reverse",
             md: "column",
             sm: "column",
             base: "column",
@@ -23,11 +22,11 @@ const Efficient = () => {
           textAlign={{ lg: "left", md: "center", sm: "center" }}
         >
           <Image
-            src="/InterpreteChart.svg"
+            src="/Secure.svg"
             alt=""
             width="50%"
             display="block"
-            mr={{ base: "0rem", sm: "0rem", lg: "5rem" }}
+            ml={{ base: "0rem", sm: "0rem", lg: "5rem" }}
             mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
           />
           <Box
@@ -50,10 +49,11 @@ const Efficient = () => {
               }}
               pb="1rem"
             >
-              Interpretation Made Simple
+              Secure Connections 
+        
             </Heading>
             <Image
-              src="/Line.svg"
+              src="/secureline.svg"
               alt=""
               pb="1rem"
               m={{ md: "auto", sm: "auto", base: "auto" }}
@@ -66,37 +66,16 @@ const Efficient = () => {
                 md: "18px",
                 sm: "18px",
                 base: "12px",
+           
               }}
             >
-              Our company offers innovative interpreting services that break
-              down language barriers and provide efficient communication
-              solutions for businesses and individuals. Let Canvey help you
-              effectively communicate with a diverse audience by providing both
-              in-person and remote interpreting services tailored to your needs.
-              Join us today and experience the power of seamless communication.
+              We prioritize top-notch security in our operations by employing a
+              combination of cutting-edge measures. Our industry-leading
+              security grade is achieved through a robust lineup of safeguards,
+              including AWS Security & Compliance Hub, Orca Cybersecurity, and
+              Sprinto for HIPAA compliance. Rest assured, your data and privacy
+              are in safe hands.
             </Text>
-            <NextLink href="/how-it-works" passHref>
-              <Button
-                bg="#3a76bf"
-                borderRadius="8px"
-                py="25px"
-                color="#fff"
-                width="100%"
-                fontWeight="700"
-                fontSize="18px"
-                maxW="200px"
-                mt={{ base: "2rem", xl: "2.5rem" }}
-                _hover={{
-                  bg: "#3a76bf",
-                }}
-                _focus={{
-                  outline: "none",
-                  bg: "#3a76bf",
-                }}
-              >
-                Learn More
-              </Button>
-            </NextLink>
           </Box>
         </Flex>
       </Box>
@@ -104,4 +83,4 @@ const Efficient = () => {
   );
 };
 
-export default Efficient;
+export default Secure;
