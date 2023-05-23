@@ -117,21 +117,13 @@ const AboutComp = () => {
                 fontSize="1.2rem"
                 px={isTabView ? "" : [5, 70]}
                 textAlign={isTabView ? "center" : "center"}
+                fontWeight="bold"
+                color="#6C6A78"
               >
-                The U.S. Census Bureau has reported that 21% of the population
-                speaks a language other than English at home. This is more than
-                60 million people who may have limited proficiency in English.
-                According to a study released by the center for studying health
-                system change;
-                <Text as="span" fontWeight="bold">
-                  “Nearly half of U.S. physicians say language or other cultural
-                  barriers are obstacles to providing high-quality patient
-                  care.”
-                </Text>
-                Inadequate communication with patients can make the healthcare
-                process more difficult for both patients and providers, and it’s
-                important to address them to ensure high quality and safe care
-                for all.
+                According to a study released by the Center for Studying Health
+                System Change; “Nearly half of U.S. physicians say language or
+                other cultural barriers are obstacles to providing high-quality
+                patient care.”
               </Text>
             </Flex>
           </Box>
