@@ -55,7 +55,6 @@ const Manage = () => {
               md: "18px",
               sm: "18px",
               base: "12px",
-         
             }}
           >
             We are dedicated to making a positive social impact in underserved
@@ -67,7 +66,7 @@ const Manage = () => {
           </Text>
         </Box>
         <ChakraImage
-          src="/circle-icon.png"
+          src="/socialimpact.svg"
           alt=""
           width={{ base: "50%", md: "50%", lg: "45%" }}
           mr={{ lg: "6rem", md: "auto", sm: "auto" }}

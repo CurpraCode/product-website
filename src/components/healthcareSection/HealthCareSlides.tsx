@@ -13,7 +13,6 @@ const HealthCareSlides = ({
 }) => {
   const slidesData = [
     {
-      title: "Lorem ipsum",
       body: "Nearly half of U.S. physicians say language or other cultural barriers are obstacles to providing high-quality patient care",
     },
   ];

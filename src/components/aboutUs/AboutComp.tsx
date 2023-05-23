@@ -35,7 +35,7 @@ const AboutComp = () => {
         </Flex>
         <ServiceAnimatedText />
       </Box>
-      <Flex
+      {/* <Flex
         mt="5rem"
         flexDir="column"
         px={isTab ? "" : [5, 70]}
@@ -78,8 +78,8 @@ const AboutComp = () => {
             healthcare journey.
           </Text>
         </Flex>
-      </Flex>
-      <Box bg="#F4F6F9" px={isTab ? "" : [5, 70]} mt="5rem" py="5rem">
+      </Flex> */}
+      <Box px={isTab ? "" : [5, 70]} mt="5rem" py="5rem">
         <Flex
           flexDirection={{
             lg: "column",
@@ -142,6 +142,7 @@ const AboutComp = () => {
         flexDir="column"
         px={isTab ? "" : [5, 70]}
         alignItems="center"
+        bg="#F4F6F9"
       >
         <Flex flexDir="column" px={[5, 70]} alignItems="center">
           <Text
@@ -150,7 +151,7 @@ const AboutComp = () => {
             fontSize="1.3rem"
             fontWeight="bolder"
           >
-            Our Promise
+            Passion led us here
           </Text>
           <Box
             mt="2rem"
@@ -159,12 +160,25 @@ const AboutComp = () => {
             borderRadius="5px"
           ></Box>
           <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
-            We promise to revolutionize the interpretation industry by providing
-            cutting-edge technology, fast and reliable service, and high-quality
-            in-person and virtual interpretation for people of all languages,
-            cultures and backgrounds. Our commitment is to ensure equal access
-            to effective communication. You can trust that we will always put
-            our clients first and work tirelessly to break down barriers.
+            At Canvey, our team&apos;s multilingual abilities are a true asset.
+            With members from diverse backgrounds and four different countries,
+            we bring a rich tapestry of perspectives and experiences. These
+            connections go beyond language, enabling us to forge deep
+            relationships with patients and healthcare providers based on
+            genuine understanding. Our expertise spans the technical,
+            healthcare, and language intricacies of interpretation. We are
+            dedicated to delivering innovative and high-quality solutions,
+            making Canvey a trusted leader in the industry. With collective
+            experience in insurance, healthcare, and engineering, we understand
+            the challenges and opportunities across these domains. When you
+            choose Canvey, you gain more than just linguistic skills. Our team
+            has a profound understanding of healthcare and the vital role of
+            effective communication. We go above and beyond to exceed your
+            expectations, driving positive outcomes for patients and providers
+            alike. Partner with Canvey and witness the power of our multilingual
+            expertise, technical prowess, and industry knowledge. Together, we
+            will break down barriers, enhance patient experiences, and elevate
+            healthcare communication to new heights.
           </Text>
         </Flex>
         <Image mt="5rem" src="/cut-bg.png" alt="profile image" />
