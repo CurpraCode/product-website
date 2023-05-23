@@ -9,12 +9,10 @@ import {
   MenuList,
   MenuDivider,
   MenuItem,
-  Text,
   Box,
-  AccordionPanel,
   Accordion,
   AccordionButton,
-  AccordionIcon,
+
   AccordionItem,
 } from "@chakra-ui/react";
 import Link from "next/link";
@@ -79,17 +77,7 @@ const AuthButton = () => {
                     <Box as="span" flex="1" textAlign="left">
                       Interpreters
                     </Box>
-                    <AccordionIcon />
                   </AccordionButton>
-
-                  <AccordionPanel pb={4} fontSize="0.7rem">
-                    <Text color="#3A76BF">Sign in</Text>
-                    <p>I am a registered interpreter</p>
-                  </AccordionPanel>
-                  <AccordionPanel pb={4} fontSize="0.7rem">
-                    <Text color="#3A76BF">Sign Up</Text>
-                    <p>I need to set up my account</p>
-                  </AccordionPanel>
                 </AccordionItem>
               </Accordion>
 
@@ -101,17 +89,7 @@ const AuthButton = () => {
                     <Box as="span" flex="1" textAlign="left">
                       Health Care Worker
                     </Box>
-                    <AccordionIcon />
                   </AccordionButton>
-
-                  <AccordionPanel pb={4} fontSize="0.7rem">
-                    <Text color="#3A76BF">Sign in</Text>
-                    <p>I am a registered Health Care Worker</p>
-                  </AccordionPanel>
-                  <AccordionPanel pb={4} fontSize="0.7rem">
-                    <Text color="#3A76BF">Sign Up</Text>
-                    <p>I need to set up my account</p>
-                  </AccordionPanel>
                 </AccordionItem>
               </Accordion>
 

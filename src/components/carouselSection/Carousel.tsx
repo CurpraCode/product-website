@@ -22,13 +22,13 @@ const Carousel = () => {
     {
       icon: MdLocationOn,
       title: "Quality Interpreters",
-      body: "We offer services in the top 11 requested languages in Minnesota.",
+      body: "60+ Langauges available for interpretations",
       imgSrc: "/carousel-quality.png",
     },
     {
       icon: AiFillClockCircle,
       title: "Instant Access",
-      body: "Access to both video and audio mean of interpretation",
+      body: "Access to both Video and Audio mean of interpretation",
       imgSrc: "/carousel-instant.png",
     },
     {
@@ -47,7 +47,7 @@ const Carousel = () => {
     {
       icon: MdLocationOn,
       title: "HIPAA",
-      body: "As per federal law our services are HIPAA compliant and secure",
+      body: "As per federal law our services are HIPAA compliant and secure.",
       imgSrc: "/carousel-hipaa.png",
     },
   ];

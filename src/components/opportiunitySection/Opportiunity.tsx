@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import {
   Box,
@@ -8,6 +7,7 @@ import {
   Button,
   Center,
   VStack,
+  Image
 } from "@chakra-ui/react";
 import ImageSection from "./ImageSection";
 
@@ -27,7 +27,6 @@ const Opportiunity = () => {
           justifyContent="center"
           alignItems="center"
           spacing="20px"
-          px="5rem"
         >
           {/* left section */}
           <VStack
@@ -39,18 +38,31 @@ const Opportiunity = () => {
             textAlign={["center", "center", "start"]}
           >
             <Heading fontWeight="700" fontSize={["18px", "25px", "32px"]}>
-              Opportunities for <br /> Interpreters
+              Opportunities For <br /> Interpreters
             </Heading>
-            <Box w="60px" border="4px solid #686DF1" borderRadius="5px"></Box>
+            <Image
+              src="/Line.svg"
+              alt=""
+              pb="1rem"
+              m={{ md: "auto", sm: "auto", base: "auto" }}
+              display={{ lg: "inline", md: "block", sm: "block" }}
+            />
             <Text
               lineHeight="35px"
               color="#575757"
               fontSize={{
                 lg: "22px",
-                base: "18px",
+                md: "18px",
+                sm: "18px",
+                base: "12px",
+           
               }}
             >
-              Canvey's app allows interpreters to work remotely and get paid easily. Join us for flexible interpreting opportunities.
+              We&rsquo;re dedicated to creating flexible opportunities for
+              interpreters to work from anywhere and at any time. With our
+              user-friendly app, interpreters can easily connect with clients,
+              get paid for their services, and enjoy the freedom and flexibility
+              of remote or in-person work.
             </Text>
             <Button
               bg="#3a76bf"
