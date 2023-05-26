@@ -73,8 +73,7 @@ const Secure = () => {
               combination of cutting-edge measures. Our industry-leading
               security grade is achieved through a robust lineup of safeguards,
               including AWS Security & Compliance Hub, Orca Cybersecurity, and
-              Sprinto for HIPAA compliance. Rest assured, your data and privacy
-              are in safe hands.
+              Sprinto for HIPAA compliance. 
             </Text>
           </Box>
         </Flex>
