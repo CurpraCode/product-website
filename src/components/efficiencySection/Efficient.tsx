@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Flex, Text, Heading, Button, Image } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, Flex, Text, Heading, Image } from "@chakra-ui/react";
+
 
 const Efficient = () => {
   return (
@@ -75,28 +75,7 @@ const Efficient = () => {
               in-person and remote interpreting services tailored to your needs.
               Join us today and experience the power of seamless communication.
             </Text>
-            <NextLink href="/how-it-works" passHref>
-              <Button
-                bg="#3a76bf"
-                borderRadius="8px"
-                py="25px"
-                color="#fff"
-                width="100%"
-                fontWeight="700"
-                fontSize="18px"
-                maxW="200px"
-                mt={{ base: "2rem", xl: "2.5rem" }}
-                _hover={{
-                  bg: "#3a76bf",
-                }}
-                _focus={{
-                  outline: "none",
-                  bg: "#3a76bf",
-                }}
-              >
-                Learn More
-              </Button>
-            </NextLink>
+           
           </Box>
         </Flex>
       </Box>

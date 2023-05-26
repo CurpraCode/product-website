@@ -70,7 +70,7 @@ const Health = () => {
             innovative services reduce interpretation errors and prevent fraud,
             ensuring access to accurate healthcare information for all.
           </Text>
-          <NextLink href="/how-it-works" passHref>
+          <NextLink href="/sign-up" passHref>
               <Button
                 bg="#AE64A7"
                 borderRadius="8px"
