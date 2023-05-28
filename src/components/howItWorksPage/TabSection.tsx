@@ -19,6 +19,7 @@ const TabSection = () => {
       title: "1. Download",
       body: "Install our app on your mobile device from the appropriate app store, such as App Store or Google Play.",
       imgSrc: "/download.svg",
+      bg: "#F4F6F9",
     },
 
     {
@@ -30,6 +31,7 @@ const TabSection = () => {
       title: "3. Go Online",
       body: "Accept service requests at your convenience, whether they're virtual or in-person",
       imgSrc: "/goonline.svg",
+      bg: "#D4E2FC",
     },
     {
       title: "4. Make Money",
@@ -40,6 +42,7 @@ const TabSection = () => {
       title: "5. Refer Friends",
       body: "Refer your healthcare interpreter friends to Canvey and earn rewards. Join us in revolutionizing healthcare communication.",
       imgSrc: "/referfriends.svg",
+      bg: "#F4F6F9",
     },
   ]);
   const [TabData] = useState([
@@ -47,6 +50,7 @@ const TabSection = () => {
       title: "1. Download",
       body: "Install our app on your mobile device from the appropriate app store, such as App Store or Google Play.",
       imgSrc: "/verification.svg",
+      bg: "#F4F6F9",
     },
 
     {
@@ -58,6 +62,7 @@ const TabSection = () => {
       title: "3. Verification",
       body: "Once verified, healthcare providers gain secure access to our interpretation service platform, ensuring a trusted connection to their organization.",
       imgSrc: "/stayorganized.svg",
+      bg: "#D4E2FC",
     },
     {
       title: "4. Make Request",
@@ -68,78 +73,104 @@ const TabSection = () => {
       title: "5. Rating System",
       body: "Your feedback is crucial to us. Please take a moment to rate our services and leave a comment. We are dedicated to continuously enhancing your experience.",
       imgSrc: "/analytics.svg",
+      bg: "#F4F6F9",
     },
   ]);
 
   return (
     <Tabs>
       <TabList>
-        <Tab w="50%" fontSize="1.3rem" fontWeight="bolder">
+        <Tab
+          w="50%"
+          fontSize={["1rem", "1rem", "1.3rem", "1.3rem"]}
+          fontWeight="bolder"
+        >
           Interpreters
         </Tab>
-        <Tab w="50%" fontSize="1.3rem" fontWeight="bolder">
+        <Tab
+          w="50%"
+          fontSize={["0.8rem", "1rem", "1.3rem", "1.3rem"]}
+          fontWeight="bolder"
+        >
           Health Care Workers
         </Tab>
       </TabList>
 
-      <TabPanels py="100px">
+      <TabPanels>
         <TabPanel>
-          <VStack alignItems="center" gap="100px">
-            {TabsData.map((item, index) => (
-              <Stack
-                key={index}
-                w={["240px", "540px", "760px"]}
-                gap={["20px", "30px", "30px", "100px"]}
-                direction={["column", "column", "row"]}
-                alignItems={["center"]}
-                px={["0", "10px", "10px", "0"]}
-              >
-                <Image src={item.imgSrc} alt="gradient-box" />
-                <VStack
-                  alignItems={["center", "center", "start"]}
-                  textAlign={["center", "center", "start"]}
-                  gap="4"
+          {TabsData.map((item, index) => (
+            <Box key={index} bg={item.bg}>
+              <VStack alignItems="center" py={{ lg: "50px" }} gap="100px">
+                <Stack
+                  bg={item.bg}
+                  w={["240px", "540px", "760px"]}
+                  gap={["20px", "30px", "30px", "100px"]}
+                  direction={["column", "column", "row"]}
+                  p={{ base: "10px" }}
+                  alignItems={["center"]}
+                  px={["10px", "10px", "10px", "0"]}
                 >
-                  <Heading fontSize={["18px", "24px"]}>{item.title}</Heading>
-                  <Box
-                    border="4px solid #8F5273"
-                    w="40px"
-                    borderRadius="10"
-                  ></Box>
-                  <Text fontSize="18px">{item.body}</Text>
-                </VStack>
-              </Stack>
-            ))}
-          </VStack>
+                  <Image src={item.imgSrc} alt="gradient-box" />
+                  <VStack
+                    alignItems={["center", "center", "start"]}
+                    textAlign={["center", "center", "start"]}
+                    gap="4"
+                    px="15px"
+                  >
+                    <Heading fontSize={["18px", "24px"]}>{item.title}</Heading>
+                    <Box
+                      border="4px solid #8F5273"
+                      w="40px"
+                      borderRadius="10"
+                    ></Box>
+                    <Text
+                      fontSize={["15px", "15px", "18px", "18px"]}
+                      px={["10px", "14px", "14px", "0"]}
+                    >
+                      {item.body}
+                    </Text>
+                  </VStack>
+                </Stack>
+              </VStack>
+            </Box>
+          ))}
         </TabPanel>
         <TabPanel>
-          <VStack alignItems="center" gap="100px">
-            {TabData.map((item, index) => (
-              <Stack
-                key={index}
-                w={["240px", "540px", "760px"]}
-                gap={["20px", "30px", "30px", "100px"]}
-                direction={["column", "column", "row"]}
-                alignItems={["center"]}
-                px={["0", "10px", "10px", "0"]}
-              >
-                <Image src={item.imgSrc} alt="gradient-box" />
-                <VStack
-                  alignItems={["center", "center", "start"]}
-                  textAlign={["center", "center", "start"]}
-                  gap="4"
+          {TabData.map((item, index) => (
+            <Box key={index} bg={item.bg}>
+              <VStack alignItems="center" py={{ lg: "50px" }}  gap="100px">
+                <Stack
+                  key={index}
+                  w={["240px", "540px", "760px"]}
+                  gap={["20px", "30px", "30px", "100px"]}
+                  direction={["column", "column", "row"]}
+                  alignItems={["center"]}
+                  px={["10px", "10px", "10px", "0"]}
                 >
-                  <Heading fontSize={["18px", "24px"]}>{item.title}</Heading>
-                  <Box
-                    border="4px solid #3A76BF"
-                    w="40px"
-                    borderRadius="10"
-                  ></Box>
-                  <Text fontSize="18px">{item.body}</Text>
-                </VStack>
-              </Stack>
-            ))}
-          </VStack>
+                  <Image src={item.imgSrc} alt="gradient-box" />
+                  <VStack
+                    alignItems={["center", "center", "start"]}
+                    textAlign={["center", "center", "start"]}
+                    gap="4"
+                    px="15px"
+                  >
+                    <Heading fontSize={["18px", "24px"]}>{item.title}</Heading>
+                    <Box
+                      border="4px solid #3A76BF"
+                      w="40px"
+                      borderRadius="10"
+                    ></Box>
+                    <Text
+                      fontSize={["15px", "15px", "18px", "18px"]}
+                      px={["10px", "14px", "14px", "0"]}
+                    >
+                      {item.body}
+                    </Text>
+                  </VStack>
+                </Stack>
+              </VStack>
+            </Box>
+          ))}
         </TabPanel>
       </TabPanels>
     </Tabs>

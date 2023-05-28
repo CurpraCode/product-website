@@ -5,16 +5,47 @@ import {
   Heading,
   Input,
   Stack,
+  Button,
   InputGroup,
   InputLeftElement,
   Textarea,
   useMediaQuery,
-  Image as ChakraImage
+  Image as ChakraImage,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { contactService } from "../../service/request.service";
+import { useToast } from "@chakra-ui/react";
+import { useMutation } from "@tanstack/react-query";
 
+type ContactType = {
+  name: string;
+  email: string;
+  message: string;
+};
 const Contact = () => {
   const [isTablet] = useMediaQuery("(max-width: 767px)");
+  const toast = useToast();
+  const { register, handleSubmit, reset } = useForm<ContactType>();
+  const { mutateAsync, isLoading } = useMutation(contactService, {
+    onSuccess: (data) => {
+      console.log(data);
+      if (data) {
+         toast({title:"Sent", status:"success"})
+        console.log(data);
+      }
+    },
+    onError(error, variables, context) {
+      console.log(error, variables, context);
+      // cogoToast.error(error.message);
+    },
+  });
+
+  const handleContact = async (data: ContactType) => {
+    await mutateAsync({ ...data });
+    reset()
+  };
+
   return (
     <>
       <Box
@@ -54,7 +85,12 @@ const Contact = () => {
               contact us
             </Heading>
             <Box display="flex" flexDirection="column" gap="1rem" px="4rem">
-              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                gap="1rem"
+              >
                 <ChakraImage
                   src="/location-1.svg"
                   width="20px"
@@ -68,7 +104,12 @@ const Contact = () => {
                   </Text>
                 </Box>
               </Box>
-              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                gap="1rem"
+              >
                 <ChakraImage
                   src="/phone-1.svg"
                   width="20px"
@@ -80,7 +121,12 @@ const Contact = () => {
                   <Text w="100%">1-206-407-9000</Text>
                 </Box>
               </Box>
-              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                gap="1rem"
+              >
                 <ChakraImage
                   src="/mail-1.svg"
                   width="20px"
@@ -111,7 +157,7 @@ const Contact = () => {
               fontWeight="700"
               mb="2rem"
             >
-              message us
+              Message Us
             </Heading>
             <Box
               display="flex"
@@ -119,7 +165,11 @@ const Contact = () => {
               flexDirection="column"
               gap="1.5rem"
             >
-              <Stack spacing={4}>
+              <Stack
+                as="form"
+                spacing={4}
+                onSubmit={handleSubmit(handleContact)}
+              >
                 <InputGroup bg="white">
                   <InputLeftElement pointerEvents="none">
                     {
@@ -131,7 +181,7 @@ const Contact = () => {
                       />
                     }
                   </InputLeftElement>
-                  <Input type="text" placeholder="Name" required />
+                  <Input type="text" placeholder="Name" required  {...register("name", { required: true })}/>
                 </InputGroup>
 
                 <InputGroup bg="white">
@@ -149,20 +199,30 @@ const Contact = () => {
                       />
                     }
                   </InputLeftElement>
-                  <Input type="email" placeholder="Email" required />
+                  <Input type="email" placeholder="Email" required  {...register("email", { required: true })}/>
                 </InputGroup>
 
                 <InputGroup bg="white">
-                  <Textarea placeholder="Message" rows={isTablet ? 7 : 5} />
+                  <Textarea placeholder="Message" rows={isTablet ? 7 : 5}  {...register("message", { required: true })}/>
                 </InputGroup>
+                <Button
+                  type="submit"
+                  isLoading={isLoading}
+                  bg="#3A76BF"
+                  color="white"
+                  fontWeight="500"
+                  _hover={{
+                    bg: "#3A76BF",
+                  }}
+                  _focus={{
+                    outline: "none",
+                    bg: "#3A76BF",
+                  }}
+                >
+                  {isTablet ? "Send Message" : "Contact Us"}
+                </Button>
               </Stack>
-              <Input
-                type="submit"
-                value={isTablet ? "Send Message" : "Contact Us"}
-                bg="#3A76BF"
-                color="white"
-                fontWeight="500"
-              />
+             
             </Box>
           </Box>
         </Box>

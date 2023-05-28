@@ -19,9 +19,40 @@ import {
   Stack,
   Circle,
 } from "@chakra-ui/react";
+import { useForm } from "react-hook-form";
+import { connectService } from "../service/request.service";
+import { useToast } from "@chakra-ui/react";
+import { useMutation } from "@tanstack/react-query";
 
+type ConnectType = {
+  firstName: "string";
+  lastName: "string";
+  phone: "string";
+  email: "string";
+  hospitalName: "string";
+  message: "string";
+};
 const SignUp = () => {
+  const toast = useToast();
+  const { register, handleSubmit, reset } = useForm<ConnectType>();
+  const { mutateAsync, isLoading } = useMutation(connectService, {
+    onSuccess: (data) => {
+      console.log(data);
+      if (data) {
+        toast({ title: "Sent", status: "success" });
+        console.log(data);
+      }
+    },
+    onError(error, variables, context) {
+      console.log(error, variables, context);
+      // cogoToast.error(error.message);
+    },
+  });
 
+  const handleConnect = async (data: ConnectType) => {
+    await mutateAsync({ ...data });
+    reset();
+  };
 
   return (
     <Layout>
@@ -127,7 +158,7 @@ const SignUp = () => {
                     Lets Connect!
                   </Text>
                 </Heading>
-                <Stack spacing={6}>
+                <Stack as="form" spacing={6} onSubmit={handleSubmit(handleConnect)}>
                   <Stack
                     direction={{ base: "column", sm: "row" }}
                     spacing={{ base: "5", sm: "3" }}
@@ -138,7 +169,12 @@ const SignUp = () => {
                           <InputLeftElement
                             children={<Image src="name-1.svg" alt="name" />}
                           />
-                          <Input type="text" placeholder="First Name" />
+                          <Input
+                            type="text"
+                            placeholder="First Name"
+                            required
+                            {...register("firstName", { required: true })}
+                          />
                         </InputGroup>
                       </FormControl>
                     </Box>
@@ -148,7 +184,12 @@ const SignUp = () => {
                           <InputLeftElement
                             children={<Image src="name-1.svg" alt="name" />}
                           />
-                          <Input type="text" placeholder="Last Name" />
+                          <Input
+                            type="text"
+                            placeholder="Last Name"
+                            required
+                            {...register("lastName", { required: true })}
+                          />
                         </InputGroup>
                       </FormControl>
                     </Box>
@@ -163,7 +204,12 @@ const SignUp = () => {
                           <InputLeftElement
                             children={<Image src="phone.svg" alt="phone" />}
                           />
-                          <Input type="number" placeholder="Phone" />
+                          <Input
+                            type="number"
+                            placeholder="Phone"
+                            required
+                            {...register("phone", { required: true })}
+                          />
                         </InputGroup>
                       </FormControl>
                     </Box>
@@ -173,7 +219,12 @@ const SignUp = () => {
                           <InputLeftElement
                             children={<Image src="mail.svg" alt="name" />}
                           />
-                          <Input type="email" placeholder="Email" />
+                          <Input
+                            type="email"
+                            placeholder="Email"
+                            required
+                            {...register("email", { required: true })}
+                          />
                         </InputGroup>
                       </FormControl>
                     </Box>
@@ -183,29 +234,43 @@ const SignUp = () => {
                       <InputLeftElement
                         children={<Image src="hospital.svg" alt="name" />}
                       />
-                      <Input type="text" placeholder="Hospital / Clinic" />
+                      <Input
+                        type="text"
+                        placeholder="Hospital / Clinic"
+                        required
+                        {...register("hospitalName", { required: true })}
+                      />
                     </InputGroup>
                   </FormControl>
 
                   <FormControl isRequired>
                     <Textarea
                       bgColor="#F4F6F9"
-                      name="message"
                       placeholder="How can our team help you?"
                       rows={6}
                       resize="none"
+                      required
+                      {...register("message", { required: true })}
                     />
                   </FormControl>
 
                   <Stack spacing={10} pt={2}>
                     <Button
-                      loadingText="Submitting"
+                      type="submit"
+                      isLoading={isLoading}
                       colorScheme={"#3A76BF"}
                       size="lg"
                       bg={"#3A76BF"}
                       color={"white"}
+                      _hover={{
+                        bg: "#3A76BF",
+                      }}
+                      _focus={{
+                        outline: "none",
+                        bg: "#3A76BF",
+                      }}
                     >
-                      Register
+                      Submit
                     </Button>
                   </Stack>
                 </Stack>
