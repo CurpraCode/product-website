@@ -1,142 +1,118 @@
 import React from "react";
-import { Box, Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Image,
+  useMediaQuery,
+  Heading,
+  VStack,
+  Button,
+} from "@chakra-ui/react";
 import ServiceAnimatedText from "./ServiceAnimatedText";
+import NextLink from "next/link";
 
 const AboutComp = () => {
   const [isTab] = useMediaQuery("(max-width: 660px)");
   const [isTabView] = useMediaQuery("(max-width: 990px)");
   return (
     <Box>
-      <Text mt="4rem" textAlign="center" fontSize="1.3rem" fontWeight="bolder">
-        About Us
-      </Text>
-      <Box
-        mt="4rem"
-        bg="#E4EEFF"
-        bgGradient="linear(180deg, #FFF 50%, #E4EEFF 50%)"
-        py="10px"
-        px={[5, 70]}
-      >
+      <Box mt="4rem">
         <Flex
           justifyContent="space-evenly"
           flexDir={["column", "column", "row"]}
         >
-          <Image
-            src="/doctor-phone.png"
-            alt="profile image"
-            mb={isTabView ? "2rem" : ""}
-          />
-          <Image
-            src="/interpreter.png"
-            alt="profile image"
-            mb={isTabView ? "2rem" : ""}
-          />
-          <Image src="/white-doctor.png" alt="profile image" />
-        </Flex>
-        <ServiceAnimatedText />
-      </Box>
-      {/* <Flex
-        mt="5rem"
-        flexDir="column"
-        px={isTab ? "" : [5, 70]}
-        alignItems="center"
-      >
-        <Image
-          width={isTab ? "20%" : "20%"}
-          src="/story.png"
-          alt="profile image"
-        />
-        <Flex flexDir="column" px={[5, 70]} alignItems="center">
-          <Text
+          <VStack
             textAlign="center"
-            mt="2rem"
-            fontSize="1.3rem"
-            fontWeight="bolder"
+            spacing={["30px"]}
+            mb={isTabView ? "2rem" : ""}
           >
-            Our Story
-          </Text>
-          <Box
-            w="60px"
-            mt="2rem"
-            border="4px solid #AE64A7"
-            borderRadius="5px"
-          ></Box>
-          <Text textAlign="center" mt="3rem" fontSize={isTab ? "" : "1.2rem"}>
-            We, the founders of Canvey, come from immigrant families and
-            understand firsthand the struggles of navigating a new country where
-            the primary language is not our first language. Growing up, we often
-            saw our loved ones struggle to communicate with health care
-            providers. That&#39;s why we started Canvey, a technology-driven
-            interpretation company that specializes in providing professional
-            interpreting services via our application. Together, we set out to
-            create a personalized approach to interpreting that would meet the
-            specific needs of our users, while being sensitive to cultural
-            differences. Our platform is designed to be user-friendly and easy
-            to use, making it accessible for anyone to access our services.
-            We&#39;re dedicated to helping others, just like our families, to
-            communicate effectively and to fully participate in their own
-            healthcare journey.
-          </Text>
-        </Flex>
-      </Flex> */}
-      <Box px={isTab ? "" : [5, 70]} mt="5rem" py="5rem">
-        <Flex
-          flexDirection={{
-            lg: "column",
-            md: "column",
-            sm: "column",
-            base: "column",
-          }}
-          justifyContent="space-evenly"
-          alignItems="center"
-          px={[5, 70]}
-        >
-          <Image src="/chart.png" alt="chart" width={isTab ? "20%" : "20%"} />
-          <Box>
-            <Text
-              textAlign="center"
-              mt="2rem"
-              fontSize="1.3rem"
-              fontWeight="bolder"
-            >
-              The Problem
+            <Image src="/ourvision.svg" alt="profile image" />
+            <Heading fontWeight="700" fontSize={["18px", "25px", "25px"]}>
+              What Is Canvey?
+            </Heading>
+            <Image
+              src="/aboutline.svg"
+              alt=""
+              pb="1rem"
+              m={{ md: "auto", sm: "auto", base: "auto" }}
+              display={{ lg: "inline", md: "block", sm: "block" }}
+            />
+            <Text px="6">
+              Interpretation platform that provides both in-person and remote
+              interpreting services tailored to your needs.
             </Text>
-            <Flex
-              flexDir="column"
-              mt={isTabView ? "2rem" : "2rem"}
-              mb={isTabView ? "5rem" : ""}
-              alignItems="center"
-            >
-              <Box
-                w="60px"
-                mb={isTabView ? "3rem" : "3rem"}
-                border="4px solid #D0CCE9"
-                borderRadius="5px"
-              ></Box>
-              <Text
-                fontSize="1.2rem"
-                px={isTabView ? "" : [5, 70]}
-                textAlign={isTabView ? "center" : "center"}
-                fontWeight="bold"
-                color="#6C6A78"
-              >
-                According to a study released by the Center for Studying Health
-                System Change; “Nearly half of U.S. physicians say language or
-                other cultural barriers are obstacles to providing high-quality
-                patient care.”
-              </Text>
-            </Flex>
-          </Box>
+          </VStack>
+          <VStack
+            textAlign="center"
+            spacing={["30px"]}
+            mb={isTabView ? "2rem" : ""}
+          >
+            <Image src="/theproblem.svg" alt="profile image" />
+            <Heading fontWeight="700" fontSize={["18px", "25px", "25px"]}>
+              Our Vision
+            </Heading>
+            <Image
+              src="/aboutline.svg"
+              alt=""
+              pb="1rem"
+              m={{ md: "auto", sm: "auto", base: "auto" }}
+              display={{ lg: "inline", md: "block", sm: "block" }}
+            />
+            <Text px="6">
+              Our primary focus is to dismantle barriers, enhance patient
+              experiences, and elevate healthcare communication to unprecedented
+              levels.{" "}
+            </Text>
+          </VStack>
+          <VStack
+            textAlign="center"
+            spacing={["30px"]}
+            mb={isTabView ? "2rem" : ""}
+          >
+            <Image src="/whatiscanvey.svg" alt="profile image" />
+            <Heading fontWeight="700" fontSize={["18px", "25px", "25px"]}>
+              The Problem
+            </Heading>
+            <Image
+              src="/aboutline.svg"
+              alt=""
+              pb="1rem"
+              m={{ md: "auto", sm: "auto", base: "auto" }}
+              display={{ lg: "inline", md: "block", sm: "block" }}
+            />
+            <Text px="6">
+              Insufficient access to interpretation and cultural services is
+              hampering care and creating obstacles in nearly 50% of hospitals
+              across the United States.{" "}
+            </Text>
+          </VStack>
         </Flex>
       </Box>
+      <Box bg="#403E50">
+        <Box
+          maxW="7xl"
+          m="0 auto"
+          py="1rem"
+          mt={isTab ? "8rem" : "2rem"}
+          px={{ lg: "6rem", md: "4rem", sm: "3rem", base: "2rem" }}
+        >
+          <ServiceAnimatedText />
+        </Box>
+      </Box>
+
       <Flex
         mt="5rem"
         flexDir="column"
         px={isTab ? "" : [5, 70]}
         alignItems="center"
-        bg="#F4F6F9"
       >
         <Flex flexDir="column" px={[5, 70]} alignItems="center">
+          <Image
+            width={isTab ? "20%" : "20%"}
+            src="/story.png"
+            alt="profile image"
+          />
           <Text
             mt="2rem"
             textAlign="center"
@@ -152,28 +128,61 @@ const AboutComp = () => {
             borderRadius="5px"
           ></Box>
           <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
-            At Canvey, our team&apos;s multilingual abilities are a true asset.
-            With members from diverse backgrounds and four different countries,
-            we bring a rich tapestry of perspectives and experiences. These
-            connections go beyond language, enabling us to forge deep
-            relationships with patients and healthcare providers based on
-            genuine understanding. Our expertise spans the technical,
-            healthcare, and language intricacies of interpretation. We are
-            dedicated to delivering innovative and high-quality solutions,
-            making Canvey a trusted leader in the industry. With collective
-            experience in insurance, healthcare, and engineering, we understand
-            the challenges and opportunities across these domains. When you
-            choose Canvey, you gain more than just linguistic skills. Our team
-            has a profound understanding of healthcare and the vital role of
-            effective communication. We go above and beyond to exceed your
-            expectations, driving positive outcomes for patients and providers
-            alike. Partner with Canvey and witness the power of our multilingual
-            expertise, technical prowess, and industry knowledge. Together, we
-            will break down barriers, enhance patient experiences, and elevate
-            healthcare communication to new heights.
+            Canvey is a healthcare-centered interpretation startup dedicated to
+            enhancing healthcare communication between patients and healthcare
+            providers. Our mission is to revolutionize the healthcare industry
+            by providing affordable and on-demand video, audio, in-person, and
+            sign language interpretation services. We carefully curate a team of
+            interpreters with a deep understanding of healthcare terminology and
+            best practices. Our ultimate objective is to transform the way
+            healthcare providers communicate with patients, ensuring optimal
+            care regardless of language or communication barriers. At Canvey, we
+            recognize the critical importance of improving health outcomes,
+            promoting wellness, and fostering healthier lives, especially for
+            immigrant individuals confronted with language limitations. Our team
+            possesses exceptional language proficiency, serving as an invaluable
+            asset in achieving these objectives. With members from diverse
+            backgrounds and originating from four different countries, we bring
+            a wealth of perspectives and experiences. This diversity empowers us
+            to establish meaningful connections with both patients and
+            healthcare providers, effectively overcoming language barriers. To
+            realize our vision, we leverage cutting-edge technology to deliver a
+            seamless user experience. We build a network of highly qualified
+            interpreters and establish strategic partnerships with healthcare
+            organizations, seamlessly integrating interpretation services into
+            their workflows. As a team of immigrants ourselves, we deeply
+            understand the significance of language and cultural competence in
+            healthcare. We are committed to providing services that are
+            sensitive to the unique needs of each patient and healthcare
+            provider. Privacy and security are paramount to us, and we strictly
+            adhere to all relevant regulations and standards to ensure the
+            confidentiality of our users&rsquo; information.
           </Text>
         </Flex>
-        <Image mt="5rem" src="/cut-bg.png" alt="profile image" />
+        <NextLink href="/sign-up" passHref>
+          <Button
+            bg="#3a76bf"
+            borderRadius="8px"
+            py="25px"
+            color="#fff"
+            width="100%"
+            fontWeight="700"
+            fontSize="18px"
+            maxW="200px"
+            mt={{ base: "2rem", xl: "2.5rem" }}
+            _hover={{
+              bg: "#3a76bf",
+            }}
+            _focus={{
+              outline: "none",
+              bg: "#3a76bf",
+            }}
+            mb="5rem"
+          >
+            Contact Us Today
+          </Button>
+        </NextLink>
+        {/* <Image mt="5rem" src="/cut-bg.png" alt="profile image" /> */}
       </Flex>
     </Box>
   );

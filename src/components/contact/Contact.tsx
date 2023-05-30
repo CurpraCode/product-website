@@ -7,12 +7,10 @@ import {
   Stack,
   Button,
   InputGroup,
-  InputLeftElement,
   Textarea,
   useMediaQuery,
   Image as ChakraImage,
 } from "@chakra-ui/react";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { contactService } from "../../service/request.service";
 import { useToast } from "@chakra-ui/react";
@@ -31,19 +29,18 @@ const Contact = () => {
     onSuccess: (data) => {
       console.log(data);
       if (data) {
-         toast({title:"Sent", status:"success"})
+        toast({ title: "Sent", status: "success", position: "top" });
         console.log(data);
       }
     },
     onError(error, variables, context) {
       console.log(error, variables, context);
-      // cogoToast.error(error.message);
     },
   });
 
   const handleContact = async (data: ContactType) => {
     await mutateAsync({ ...data });
-    reset()
+    reset();
   };
 
   return (
@@ -53,7 +50,7 @@ const Contact = () => {
         flexDirection="row"
         justifyContent="center"
         alignItems="center"
-        bg={{ base: "#F4F6F9", md: "white" }}
+        bg={{ base: "#fff", md: "white" }}
       >
         <Box
           maxWidth="container.lg"
@@ -92,9 +89,9 @@ const Contact = () => {
                 gap="1rem"
               >
                 <ChakraImage
-                  src="/location-1.svg"
-                  width="20px"
-                  height="20px"
+                  src="/locationaddress.svg"
+                  width="40px"
+                  height="40px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -111,9 +108,9 @@ const Contact = () => {
                 gap="1rem"
               >
                 <ChakraImage
-                  src="/phone-1.svg"
-                  width="20px"
-                  height="20px"
+                  src="/phoneaddress.svg"
+                  width="40px"
+                  height="40px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -128,9 +125,9 @@ const Contact = () => {
                 gap="1rem"
               >
                 <ChakraImage
-                  src="/mail-1.svg"
-                  width="20px"
-                  height="20px"
+                  src="/mailaddress.svg"
+                  width="40px"
+                  height="40px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -141,7 +138,7 @@ const Contact = () => {
             </Box>
           </Box>
           <Box
-            bg={{ base: "#F4F6F9", md: "white" }}
+            bg={{ base: "none", md: "white" }}
             width={{ md: "400px", lg: "500px" }}
             height={{ md: "440px", lg: "500px" }}
             display="flex"
@@ -167,43 +164,37 @@ const Contact = () => {
             >
               <Stack
                 as="form"
+                w="100%"
                 spacing={4}
                 onSubmit={handleSubmit(handleContact)}
               >
-                <InputGroup bg="white">
-                  <InputLeftElement pointerEvents="none">
-                    {
-                      <Image
-                        src="/name.svg"
-                        width="15%"
-                        height="15%"
-                        alt="name"
-                      />
-                    }
-                  </InputLeftElement>
-                  <Input type="text" placeholder="Name" required  {...register("name", { required: true })}/>
+                <InputGroup bg="#F4F6F9" borderRadius="5px">
+                  <Input
+                    type="text"
+                    placeholder="Name"
+                    border="none"
+                    required
+                    {...register("name", { required: true })}
+                  />
                 </InputGroup>
 
-                <InputGroup bg="white">
-                  <InputLeftElement
-                    pointerEvents="none"
-                    color="gray.300"
-                    fontSize="1.2em"
-                  >
-                    {
-                      <Image
-                        src="/email-black.svg"
-                        width="15%"
-                        height="15%"
-                        alt="name"
-                      />
-                    }
-                  </InputLeftElement>
-                  <Input type="email" placeholder="Email" required  {...register("email", { required: true })}/>
+                <InputGroup bg="#F4F6F9" borderRadius="5px">
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    border="none"
+                    required
+                    {...register("email", { required: true })}
+                  />
                 </InputGroup>
 
-                <InputGroup bg="white">
-                  <Textarea placeholder="Message" rows={isTablet ? 7 : 5}  {...register("message", { required: true })}/>
+                <InputGroup bg="#F4F6F9" borderRadius="5px">
+                  <Textarea
+                    placeholder="Message"
+                    border="none"
+                    rows={isTablet ? 7 : 5}
+                    {...register("message", { required: true })}
+                  />
                 </InputGroup>
                 <Button
                   type="submit"
@@ -222,7 +213,6 @@ const Contact = () => {
                   {isTablet ? "Send Message" : "Contact Us"}
                 </Button>
               </Stack>
-             
             </Box>
           </Box>
         </Box>

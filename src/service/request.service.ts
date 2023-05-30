@@ -1,5 +1,5 @@
 import instance from "../config/axios.config";
-// import { useToast } from '@chakra-ui/react'
+
 export const contactService = async (body: any) => {
   try {
     const { data } = await instance.post("/mail/contact", body);

@@ -5,14 +5,14 @@ import { TypeAnimation } from "react-type-animation";
 const ServiceAnimatedText = () => {
   return (
     <Center my="5rem">
-      <Text w={[400, 400, 550]} textAlign="left" fontSize="1.2rem">
+      <Text w={[400, 400, 550]} textAlign="left" fontSize="1.2rem" color="#ffffff">
         We strive to provide services that express
         <Text
           as="span"
           display="inline"
           fontWeight="bolder"
           ml="0.5rem"
-          color="#3A76BF"
+          color="#D4E0EF"
         >
           <TypeAnimation
             sequence={[

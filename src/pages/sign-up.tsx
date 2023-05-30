@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../Layout";
 import {
   Container,
+  Center,
   Flex,
   Box,
   Heading,
@@ -13,7 +14,6 @@ import {
   FormControl,
   Input,
   InputGroup,
-  InputLeftElement,
   Textarea,
   Image,
   Stack,
@@ -56,7 +56,7 @@ const SignUp = () => {
 
   return (
     <Layout>
-      <Container minW="full" bgColor="gray.200" centerContent>
+      <Container minW="full" bgColor="#F4F6F9" centerContent>
         <Flex
           pb={{ base: "4rem", md: "8rem" }}
           pt="4rem"
@@ -67,18 +67,22 @@ const SignUp = () => {
           maxW="container.xl"
         >
           <Box w={{ base: "100%", xl: "50%" }}>
-            <Image
-              src="docScreen.png"
-              alt="interpreter-screen"
-              pb="2rem"
-              margin={{ base: "auto", xl: "0" }}
-            />
+            <Center>
+              <Image
+                src="joinus.svg"
+                alt="interpreter-screen"
+                pb="2rem"
+                margin={{ base: "auto", xl: "0" }}
+              />
+            </Center>
+
             <Text
               fontSize="18px"
               w="100%"
               align={{ base: "center", xl: "left" }}
               color="gray.600"
               fontWeight="500"
+              textAlign="center"
             >
               Set up an enterpise account for your organization in{" "}
               <Text as="span" fontWeight="800">
@@ -91,8 +95,12 @@ const SignUp = () => {
                   <HStack spacing={{ base: "12px", sm: "24px" }}>
                     <Circle
                       size={{ base: "35px", sm: "50px" }}
-                      bg="#754C8B"
-                    ></Circle>
+                      bg="#3A76BF"
+                      fontWeight="800"
+                      color="#fff"
+                    >
+                      1
+                    </Circle>
                     <VStack spacing={{ base: 1.5, sm: 2 }} align="left">
                       <Text fontWeight="bold">Regsiter</Text>
                       <Text fontSize={{ base: "13px", sm: "16px" }}>
@@ -106,8 +114,11 @@ const SignUp = () => {
                   <HStack spacing={{ base: "12px", sm: "24px" }}>
                     <Circle
                       size={{ base: "35px", sm: "50px" }}
-                      bg="#2A689D"
-                    ></Circle>
+                      bg="#3A76BF"
+                      color="#fff"
+                    >
+                      2
+                    </Circle>
                     <VStack spacing={{ base: 1.5, sm: 2 }} align="left">
                       <Text fontWeight="bold">Onboarding</Text>
                       <Text fontSize={{ base: "13px", sm: "16px" }}>
@@ -121,8 +132,11 @@ const SignUp = () => {
                   <HStack spacing={{ base: "12px", sm: "24px" }}>
                     <Circle
                       size={{ base: "35px", sm: "50px" }}
-                      bg="#2BC1D8"
-                    ></Circle>
+                      bg="#3A76BF"
+                      color="#fff"
+                    >
+                      3
+                    </Circle>
                     <VStack spacing={{ base: 1.5, sm: 2 }} align="left">
                       <Text fontWeight="bold">Learn how to use</Text>
                       <Text fontSize={{ base: "13px", sm: "16px" }}>
@@ -153,90 +167,78 @@ const SignUp = () => {
                   color="gray.700"
                 >
                   Interested in bringing our services to your hospital or
-                  clinic?{" "}
+                  clinic?
                   <Text as={"span"} color={"#3A76BF"} fontWeight={700}>
                     Lets Connect!
                   </Text>
                 </Heading>
-                <Stack as="form" spacing={6} onSubmit={handleSubmit(handleConnect)}>
+                <Stack
+                  as="form"
+                  spacing={6}
+                  onSubmit={handleSubmit(handleConnect)}
+                >
                   <Stack
                     direction={{ base: "column", sm: "row" }}
                     spacing={{ base: "5", sm: "3" }}
                   >
-                    <Box>
-                      <FormControl id="firstName" isRequired>
-                        <InputGroup bgColor="#F4F6F9">
-                          <InputLeftElement
-                            children={<Image src="name-1.svg" alt="name" />}
-                          />
-                          <Input
-                            type="text"
-                            placeholder="First Name"
-                            required
-                            {...register("firstName", { required: true })}
-                          />
-                        </InputGroup>
-                      </FormControl>
-                    </Box>
-                    <Box>
-                      <FormControl id="lastName">
-                        <InputGroup bgColor="#F4F6F9">
-                          <InputLeftElement
-                            children={<Image src="name-1.svg" alt="name" />}
-                          />
-                          <Input
-                            type="text"
-                            placeholder="Last Name"
-                            required
-                            {...register("lastName", { required: true })}
-                          />
-                        </InputGroup>
-                      </FormControl>
-                    </Box>
+                    <FormControl id="firstName" isRequired>
+                      <InputGroup bgColor="#F4F6F9">
+                        <Input
+                        border="none"
+                          type="text"
+                          placeholder="First Name"
+                          required
+                          {...register("firstName", { required: true })}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl id="lastName">
+                      <InputGroup bgColor="#F4F6F9">
+                        <Input
+                        border="none"
+                          type="text"
+                          placeholder="Last Name"
+                          required
+                          {...register("lastName", { required: true })}
+                        />
+                      </InputGroup>
+                    </FormControl>
                   </Stack>
                   <Stack
                     direction={{ base: "column", sm: "row" }}
                     spacing={{ base: "5", sm: "3" }}
                   >
-                    <Box>
-                      <FormControl id="phoneNumber" isRequired>
-                        <InputGroup bgColor="#F4F6F9">
-                          <InputLeftElement
-                            children={<Image src="phone.svg" alt="phone" />}
-                          />
-                          <Input
-                            type="number"
-                            placeholder="Phone"
-                            required
-                            {...register("phone", { required: true })}
-                          />
-                        </InputGroup>
-                      </FormControl>
-                    </Box>
-                    <Box>
-                      <FormControl id="email">
-                        <InputGroup bgColor="#F4F6F9">
-                          <InputLeftElement
-                            children={<Image src="mail.svg" alt="name" />}
-                          />
-                          <Input
-                            type="email"
-                            placeholder="Email"
-                            required
-                            {...register("email", { required: true })}
-                          />
-                        </InputGroup>
-                      </FormControl>
-                    </Box>
+                    <FormControl id="phoneNumber" isRequired>
+                      <InputGroup bgColor="#F4F6F9">
+                        <Input
+                        border="none"
+                          type="number"
+                          placeholder="Phone"
+                          required
+                          {...register("phone", { required: true })}
+                        />
+                      </InputGroup>
+                    </FormControl>
+
+                    <FormControl id="email">
+                      <InputGroup bgColor="#F4F6F9">
+                        <Input
+                        border="none"
+                          type="email"
+                          placeholder="Email"
+                          required
+                          {...register("email", { required: true })}
+                        />
+                      </InputGroup>
+                    </FormControl>
                   </Stack>
                   <FormControl id="hospital" isRequired>
                     <InputGroup bgColor="#F4F6F9">
-                      <InputLeftElement
-                        children={<Image src="hospital.svg" alt="name" />}
-                      />
                       <Input
+                      border="none"
                         type="text"
-                        placeholder="Hospital / Clinic"
+                        placeholder="Organization Name"
                         required
                         {...register("hospitalName", { required: true })}
                       />
@@ -245,6 +247,7 @@ const SignUp = () => {
 
                   <FormControl isRequired>
                     <Textarea
+                    border="none"
                       bgColor="#F4F6F9"
                       placeholder="How can our team help you?"
                       rows={6}
