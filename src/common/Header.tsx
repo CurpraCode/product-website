@@ -29,7 +29,6 @@ const Header = ({ name }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef<HTMLDivElement | null>(null);
   const [isTab] = useMediaQuery("(max-width: 991px)");
-  // const [isTablet] = useMediaQuery("(max-width: 560px)");
   const { pathname } = useRouter();
   return (
     <Box bg={name}>
@@ -40,7 +39,6 @@ const Header = ({ name }: Props) => {
         maxW="7xl"
         justifyContent="space-between"
         alignItems="center"
-        // fontWeight="600"
       >
         <NextLink href="/" passHref>
           <Image

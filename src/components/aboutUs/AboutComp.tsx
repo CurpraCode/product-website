@@ -24,12 +24,12 @@ const AboutComp = () => {
         >
           <VStack
             textAlign="center"
-            spacing={["30px"]}
-            mb={isTabView ? "2rem" : ""}
+            spacing={["10px"]}
+            mb={isTabView ? "4rem" : ""}
           >
-            <Image src="/ourvision.svg" alt="profile image" />
+            <Image src="/ourvision.svg" alt="profile image" mb="1.5rem" />
             <Heading fontWeight="700" fontSize={["18px", "25px", "25px"]}>
-              What Is Canvey?
+              What Is Canvey
             </Heading>
             <Image
               src="/aboutline.svg"
@@ -45,10 +45,10 @@ const AboutComp = () => {
           </VStack>
           <VStack
             textAlign="center"
-            spacing={["30px"]}
-            mb={isTabView ? "2rem" : ""}
+            spacing={["10px"]}
+            mb={isTabView ? "4rem" : ""}
           >
-            <Image src="/theproblem.svg" alt="profile image" />
+            <Image src="/theproblem.svg" alt="profile image" mb="1.5rem" />
             <Heading fontWeight="700" fontSize={["18px", "25px", "25px"]}>
               Our Vision
             </Heading>
@@ -67,10 +67,10 @@ const AboutComp = () => {
           </VStack>
           <VStack
             textAlign="center"
-            spacing={["30px"]}
-            mb={isTabView ? "2rem" : ""}
+            spacing={["10px"]}
+            mb={isTabView ? "1rem" : ""}
           >
-            <Image src="/whatiscanvey.svg" alt="profile image" />
+            <Image src="/whatiscanvey.svg" alt="profile image" mb="1.5rem" />
             <Heading fontWeight="700" fontSize={["18px", "25px", "25px"]}>
               The Problem
             </Heading>
@@ -128,7 +128,7 @@ const AboutComp = () => {
             m={{ md: "auto", sm: "auto", base: "auto" }}
             display={{ lg: "inline", md: "block", sm: "block" }}
           />
-          <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
+          <Text mt="3rem" textAlign="justify" fontSize={isTab ? "" : "1.2rem"}>
             Canvey is a healthcare-centered interpretation startup dedicated to
             enhancing healthcare communication between patients and healthcare
             providers. Our mission is to revolutionize the healthcare industry
@@ -137,27 +137,32 @@ const AboutComp = () => {
             interpreters with a deep understanding of healthcare terminology and
             best practices. Our ultimate objective is to transform the way
             healthcare providers communicate with patients, ensuring optimal
-            care regardless of language or communication barriers. At Canvey, we
-            recognize the critical importance of improving health outcomes,
-            promoting wellness, and fostering healthier lives, especially for
-            immigrant individuals confronted with language limitations. Our team
-            possesses exceptional language proficiency, serving as an invaluable
-            asset in achieving these objectives. With members from diverse
-            backgrounds and originating from four different countries, we bring
-            a wealth of perspectives and experiences. This diversity empowers us
-            to establish meaningful connections with both patients and
-            healthcare providers, effectively overcoming language barriers. To
-            realize our vision, we leverage cutting-edge technology to deliver a
-            seamless user experience. We build a network of highly qualified
-            interpreters and establish strategic partnerships with healthcare
-            organizations, seamlessly integrating interpretation services into
-            their workflows. As a team of immigrants ourselves, we deeply
-            understand the significance of language and cultural competence in
-            healthcare. We are committed to providing services that are
-            sensitive to the unique needs of each patient and healthcare
-            provider. Privacy and security are paramount to us, and we strictly
-            adhere to all relevant regulations and standards to ensure the
-            confidentiality of our users&rsquo; information.
+            care regardless of language or communication barriers.
+          </Text>
+          <Text mt="3rem" textAlign="justify" fontSize={isTab ? "" : "1.2rem"}>
+            At Canvey, we recognize the critical importance of improving health
+            outcomes, promoting wellness, and fostering healthier lives,
+            especially for immigrant individuals confronted with language
+            limitations. Our team possesses exceptional language proficiency,
+            serving as an invaluable asset in achieving these objectives. With
+            members from diverse backgrounds and originating from four different
+            countries, we bring a wealth of perspectives and experiences. This
+            diversity empowers us to establish meaningful connections with both
+            patients and healthcare providers, effectively overcoming language
+            barriers. To realize our vision, we leverage cutting-edge technology
+            to deliver a seamless user experience. We build a network of highly
+            qualified interpreters and establish strategic partnerships with
+            healthcare organizations, seamlessly integrating interpretation
+            services into their workflows.
+          </Text>
+          <Text mt="3rem" textAlign="justify" fontSize={isTab ? "" : "1.2rem"}>
+            As a team of immigrants ourselves, we deeply understand the
+            significance of language and cultural competence in healthcare. We
+            are committed to providing services that are sensitive to the unique
+            needs of each patient and healthcare provider. Privacy and security
+            are paramount to us, and we strictly adhere to all relevant
+            regulations and standards to ensure the confidentiality of our
+            users&rsquo; information.
           </Text>
         </Flex>
         <NextLink href="/sign-up" passHref>
@@ -180,10 +185,10 @@ const AboutComp = () => {
             }}
             mb="5rem"
           >
-            Contact Us Today
+            Contact Us
           </Button>
         </NextLink>
-        {/* <Image mt="5rem" src="/cut-bg.png" alt="profile image" /> */}
+        <Image mt="5rem" src="/cut-bg.png" alt="profile image" />
       </Flex>
     </Box>
   );
