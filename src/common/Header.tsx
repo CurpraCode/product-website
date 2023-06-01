@@ -16,7 +16,7 @@ import {
 import AuthButton from "../components/authButtons/AuthButton";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-
+import { useRouter } from "next/router";
 interface Props {
   name: string;
 }
@@ -30,7 +30,7 @@ const Header = ({ name }: Props) => {
   const btnRef = useRef<HTMLDivElement | null>(null);
   const [isTab] = useMediaQuery("(max-width: 991px)");
   // const [isTablet] = useMediaQuery("(max-width: 560px)");
-
+  const { pathname } = useRouter();
   return (
     <Box bg={name}>
       <Flex
@@ -40,10 +40,11 @@ const Header = ({ name }: Props) => {
         maxW="7xl"
         justifyContent="space-between"
         alignItems="center"
-        fontWeight="600"
+        // fontWeight="600"
       >
         <NextLink href="/" passHref>
           <Image
+            cursor="pointer"
             width={{ base: "37%", md: "25%", lg: "20%" }}
             height="25%"
             objectFit="cover"
@@ -65,23 +66,39 @@ const Header = ({ name }: Props) => {
             {links.map(({ name, to }, index) => (
               <NextLink href={to} passHref key={index}>
                 <Link
-                  px={["2rem", "3rem", "3rem", "2rem"]}
+                  px={["2rem", "3rem", "3rem", "1rem"]}
                   color="white"
+                  ml="0.5rem"
                   _hover={{
                     textDecor: "none",
                     color: "theme.300",
+
+                    borderRadius: "8px",
+                    px: "1rem",
+                    py: "0.6rem",
+                    fontWeight: "800",
                   }}
                   _focus={{
                     textDecor: "none",
-                    bg: "none",
+                    bg: "rgba(255, 255, 255, 0.2)",
                     border: "none",
+                    borderRadius: "8px",
+                    px: "1rem",
+                    py: "0.6rem",
                   }}
                   _active={{
                     textDecor: "none",
-                    bg: "none",
+                    bg: "rgba(255, 255, 255, 0.2)",
                     border: "none",
+                    borderRadius: "8px",
+                    px: "1rem",
+                    py: "0.6rem",
                   }}
                   onClick={onClose}
+                  py={pathname === to ? "0.6rem" : ""}
+                  bg={pathname === to ? "rgba(255, 255, 255, 0.2)" : ""}
+                  borderRadius={pathname === to ? "8px" : ""}
+                  fontWeight={pathname === to ? "800" : ""}
                 >
                   {name}
                 </Link>

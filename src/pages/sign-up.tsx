@@ -61,7 +61,7 @@ const SignUp = () => {
         minW="full"
         bgColor={isTab ? "#F4F6F9" : "#Fff"}
         bgGradient={isTab ? "none" : "linear(180deg, #FFF 20%, #F4F6F9 20%)"}
-        centerContent
+        // centerContent
       >
         <Flex
           pb={{ base: "4rem", md: "8rem" }}
@@ -156,16 +156,17 @@ const SignUp = () => {
             </Box>
           </Box>
           <Container
+            bg={{ base: "white", md: "none" }}
             w={{ base: "100%", xl: "50%" }}
             mt={{ base: "1rem", md: "3rem", xl: "0" }}
           >
             <Box
-              bgColor="white"
+               bg={{ base: "none", md: "white" }}
               borderRadius="lg"
               px={{ base: "1rem", sm: "2rem" }}
               py={{ base: "1rem", md: "2rem" }}
               mt={{ base: "1rem", sm: "2rem" }}
-              boxShadow="xl"
+              boxShadow={{ base: "none", md: "xl" }}
             >
               <VStack spacing={{ base: 4, sm: 6, md: 8 }} align="stretch">
                 <Heading

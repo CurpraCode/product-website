@@ -87,7 +87,7 @@ const Contact = () => {
             >
               contact us
             </Heading>
-            <Box display="flex" flexDirection="column" gap="1rem" px="4rem">
+            <Box display="flex" flexDirection="column" gap="1rem" px="2rem">
               <Box
                 display="flex"
                 alignItems="center"
@@ -146,12 +146,11 @@ const Contact = () => {
           <Box
             bg={{ base: "none", md: "white" }}
             width={{ base:"400px", md: "400px", lg: "500px" }}
-            // width={["300px", "300px", "300px", "500px"]}
             height={{ md: "440px", lg: "500px" }}
             display="flex"
             flexDirection="column"
             alignItems="center"
-            pt={{ base: "0rem", sm: "0rem", md: "3rem" }}
+            pt={{ base: "0rem", sm: "0rem", md: "2rem" }}
             boxShadow={{ base: "none", md: "0px 4px 20px rgba(0, 0, 0, 0.12)" }}
           >
             <Heading
@@ -159,7 +158,7 @@ const Contact = () => {
               textTransform="capitalize"
               color="#403E50"
               fontWeight="700"
-              mb="2rem"
+              mb="1rem"
             >
               Message Us
             </Heading>
