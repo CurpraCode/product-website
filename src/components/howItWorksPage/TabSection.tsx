@@ -100,7 +100,7 @@ const TabSection = () => {
         <TabPanel>
           {TabsData.map((item, index) => (
             <Box key={index} bg={item.bg}>
-              <VStack alignItems="center" py={{ lg: "50px" }} gap="100px">
+              <VStack alignItems="center" py={{ base:"50px", md:"50px",lg: "50px" }} gap="100px">
                 <Stack
                   bg={item.bg}
                   w={["240px", "540px", "760px"]}
@@ -138,7 +138,7 @@ const TabSection = () => {
         <TabPanel>
           {TabData.map((item, index) => (
             <Box key={index} bg={item.bg}>
-              <VStack alignItems="center" py={{ lg: "50px" }}  gap="100px">
+              <VStack alignItems="center" py={{ base:"50px", md:"50px",lg: "50px" }}  gap="100px">
                 <Stack
                   key={index}
                   w={["240px", "540px", "760px"]}

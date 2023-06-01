@@ -18,6 +18,7 @@ import {
   Image,
   Stack,
   Circle,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { connectService } from "../service/request.service";
@@ -34,6 +35,7 @@ type ConnectType = {
 };
 const SignUp = () => {
   const toast = useToast();
+  const [isTab] = useMediaQuery("(max-width: 991px)");
   const { register, handleSubmit, reset } = useForm<ConnectType>();
   const { mutateAsync, isLoading } = useMutation(connectService, {
     onSuccess: (data) => {
@@ -45,7 +47,6 @@ const SignUp = () => {
     },
     onError(error, variables, context) {
       console.log(error, variables, context);
-      // cogoToast.error(error.message);
     },
   });
 
@@ -56,11 +57,16 @@ const SignUp = () => {
 
   return (
     <Layout>
-      <Container minW="full" bgColor="#F4F6F9" centerContent>
+      <Container
+        minW="full"
+        bgColor={isTab ? "#F4F6F9" : "#Fff"}
+        bgGradient={isTab ? "none" : "linear(180deg, #FFF 20%, #F4F6F9 20%)"}
+        centerContent
+      >
         <Flex
           pb={{ base: "4rem", md: "8rem" }}
           pt="4rem"
-          flexDirection={{ base: "column", xl: "row" }}
+          flexDirection={{ base: "column", md: "column", lg: "row", xl: "row" }}
           gap={{ base: "1rem", lg: "2rem" }}
           alignItems="center"
           justifyContent="center"
@@ -184,7 +190,7 @@ const SignUp = () => {
                     <FormControl id="firstName" isRequired>
                       <InputGroup bgColor="#F4F6F9">
                         <Input
-                        border="none"
+                          border="none"
                           type="text"
                           placeholder="First Name"
                           required
@@ -196,7 +202,7 @@ const SignUp = () => {
                     <FormControl id="lastName">
                       <InputGroup bgColor="#F4F6F9">
                         <Input
-                        border="none"
+                          border="none"
                           type="text"
                           placeholder="Last Name"
                           required
@@ -212,7 +218,7 @@ const SignUp = () => {
                     <FormControl id="phoneNumber" isRequired>
                       <InputGroup bgColor="#F4F6F9">
                         <Input
-                        border="none"
+                          border="none"
                           type="number"
                           placeholder="Phone"
                           required
@@ -224,7 +230,7 @@ const SignUp = () => {
                     <FormControl id="email">
                       <InputGroup bgColor="#F4F6F9">
                         <Input
-                        border="none"
+                          border="none"
                           type="email"
                           placeholder="Email"
                           required
@@ -236,7 +242,7 @@ const SignUp = () => {
                   <FormControl id="hospital" isRequired>
                     <InputGroup bgColor="#F4F6F9">
                       <Input
-                      border="none"
+                        border="none"
                         type="text"
                         placeholder="Organization Name"
                         required
@@ -247,7 +253,7 @@ const SignUp = () => {
 
                   <FormControl isRequired>
                     <Textarea
-                    border="none"
+                      border="none"
                       bgColor="#F4F6F9"
                       placeholder="How can our team help you?"
                       rows={6}

@@ -115,18 +115,19 @@ const AboutComp = () => {
           />
           <Text
             mt="2rem"
+            mb="2rem"
             textAlign="center"
             fontSize="1.3rem"
             fontWeight="bolder"
           >
-            Passion led us here
+            Our Misson
           </Text>
-          <Box
-            mt="2rem"
-            w="60px"
-            border="4px solid #AE64A7"
-            borderRadius="5px"
-          ></Box>
+          <Image
+            src="/missionline.svg"
+            alt=""
+            m={{ md: "auto", sm: "auto", base: "auto" }}
+            display={{ lg: "inline", md: "block", sm: "block" }}
+          />
           <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
             Canvey is a healthcare-centered interpretation startup dedicated to
             enhancing healthcare communication between patients and healthcare

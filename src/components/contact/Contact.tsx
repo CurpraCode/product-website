@@ -50,7 +50,12 @@ const Contact = () => {
         flexDirection="row"
         justifyContent="center"
         alignItems="center"
-        bg={{ base: "#fff", md: "white" }}
+        bgColor={isTablet ? "#F4F6F9" : "#Fff"}
+        bgGradient={
+          isTablet
+            ? "none"
+            : " linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(244,246,249,1) 31%, rgba(244,246,249,1) 67%, rgba(255,255,255,1) 67%, rgba(255,255,255,1) 100%)"
+        }
       >
         <Box
           maxWidth="container.lg"

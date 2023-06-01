@@ -34,6 +34,7 @@ const YoutubeSection = () => {
         pos="absolute"
         top="200"
         left="50%"
+        borderRadius={15}
         transform="translate(-50%)"
         sx={{
           aspectRatio: "16/9",
