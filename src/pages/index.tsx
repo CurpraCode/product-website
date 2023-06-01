@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "../common/Header";
 import { Box, Image } from "@chakra-ui/react";
 import bgcurve from "../../public/bg-curve.svg";
-// import bgsmallcurve from "../../public/bgsmallcurve.png";
 import Screen from "../components/bannerSection/screen";
 import Efficient from "../components/efficiencySection/Efficient";
 import Health from "../components/healthcareSection/Health";
@@ -11,7 +10,6 @@ import Opportiunity from "../components/opportiunitySection/Opportiunity";
 import Manage from "../components/socialImpactSection/Manage";
 import Footer from "../common/Footer";
 import { useMediaQuery } from "@chakra-ui/react";
-// import Carousel from "../components/carouselSection/Carousel";
 import Secure from "../components/secure";
 import Download from "../components/download";
 
@@ -28,8 +26,6 @@ const Home: NextPage = () => {
 
       <Box
         bgGradient={isTablet ? null : bgcurve}
-        // borderBottomLeftRadius="500px"
-        // borderBottomRightRadius="500px"
       >
         {isTablet ? (
           <Image
@@ -53,10 +49,7 @@ const Home: NextPage = () => {
         <Header name={"blah blah blah"} />
         <Screen />
       </Box>
-      {/* 
-      <Box mt={{ base: "8rem", md: "4rem", lg: "4rem" }}>
-        <Carousel />
-      </Box> */}
+     
       <Download />
 
       <Efficient />

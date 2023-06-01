@@ -61,7 +61,6 @@ const SignUp = () => {
         minW="full"
         bgColor={isTab ? "#F4F6F9" : "#Fff"}
         bgGradient={isTab ? "none" : "linear(180deg, #FFF 20%, #F4F6F9 20%)"}
-        // centerContent
       >
         <Flex
           pb={{ base: "4rem", md: "8rem" }}

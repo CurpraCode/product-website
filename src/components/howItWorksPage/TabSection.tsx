@@ -102,7 +102,6 @@ const TabSection = () => {
             <Box key={index} bg={item.bg}>
               <VStack alignItems="center" py={{ base:"50px", md:"50px",lg: "50px" }} gap="100px">
                 <Stack
-                  // bg={item.bg}
                   w={["240px", "540px", "760px"]}
                   gap={["20px", "30px", "30px", "100px"]}
                   direction={["column", "column", "row"]}

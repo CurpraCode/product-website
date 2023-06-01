@@ -20,7 +20,7 @@ const Health = () => {
         alignItems="center"
         spacing="20px"
       >
-        {/* image and info section */}
+      
         <Center h="100%" width={["100%", "100%", "60%"]}>
           <Center
             h={[250, 300, 400, 500]}
@@ -38,8 +38,6 @@ const Health = () => {
             <HealthCareSlides groupHover={{ zIndex: 50, opacity: 1 }} />
           </Center>
         </Center>
-
-        {/* right section */}
         <VStack
           width={["100%", "100%", "40%"]}
           h="100%"

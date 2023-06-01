@@ -33,7 +33,6 @@ const Download = () => {
           textAlign={{ lg: "left", md: "center", sm: "center" }}
         >
           <Box
-            // mb="3rem"
             textAlign={{
               lg: "left",
               md: "center",
@@ -50,7 +49,6 @@ const Download = () => {
                 sm: "15px",
                 base: "15px",
               }}
-              //   pb="1rem"
               color="#fff"
             >
               Download our App from the PlayStore or App Store
@@ -62,15 +60,8 @@ const Download = () => {
               alt=""
               width={isSmall ? "35%" : ""}
               mr={{ base: "0rem", sm: "0rem", lg: "2rem" }}
-              // mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
             />
-            <Image
-              src="/lgapple.svg"
-              alt=""
-              width={isSmall ? "35%" : ""}
-              // mr={{ base: "0rem", sm: "0rem", lg: "2rem" }}
-              // mb={{ lg: "0rem", sm: "3rem", base: "2rem" }}
-            />
+            <Image src="/lgapple.svg" alt="" width={isSmall ? "35%" : ""} />
           </HStack>
         </Flex>
       </Box>

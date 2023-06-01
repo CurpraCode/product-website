@@ -12,8 +12,6 @@ const CarouselCard = ({ IconName, title, body, imgSrc }) => {
       boxShadow="2px 2px 1px rgba(64, 62, 80, 0.12)"
       height="500px"
       width="416px"
-      borderRadius="xl"
-      // border="2px solid lightgray"
     >
       <CardBody>
         <Stack alignItems="start" justifyContent="space-between" gap="2">

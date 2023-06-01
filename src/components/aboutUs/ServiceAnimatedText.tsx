@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const ServiceAnimatedText = () => {
    const [isBase] = useMediaQuery("(max-width: 390px)");
-  //  const [isBase] = useMediaQuery("(max-width: 560px)");
+
   return (
     <Center my="5rem">
       <Text
