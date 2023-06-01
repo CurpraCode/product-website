@@ -102,7 +102,7 @@ const TabSection = () => {
             <Box key={index} bg={item.bg}>
               <VStack alignItems="center" py={{ base:"50px", md:"50px",lg: "50px" }} gap="100px">
                 <Stack
-                  bg={item.bg}
+                  // bg={item.bg}
                   w={["240px", "540px", "760px"]}
                   gap={["20px", "30px", "30px", "100px"]}
                   direction={["column", "column", "row"]}
@@ -138,7 +138,7 @@ const TabSection = () => {
         <TabPanel>
           {TabData.map((item, index) => (
             <Box key={index} bg={item.bg}>
-              <VStack alignItems="center" py={{ base:"50px", md:"50px",lg: "50px" }}  gap="100px">
+              <VStack alignItems="center" py={{ base:"50px", md:"50px", lg: "90px" }}  gap="100px">
                 <Stack
                   key={index}
                   w={["240px", "540px", "760px"]}
@@ -163,6 +163,7 @@ const TabSection = () => {
                     <Text
                       fontSize={["15px", "15px", "18px", "18px"]}
                       px={["10px", "14px", "14px", "0"]}
+
                     >
                       {item.body}
                     </Text>
