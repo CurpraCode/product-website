@@ -5,6 +5,7 @@ import {
   Heading,
   Input,
   Stack,
+  Flex,
   Button,
   InputGroup,
   Textarea,
@@ -50,7 +51,7 @@ const Contact = () => {
         flexDirection="row"
         justifyContent="center"
         alignItems="center"
-        bgColor={isTablet ? "#F4F6F9" : "#Fff"}
+        bgColor={isTablet ? "#fff" : "#F4F6F9"}
         bgGradient={
           isTablet
             ? "none"
@@ -144,7 +145,8 @@ const Contact = () => {
           </Box>
           <Box
             bg={{ base: "none", md: "white" }}
-            width={{ md: "400px", lg: "500px" }}
+            width={{ base:"400px", md: "400px", lg: "500px" }}
+            // width={["300px", "300px", "300px", "500px"]}
             height={{ md: "440px", lg: "500px" }}
             display="flex"
             flexDirection="column"
@@ -161,64 +163,60 @@ const Contact = () => {
             >
               Message Us
             </Heading>
-            <Box
-              display="flex"
-              alignItems="stretch"
-              flexDirection="column"
-              gap="1.5rem"
+
+            <Flex
+              as="form"
+              width={{ base:"80%",sm:"100%", md: "70%", lg: "70%" }}
+              ml={{ base: "", md: "4rem" }}
+              flexDir="column"
+              justifyContent="center"
+              onSubmit={handleSubmit(handleContact)}
             >
-              <Stack
-                as="form"
-                w="100%"
-                spacing={4}
-                onSubmit={handleSubmit(handleContact)}
+              <InputGroup bg="#F4F6F9" mb="8" borderRadius="5px">
+                <Input
+                  type="text"
+                  placeholder="Name"
+                  border="none"
+                  required
+                  {...register("name", { required: true })}
+                />
+              </InputGroup>
+
+              <InputGroup bg="#F4F6F9" mb="8" borderRadius="5px">
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  border="none"
+                  required
+                  {...register("email", { required: true })}
+                />
+              </InputGroup>
+
+              <InputGroup bg="#F4F6F9" mb="8" borderRadius="5px">
+                <Textarea
+                  placeholder="Message"
+                  border="none"
+                  rows={isTablet ? 7 : 5}
+                  {...register("message", { required: true })}
+                />
+              </InputGroup>
+              <Button
+                type="submit"
+                isLoading={isLoading}
+                bg="#3A76BF"
+                color="white"
+                fontWeight="500"
+                _hover={{
+                  bg: "#3A76BF",
+                }}
+                _focus={{
+                  outline: "none",
+                  bg: "#3A76BF",
+                }}
               >
-                <InputGroup bg="#F4F6F9" borderRadius="5px">
-                  <Input
-                    type="text"
-                    placeholder="Name"
-                    border="none"
-                    required
-                    {...register("name", { required: true })}
-                  />
-                </InputGroup>
-
-                <InputGroup bg="#F4F6F9" borderRadius="5px">
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    border="none"
-                    required
-                    {...register("email", { required: true })}
-                  />
-                </InputGroup>
-
-                <InputGroup bg="#F4F6F9" borderRadius="5px">
-                  <Textarea
-                    placeholder="Message"
-                    border="none"
-                    rows={isTablet ? 7 : 5}
-                    {...register("message", { required: true })}
-                  />
-                </InputGroup>
-                <Button
-                  type="submit"
-                  isLoading={isLoading}
-                  bg="#3A76BF"
-                  color="white"
-                  fontWeight="500"
-                  _hover={{
-                    bg: "#3A76BF",
-                  }}
-                  _focus={{
-                    outline: "none",
-                    bg: "#3A76BF",
-                  }}
-                >
-                  {isTablet ? "Send Message" : "Contact Us"}
-                </Button>
-              </Stack>
-            </Box>
+                {isTablet ? "Send Message" : "Contact Us"}
+              </Button>
+            </Flex>
           </Box>
         </Box>
       </Box>
