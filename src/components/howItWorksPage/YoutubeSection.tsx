@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 
 const YoutubeSection = () => {
   return (
@@ -12,20 +12,7 @@ const YoutubeSection = () => {
           boxSize="full"
         />
       </Box>
-      <Text
-        pos="absolute"
-        top="100"
-        left="50%"
-        transform="translate(-50%)"
-        sx={{
-          aspectRatio: "16/9",
-        }}
-        color="black"
-        fontSize="1.3rem"
-        fontWeight="bolder"
-      >
-        How It Works
-      </Text>
+      
       <Box
         as="iframe"
         src="https://www.youtube.com/embed/XVkFtvW3GCE"
@@ -34,6 +21,7 @@ const YoutubeSection = () => {
         pos="absolute"
         top="200"
         left="50%"
+        borderRadius={15}
         transform="translate(-50%)"
         sx={{
           aspectRatio: "16/9",

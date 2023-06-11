@@ -26,7 +26,7 @@ const ContactUs = () => {
       >
         <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
           <ChakraImage
-            src="/location-1.svg"
+            src="/locationaddress.svg"
             width="20px"
             height="20px"
             alt="location icon"
@@ -40,7 +40,7 @@ const ContactUs = () => {
         </Box>
         <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
           <ChakraImage
-            src="/phone-1.svg"
+            src="/phoneaddress.svg"
             width="20px"
             height="20px"
             alt="location icon"
@@ -52,7 +52,7 @@ const ContactUs = () => {
         </Box>
         <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
           <ChakraImage
-            src="/mail-1.svg"
+            src="/mailaddress.svg"
             width="20px"
             height="20px"
             alt="location icon"

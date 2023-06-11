@@ -33,12 +33,13 @@ const AuthButton = () => {
               cursor={"pointer"}
               minW={0}
               color={isTab ? "#1491B8" : "#fff"}
+              ml="2rem"
               w={
                 isBase
                   ? "120px"
                   : isTablet
                   ? "150px"
-                  : { sm: "175px", md: "190px" }
+                  : { sm: "175px", md: "150px" }
               }
               h={isTablet ? "50px" : { sm: "40px", md: "40px" }}
               _hover={{

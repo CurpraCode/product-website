@@ -8,7 +8,6 @@ const ImageSection = () => {
       w={[200, 250, 350, 400, 480]}
       h={[200, 250, 350, 400, 480]}
     >
-      {/* circle animation with three moons */}
       <Box className="circle" w="100%" h="100%" borderRadius="50%">
         <Box
           className="moon-box one"
@@ -40,7 +39,6 @@ const ImageSection = () => {
         />
       </Box>
 
-      {/* fem image */}
       <Center pos="relative" w="100%" h="100%">
         <Image
           src="/inside-circle.svg"

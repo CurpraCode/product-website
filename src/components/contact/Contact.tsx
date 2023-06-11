@@ -4,17 +4,45 @@ import {
   Text,
   Heading,
   Input,
-  Stack,
+  Flex,
+  Button,
   InputGroup,
-  InputLeftElement,
   Textarea,
   useMediaQuery,
-  Image as ChakraImage
+  Image as ChakraImage,
 } from "@chakra-ui/react";
-import Image from "next/image";
+import { useForm } from "react-hook-form";
+import { contactService } from "../../service/request.service";
+import { useToast } from "@chakra-ui/react";
+import { useMutation } from "@tanstack/react-query";
 
+type ContactType = {
+  name: string;
+  email: string;
+  message: string;
+};
 const Contact = () => {
   const [isTablet] = useMediaQuery("(max-width: 767px)");
+  const toast = useToast();
+  const { register, handleSubmit, reset } = useForm<ContactType>();
+  const { mutateAsync, isLoading } = useMutation(contactService, {
+    onSuccess: (data) => {
+      console.log(data);
+      if (data) {
+        toast({ title: "Sent", status: "success", position: "top" });
+        console.log(data);
+      }
+    },
+    onError(error, variables, context) {
+      console.log(error, variables, context);
+    },
+  });
+
+  const handleContact = async (data: ContactType) => {
+    await mutateAsync({ ...data });
+    reset();
+  };
+
   return (
     <>
       <Box
@@ -22,7 +50,12 @@ const Contact = () => {
         flexDirection="row"
         justifyContent="center"
         alignItems="center"
-        bg={{ base: "#F4F6F9", md: "white" }}
+        bgColor={isTablet ? "#fff" : "#F4F6F9"}
+        bgGradient={
+          isTablet
+            ? "none"
+            : " linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(244,246,249,1) 31%, rgba(244,246,249,1) 67%, rgba(255,255,255,1) 67%, rgba(255,255,255,1) 100%)"
+        }
       >
         <Box
           maxWidth="container.lg"
@@ -53,12 +86,17 @@ const Contact = () => {
             >
               contact us
             </Heading>
-            <Box display="flex" flexDirection="column" gap="1rem" px="4rem">
-              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+            <Box display="flex" flexDirection="column" gap="1rem" px="2rem">
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                gap="1rem"
+              >
                 <ChakraImage
-                  src="/location-1.svg"
-                  width="20px"
-                  height="20px"
+                  src="/locationaddress.svg"
+                  width="40px"
+                  height="40px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -68,11 +106,16 @@ const Contact = () => {
                   </Text>
                 </Box>
               </Box>
-              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                gap="1rem"
+              >
                 <ChakraImage
-                  src="/phone-1.svg"
-                  width="20px"
-                  height="20px"
+                  src="/phoneaddress.svg"
+                  width="40px"
+                  height="40px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -80,11 +123,16 @@ const Contact = () => {
                   <Text w="100%">1-206-407-9000</Text>
                 </Box>
               </Box>
-              <Box display="flex" alignItems="center" flexDirection="row" gap="1rem">
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="row"
+                gap="1rem"
+              >
                 <ChakraImage
-                  src="/mail-1.svg"
-                  width="20px"
-                  height="20px"
+                  src="/mailaddress.svg"
+                  width="40px"
+                  height="40px"
                   alt="location icon"
                 />
                 <Box color="white">
@@ -95,13 +143,13 @@ const Contact = () => {
             </Box>
           </Box>
           <Box
-            bg={{ base: "#F4F6F9", md: "white" }}
-            width={{ md: "400px", lg: "500px" }}
+            bg={{ base: "none", md: "white" }}
+            width={{ base:"400px", md: "400px", lg: "500px" }}
             height={{ md: "440px", lg: "500px" }}
             display="flex"
             flexDirection="column"
             alignItems="center"
-            pt={{ base: "0rem", sm: "0rem", md: "3rem" }}
+            pt={{ base: "0rem", sm: "0rem", md: "2rem" }}
             boxShadow={{ base: "none", md: "0px 4px 20px rgba(0, 0, 0, 0.12)" }}
           >
             <Heading
@@ -109,61 +157,64 @@ const Contact = () => {
               textTransform="capitalize"
               color="#403E50"
               fontWeight="700"
-              mb="2rem"
+              mb="1rem"
             >
-              message us
+              Message Us
             </Heading>
-            <Box
-              display="flex"
-              alignItems="stretch"
-              flexDirection="column"
-              gap="1.5rem"
+
+            <Flex
+              as="form"
+              width={{ base:"80%",sm:"100%", md: "70%", lg: "70%" }}
+              ml={{ base: "", md: "4rem" }}
+              flexDir="column"
+              justifyContent="center"
+              onSubmit={handleSubmit(handleContact)}
             >
-              <Stack spacing={4}>
-                <InputGroup bg="white">
-                  <InputLeftElement pointerEvents="none">
-                    {
-                      <Image
-                        src="/name.svg"
-                        width="15%"
-                        height="15%"
-                        alt="name"
-                      />
-                    }
-                  </InputLeftElement>
-                  <Input type="text" placeholder="Name" required />
-                </InputGroup>
+              <InputGroup bg="#F4F6F9" mb="8" borderRadius="5px">
+                <Input
+                  type="text"
+                  placeholder="Name"
+                  border="none"
+                  required
+                  {...register("name", { required: true })}
+                />
+              </InputGroup>
 
-                <InputGroup bg="white">
-                  <InputLeftElement
-                    pointerEvents="none"
-                    color="gray.300"
-                    fontSize="1.2em"
-                  >
-                    {
-                      <Image
-                        src="/email-black.svg"
-                        width="15%"
-                        height="15%"
-                        alt="name"
-                      />
-                    }
-                  </InputLeftElement>
-                  <Input type="email" placeholder="Email" required />
-                </InputGroup>
+              <InputGroup bg="#F4F6F9" mb="8" borderRadius="5px">
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  border="none"
+                  required
+                  {...register("email", { required: true })}
+                />
+              </InputGroup>
 
-                <InputGroup bg="white">
-                  <Textarea placeholder="Message" rows={isTablet ? 7 : 5} />
-                </InputGroup>
-              </Stack>
-              <Input
+              <InputGroup bg="#F4F6F9" mb="8" borderRadius="5px">
+                <Textarea
+                  placeholder="Message"
+                  border="none"
+                  rows={isTablet ? 7 : 5}
+                  {...register("message", { required: true })}
+                />
+              </InputGroup>
+              <Button
                 type="submit"
-                value={isTablet ? "Send Message" : "Contact Us"}
+                isLoading={isLoading}
                 bg="#3A76BF"
                 color="white"
                 fontWeight="500"
-              />
-            </Box>
+                _hover={{
+                  bg: "#3A76BF",
+                }}
+                _focus={{
+                  outline: "none",
+                  bg: "#3A76BF",
+                }}
+              >
+                {isTablet ? "Send Message" : "Contact Us"}
+              </Button>
+            </Flex>
           </Box>
         </Box>
       </Box>

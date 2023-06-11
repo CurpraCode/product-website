@@ -28,7 +28,6 @@ const Opportiunity = () => {
           alignItems="center"
           spacing="20px"
         >
-          {/* left section */}
           <VStack
             width={["100%", "100%", "100%"]}
             h="100%"
@@ -85,8 +84,6 @@ const Opportiunity = () => {
               Get Started
             </Button>
           </VStack>
-
-          {/* right - image animation section */}
           <Center h="100%" width={["100%", "100%", "60%"]}>
             <ImageSection />
           </Center>

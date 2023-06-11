@@ -21,7 +21,7 @@ const theme = extendTheme({
 const index = ({ children }: LayoutProps) => {
   return (
     <ChakraProvider theme={theme}>
-      <Header name="linear-gradient(117.32deg, #5C0E62 -41.64%, #00B5D0 174.5%)" />
+      <Header name="linear-gradient(99.22deg, #5C0E62 1.27%, #00B5D0 92.23%)" />
       {children}
       <Footer />
     </ChakraProvider>

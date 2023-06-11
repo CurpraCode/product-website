@@ -4,7 +4,6 @@ import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-// import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const HealthCareSlides = ({
   groupHover,
@@ -31,12 +30,6 @@ const HealthCareSlides = ({
       transition="0.3s"
       _groupHover={groupHover}
     >
-      {/* <div className="swiper-button swiper-icon-next">
-        <IoIosArrowForward color="#fff" />
-      </div>
-      <div className="swiper-button swiper-icon-prev">
-        <IoIosArrowBack color="#fff" />
-      </div> */}
       <Swiper
         modules={[Navigation, Pagination]}
         slidesPerView={1}
@@ -55,16 +48,9 @@ const HealthCareSlides = ({
               align="center"
               justifyContent="center"
               textAlign="center"
-              // px={["35px", "45px"]}
-              // w={["240px", "300px", "480px"]}
-              // border="5px dotted blue"
+        
             >
-              {/* <Heading
-                fontSize={{ base: "24px", lg: "42px" }}
-                fontFamily="mono"
-              >
-                {item.title}
-              </Heading> */}
+            
               <Text
                 fontSize={{ base: "8px", sm: "12px", lg: "24px" }}
                 textAlign="center"
