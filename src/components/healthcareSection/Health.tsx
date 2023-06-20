@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Text,Button, Heading, Stack, VStack, Center } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Button,
+  Heading,
+  Stack,
+  VStack,
+  Center,
+} from "@chakra-ui/react";
 import ImageSection from "./ImageSection";
 import HealthCareSlides from "./HealthCareSlides";
 import NextLink from "next/link";
@@ -10,17 +18,16 @@ const Health = () => {
       maxW="7xl"
       m="0 auto"
       py="8rem"
-      h={[800, 800, 700]}
+      h={[800, 800, 800, 700]}
       px={{ lg: "3rem", md: "3rem", sm: "3rem", base: "2rem" }}
     >
       <Stack
         h="100%"
-        direction={["column", "column", "row"]}
+        direction={["column", "column", "column", "row"]}
         justifyContent="center"
         alignItems="center"
         spacing="20px"
       >
-      
         <Center h="100%" width={["100%", "100%", "60%"]}>
           <Center
             h={[250, 300, 400, 500]}
@@ -39,18 +46,17 @@ const Health = () => {
           </Center>
         </Center>
         <VStack
-          width={["100%", "100%", "40%"]}
+          width={["100%", "100%", "100%", "40%"]}
           h="100%"
           mt="0"
           spacing={["30px"]}
-          alignItems={["center", "center", "start"]}
+          alignItems={["center", "center", "center", "start"]}
           justifyContent={["", "", "center"]}
-          textAlign={["center", "center", "start"]}
+          textAlign={["center", "center", "center", "start"]}
         >
-          <Heading fontWeight="700" fontSize={["18px", "25px", "36px"]}>
+          <Heading fontWeight="700" fontSize={["18px", "18px", "25px", "36px"]}>
             Advocates For Healthcare
           </Heading>
-
           <Box w="60px" border="2.5px solid #AE64A7" borderRadius="5px"></Box>
           <Text
             lineHeight="35px"
@@ -60,7 +66,6 @@ const Health = () => {
               md: "18px",
               sm: "18px",
               base: "12px",
-         
             }}
           >
             We&rsquo;re passionate healthcare advocates dedicated to empowering
@@ -69,27 +74,27 @@ const Health = () => {
             ensuring access to accurate healthcare information for all.
           </Text>
           <NextLink href="/sign-up" passHref>
-              <Button
-                bg="#AE64A7"
-                borderRadius="8px"
-                py="25px"
-                color="#fff"
-                width="100%"
-                fontWeight="700"
-                fontSize="18px"
-                maxW="200px"
-                mt={{ base: "2rem", xl: "2.5rem" }}
-                _hover={{
-                  bg: "#AE64A7",
-                }}
-                _focus={{
-                  outline: "none",
-                  bg: "#AE64A7",
-                }}
-              >
+            <Button
+              bg="#AE64A7"
+              borderRadius="8px"
+              py="25px"
+              color="#fff"
+              width="100%"
+              fontWeight="700"
+              fontSize="18px"
+              maxW="200px"
+              mt={{ base: "2rem", xl: "2.5rem" }}
+              _hover={{
+                bg: "#AE64A7",
+              }}
+              _focus={{
+                outline: "none",
+                bg: "#AE64A7",
+              }}
+            >
               Get Started
-              </Button>
-            </NextLink>
+            </Button>
+          </NextLink>
         </VStack>
       </Stack>
     </Center>

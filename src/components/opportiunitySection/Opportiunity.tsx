@@ -7,7 +7,7 @@ import {
   Button,
   Center,
   VStack,
-  Image
+  Image,
 } from "@chakra-ui/react";
 import ImageSection from "./ImageSection";
 
@@ -19,11 +19,16 @@ const Opportiunity = () => {
         m="0 auto"
         py="8rem"
         px={{ lg: "3rem", md: "3rem", sm: "3rem", base: "2rem" }}
-        h={[800, 800, 700]}
+        h={[800, 800, 800, 700]}
       >
         <Stack
           h="100%"
-          direction={["column-reverse", "column-reverse", "row"]}
+          direction={[
+            "column-reverse",
+            "column-reverse",
+            "column-reverse",
+            "row",
+          ]}
           justifyContent="center"
           alignItems="center"
           spacing="20px"
@@ -32,11 +37,14 @@ const Opportiunity = () => {
             width={["100%", "100%", "100%"]}
             h="100%"
             spacing={["40px"]}
-            alignItems={["center", "center", "start"]}
+            alignItems={["center", "center", "center", "start"]}
             justifyContent="center"
-            textAlign={["center", "center", "start"]}
+            textAlign={["center", "center", "center", "start"]}
           >
-            <Heading fontWeight="700" fontSize={["18px", "25px", "32px"]}>
+            <Heading
+              fontWeight="700"
+              fontSize={["18px", "18px", "25px", "32px"]}
+            >
               Opportunities For <br /> Interpreters
             </Heading>
             <Image
@@ -54,7 +62,6 @@ const Opportiunity = () => {
                 md: "18px",
                 sm: "18px",
                 base: "12px",
-           
               }}
             >
               We&rsquo;re dedicated to creating flexible opportunities for

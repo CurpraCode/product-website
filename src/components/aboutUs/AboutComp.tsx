@@ -7,10 +7,8 @@ import {
   useMediaQuery,
   Heading,
   VStack,
-  Button,
 } from "@chakra-ui/react";
 import ServiceAnimatedText from "./ServiceAnimatedText";
-import NextLink from "next/link";
 
 const AboutComp = () => {
   const [isTab] = useMediaQuery("(max-width: 660px)");
@@ -21,6 +19,8 @@ const AboutComp = () => {
         <Flex
           justifyContent="space-evenly"
           flexDir={["column", "column", "row"]}
+          m="auto"
+          maxW="6xl"
         >
           <VStack
             textAlign="center"
@@ -81,7 +81,7 @@ const AboutComp = () => {
               m={{ md: "auto", sm: "auto", base: "auto" }}
               display={{ lg: "inline", md: "block", sm: "block" }}
             />
-            <Text px="6">
+            <Text px="10">
               Insufficient access to interpretation and cultural services is
               hampering care and creating obstacles in nearly 50% of hospitals
               across the United States.{" "}
@@ -165,29 +165,7 @@ const AboutComp = () => {
             users&rsquo; information.
           </Text>
         </Flex>
-        <NextLink href="/sign-up" passHref>
-          <Button
-            bg="#3a76bf"
-            borderRadius="8px"
-            py="25px"
-            color="#fff"
-            width="100%"
-            fontWeight="700"
-            fontSize="18px"
-            maxW="200px"
-            mt={{ base: "2rem", xl: "2.5rem" }}
-            _hover={{
-              bg: "#3a76bf",
-            }}
-            _focus={{
-              outline: "none",
-              bg: "#3a76bf",
-            }}
-            mb="5rem"
-          >
-            Contact Us
-          </Button>
-        </NextLink>
+
         <Image mt="5rem" src="/cut-bg.png" alt="profile image" />
       </Flex>
     </Box>
