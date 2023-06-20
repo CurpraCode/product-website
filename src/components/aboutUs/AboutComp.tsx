@@ -128,7 +128,7 @@ const AboutComp = () => {
             m={{ md: "auto", sm: "auto", base: "auto" }}
             display={{ lg: "inline", md: "block", sm: "block" }}
           />
-          <Text mt="3rem" textAlign="justify" fontSize={isTab ? "" : "1.2rem"}>
+          <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
             Canvey is a healthcare-centered interpretation startup dedicated to
             enhancing healthcare communication between patients and healthcare
             providers. Our mission is to revolutionize the healthcare industry
@@ -139,7 +139,7 @@ const AboutComp = () => {
             healthcare providers communicate with patients, ensuring optimal
             care regardless of language or communication barriers.
           </Text>
-          <Text mt="3rem" textAlign="justify" fontSize={isTab ? "" : "1.2rem"}>
+          <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
             At Canvey, we recognize the critical importance of improving health
             outcomes, promoting wellness, and fostering healthier lives,
             especially for immigrant individuals confronted with language
@@ -155,7 +155,7 @@ const AboutComp = () => {
             healthcare organizations, seamlessly integrating interpretation
             services into their workflows.
           </Text>
-          <Text mt="3rem" textAlign="justify" fontSize={isTab ? "" : "1.2rem"}>
+          <Text mt="3rem" textAlign="center" fontSize={isTab ? "" : "1.2rem"}>
             As a team of immigrants ourselves, we deeply understand the
             significance of language and cultural competence in healthcare. We
             are committed to providing services that are sensitive to the unique
