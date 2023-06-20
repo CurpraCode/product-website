@@ -46,8 +46,8 @@ const Download = () => {
               fontSize={{
                 lg: "22px",
                 md: "20px",
-                sm: "15px",
-                base: "15px",
+                sm: "18px",
+                base: "18px",
               }}
               color="#fff"
             >
@@ -58,10 +58,10 @@ const Download = () => {
             <Image
               src="/lgplay.svg"
               alt=""
-              width={isSmall ? "35%" : ""}
+              width={isSmall ? "50%" : ""}
               mr={{ base: "0rem", sm: "0rem", lg: "2rem" }}
             />
-            <Image src="/lgapple.svg" alt="" width={isSmall ? "35%" : ""} />
+            <Image src="/lgapple.svg" alt="" width={isSmall ? "45%" : ""} />
           </HStack>
         </Flex>
       </Box>
