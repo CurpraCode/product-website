@@ -48,12 +48,11 @@ const HealthCareSlides = ({
               align="center"
               justifyContent="center"
               textAlign="center"
-        
             >
-            
               <Text
                 fontSize={{ base: "8px", sm: "12px", lg: "24px" }}
                 textAlign="center"
+                display={["none","block","block","block"]}
               >
                 {item.body}
               </Text>

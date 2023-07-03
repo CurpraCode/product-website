@@ -102,7 +102,7 @@ const Contact = () => {
                 <Box color="white">
                   <Heading size="sm">Address</Heading>
                   <Text w={{ md: "100%", lg: "90%" }}>
-                    787 N Hampden St Minneapolis, MN
+                    787 N Hampden St Minneapolis, MN 55114
                   </Text>
                 </Box>
               </Box>

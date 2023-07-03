@@ -174,7 +174,7 @@ const SignUp = () => {
                 >
                   Interested in bringing our services to your hospital or
                   clinic?
-                  <Text as={"span"} color={"#3A76BF"} fontWeight={700}>
+                  <Text as={"span"} color={"#3A76BF"} ml="1rem" fontWeight={700}>
                     Lets Connect!
                   </Text>
                 </Heading>
