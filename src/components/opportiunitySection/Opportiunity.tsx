@@ -61,7 +61,7 @@ const Opportiunity = () => {
                 lg: "22px",
                 md: "18px",
                 sm: "18px",
-                base: "12px",
+                base: "18px",
               }}
             >
               We&rsquo;re dedicated to creating flexible opportunities for
